@@ -10,9 +10,11 @@ export const Container = styled.header`
     align-items: center;
 
     svg {
+      box-sizing: content-box;
+
       border: 1px solid black;
       border-radius: 100%;
-      padding: 0.1rem;
+      padding: 0.2rem;
     }
   }
 

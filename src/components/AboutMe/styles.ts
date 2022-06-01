@@ -5,22 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-top: 2rem;
+  margin-top: 3rem;
 
-  .teste {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 100%;
-    max-width: 300px;
+  h1 {
+    width: 100%;
 
-    span img {
-      border: 1px solid black;
-      border-radius: 100%;
-    }
+    font-size: 2.5rem;
+    text-align: left;
   }
 
   p {
-    max-width: 500px;
+    margin-top: 0.8rem;
+    max-width: 660px;
+    font-size: 1.2rem;
   }
 `;
