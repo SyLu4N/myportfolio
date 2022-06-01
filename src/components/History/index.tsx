@@ -23,15 +23,13 @@ export function History(): JSX.Element {
           apaixonado.
         </em>
       </Content>
-      {/*       <div className="image">
-        <Image
-          src="/assets/homeComputer.png"
-          alt="Imagem de uma página web"
-          width="300"
-          height="300"
-        />
-      </div>
- */}{' '}
+      <Image
+        src="/assets/computerEmobile.svg"
+        alt="Ilustração de um computador e celular"
+        width="500"
+        height="500"
+        className="finally"
+      />
     </Container>
   );
 }

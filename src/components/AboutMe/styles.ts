@@ -12,6 +12,10 @@ export const Container = styled.div`
 
     font-size: 2.5rem;
     text-align: left;
+
+    span {
+      color: blue;
+    }
   }
 
   p {

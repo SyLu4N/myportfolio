@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  gap: 3rem;
-
   margin-top: 2rem;
-  padding-bottom: 18rem;
+  margin-bottom: -6.8rem;
 
-  .image {
-    margin-top: -2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Content = styled.div`
@@ -34,8 +31,7 @@ export const Content = styled.div`
   }
 
   em {
-    margin-top: 0.9rem;
-    max-width: 450px;
+    max-width: 500px;
     font-size: 1.3rem;
   }
 `;
