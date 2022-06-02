@@ -2,7 +2,7 @@ import { GiPencilRuler } from 'react-icons/gi';
 import { MdOutlineWorkOutline } from 'react-icons/md';
 import { Container, Content } from './styles';
 
-export function Projects(): JSX.Element {
+export function StudyWork(): JSX.Element {
   return (
     <Container>
       <Content>

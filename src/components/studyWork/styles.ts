@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   color: white;
   width: 100%;
-  padding-bottom: 20rem;
+  padding-bottom: 5rem;
   gap: 1rem;
 `;
 
@@ -19,7 +19,7 @@ export const Content = styled.div`
   margin-top: 1.5rem;
   background: linear-gradient(to bottom, #4323f0, #072f4e);
 
-  border-radius: 0.8rem 0.8rem 0 0;
+  border-radius: 0.8rem;
   width: 100%;
 
   h1 {
