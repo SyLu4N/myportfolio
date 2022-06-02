@@ -14,7 +14,7 @@ export function History(): JSX.Element {
           />
         </div>
         <em>
-          Sempre fui muito apaixonado por computador, seja pela forma de como
+          Sempre fui muito apaixonado por tecnologia, seja pela forma de como
           funciona, peças e entre outras coisas que me fascinam, comecei a
           trabalhar com computador em 2018, com uma oportunidade de designer, e
           foi trabalhando que acabei vendo um anúncio de um curso de
