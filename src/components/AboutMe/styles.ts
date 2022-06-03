@@ -16,11 +16,17 @@ export const Container = styled.div`
     span {
       color: blue;
     }
-  }
 
-  p {
-    margin-top: 0.8rem;
-    max-width: 660px;
-    font-size: 1.2rem;
+    animation: 1.5s hellow linear;
+    @keyframes hellow {
+      0% {
+        opacity: 0;
+        margin-left: -2rem;
+      }
+      100% {
+        opacity: 1;
+        margin-left: 0rem;
+      }
+    }
   }
 `;
