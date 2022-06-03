@@ -6,27 +6,16 @@ import { Container } from './styles';
 export function Header(): JSX.Element {
   return (
     <Container>
-      <div>
-        <nav>
-          <Link href="/projects">
-            <a>Sobre mim</a>
-          </Link>
+      <h1>SyLu4N</h1>
+      <nav>
+        <a href="#home">Home</a>
 
-          <Link href="/projects">
-            <a>Projetos</a>
-          </Link>
-
-          <Link href="/contact">
-            <a>Contato</a>
-          </Link>
-
-          <Link href="/">
-            <a>
-              <FaUserAlt />
-            </a>
-          </Link>
-        </nav>
-      </div>
+        <a href="#sobre">Sobre</a>
+        <a href="#sobre">Skills</a>
+        <a href="#sobre">Experiência/Estudos</a>
+        <a href="#sobre">Trabalhos</a>
+        <a href="#sobre">Contato</a>
+      </nav>
     </Container>
   );
 }

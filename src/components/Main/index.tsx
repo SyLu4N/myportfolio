@@ -1,4 +1,4 @@
-import { AboutMe } from '../AboutMe';
+import { Welcome } from '../Welcome';
 import { History } from '../History';
 import { Projects } from '../Projects';
 import { StudyWork } from '../StudyWork';
@@ -8,7 +8,7 @@ import { Container } from './styles';
 export function Main(): JSX.Element {
   return (
     <Container>
-      <AboutMe />
+      <Welcome />
       <History />
       <StudyWork />
       <Projects />
