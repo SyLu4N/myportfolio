@@ -5,6 +5,8 @@ export const Container = styled.header`
   justify-content: space-between;
   font-size: 1.2rem;
 
+  margin-bottom: 3rem;
+
   h1 {
     font-size: 1.5rem;
   }

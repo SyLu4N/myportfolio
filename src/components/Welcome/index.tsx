@@ -16,7 +16,7 @@ export function Welcome(): JSX.Element {
         </strong>
 
         <a href="/">
-          Mande um Oi <BiSend />
+          Mandar Oi <BiSend />
         </a>
       </div>
       <Image src="/assets/Luan.png" alt="Minha foto" width="300" height="300" />

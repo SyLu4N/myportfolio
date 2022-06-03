@@ -58,7 +58,7 @@ export const Container = styled.div`
 
       background: blue;
       border-radius: 0.8rem;
-      width: 160px;
+      width: 140px;
       padding: 1rem;
       margin-top: 1rem;
 
