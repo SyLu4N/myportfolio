@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import { FaUserAlt } from 'react-icons/fa';
-
 import { Container } from './styles';
 
 export function Header(): JSX.Element {
@@ -11,10 +8,10 @@ export function Header(): JSX.Element {
         <a href="#home">Home</a>
 
         <a href="#sobre">Sobre</a>
-        <a href="#sobre">Skills</a>
-        <a href="#sobre">Experiência/Estudos</a>
-        <a href="#sobre">Trabalhos</a>
-        <a href="#sobre">Contato</a>
+        <a href="#skills">Skills</a>
+        <a href="#estudo">Experiência/Estudos</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#contato">Contato</a>
       </nav>
     </Container>
   );

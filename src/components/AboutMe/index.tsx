@@ -1,18 +1,23 @@
 import Image from 'next/image';
+import { FiDownloadCloud } from 'react-icons/fi';
+
 import { Container, Content } from './styles';
 
-export function History(): JSX.Element {
+export function AboutMe(): JSX.Element {
   return (
-    <Container>
+    <Container id="sobre">
+      <div>
+        <h1>Sobre mim</h1>
+        <p>Introdução</p>
+      </div>
       <Content>
-        <div>
-          <Image
-            src="/assets/Luan.jpg"
-            alt="Minha foto"
-            width="250"
-            height="250"
-          />
-        </div>
+        <Image
+          src="/assets/Luan.jpg"
+          alt="Minha foto"
+          width="350"
+          height="350"
+        />
+
         <em>
           Sempre fui muito apaixonado por tecnologia, seja pela forma de como
           funciona, peças e entre outras coisas que me fascinam, comecei a
@@ -21,15 +26,15 @@ export function History(): JSX.Element {
           programação, me interessei, comecei a estudar como um hobby, até que
           estava totalmente imerso no mundo de desenvolvimento, que hoje sou
           apaixonado.
+          <a
+            href="/assets/Luan_Simoes.pdf"
+            download="Luan Simoes"
+            type="aplication/zip"
+          >
+            Download CV <FiDownloadCloud />
+          </a>
         </em>
       </Content>
-      <Image
-        src="/assets/computerEmobile.svg"
-        alt="Ilustração de um computador e celular"
-        width="500"
-        height="500"
-        className="finally"
-      />
     </Container>
   );
 }
