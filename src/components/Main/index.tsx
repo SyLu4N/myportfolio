@@ -4,6 +4,7 @@ import { Projects } from '../Projects';
 import { Skills } from '../Skills';
 
 import { Container } from './styles';
+import { StudyWork } from '../StudyWork';
 
 export function Main(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ export function Main(): JSX.Element {
       <Welcome />
       <AboutMe />
       <Skills />
+      <StudyWork />
     </Container>
   );
 }

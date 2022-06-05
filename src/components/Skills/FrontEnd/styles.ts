@@ -11,6 +11,13 @@ export const Container = styled.div`
     font-size: 1.5rem;
     color: blue;
 
+    position: relative;
+    width: 330px;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+
     &:hover {
       cursor: pointer;
     }
@@ -19,6 +26,9 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       margin-left: 5rem;
+
+      position: absolute;
+      right: 0;
     }
   }
 

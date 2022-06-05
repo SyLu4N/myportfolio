@@ -1,13 +1,14 @@
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { BiCodeCurly } from 'react-icons/bi';
+
 import { Container, Content } from './styles';
 
 export function FrontEnd(): JSX.Element {
   let contador = 0;
 
   function handleFront(e: any): void {
-    const el = e.target.parentElement;
-    const front = el.querySelector('.front') as HTMLElement;
-    const svg = el.querySelector('.svg') as HTMLElement;
+    const front = document.querySelector('.front') as HTMLElement;
+    const svg = document.querySelector('.svg') as HTMLElement;
 
     if (contador === 0) {
       svg.setAttribute('class', 'opem svg');
@@ -25,7 +26,7 @@ export function FrontEnd(): JSX.Element {
   return (
     <Container>
       <h1 onClick={handleFront}>
-        Front End Developer
+        <BiCodeCurly /> Front End Developer
         <div>
           <MdKeyboardArrowDown size={30} className="svg" />
         </div>
