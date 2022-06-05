@@ -56,9 +56,19 @@ export const Container = styled.div`
     background-color: blue;
     border-radius: 100%;
   }
+
+  animation: 500ms aparecer linear;
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
-export const Work = styled.div`
+export const Study = styled.div`
   time {
     display: inline-flex;
     align-items: center;
@@ -71,7 +81,7 @@ export const Work = styled.div`
 
   div:nth-child(1) {
     position: absolute;
-    top: -16%;
+    top: -10%;
     left: 27%;
 
     text-align: right;
@@ -79,7 +89,7 @@ export const Work = styled.div`
 
   div:nth-child(2) {
     position: absolute;
-    top: 23.5%;
+    top: 22.5%;
     right: 28.8%;
 
     text-align: left;

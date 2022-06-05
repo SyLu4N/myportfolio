@@ -11,26 +11,44 @@ export const Header = styled.div`
 
   align-items: center;
   margin-bottom: 3rem;
-
-  h1 {
-    font-size: 2.5rem;
-    color: blue;
-  }
 `;
 
-export const Content = styled.div`
+interface ContentProps {
+  isWork: string;
+}
+
+export const Content = styled.div<ContentProps>`
   display: flex;
   justify-content: center;
   align-items: center;
 
   gap: 3rem;
-  color: blue;
 
   margin-bottom: 7rem;
 
-  h3 {
+  button[type='button'] {
+    color: ${({ isWork }) =>
+      isWork === 'Work' ? 'blue' : 'rgba(0, 0, 245, 0.5)'};
+  }
+
+  button[type='submit'] {
+    color: ${({ isWork }) =>
+      isWork === 'Study' ? 'blue' : 'rgba(0, 0, 245, 0.5)'};
+  }
+
+  h3 button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    transition: 300ms;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: transparent;
+
+    &:hover {
+      filter: brightness(0.6);
+    }
   }
 `;

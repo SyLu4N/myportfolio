@@ -1,6 +1,6 @@
 import { AiOutlineCalendar } from 'react-icons/ai';
 
-import { Container, Work } from './styles';
+import { Container, Study } from './styles';
 
 export function Studys(): JSX.Element {
   return (
@@ -13,7 +13,7 @@ export function Studys(): JSX.Element {
       <span />
       <span />
       <span />
-      <Work>
+      <Study>
         <div>
           <strong>
             HTML5 e CSS3 do básico ao
@@ -22,7 +22,7 @@ export function Studys(): JSX.Element {
           <p>Curso em Vídeo </p>
           <time>
             <AiOutlineCalendar />
-            08/2020 - 06/2023
+            02/2021 - 04/2021
           </time>
         </div>
 
@@ -31,7 +31,7 @@ export function Studys(): JSX.Element {
           <p>Udemy </p>
           <time>
             <AiOutlineCalendar />
-            08/2020 - 06/2023
+            04/2021 - 06/2021
           </time>
         </div>
 
@@ -40,7 +40,7 @@ export function Studys(): JSX.Element {
           <p>Udemy </p>
           <time>
             <AiOutlineCalendar />
-            08/2020 - 06/2023
+            06/2021 - 02/2022
           </time>
         </div>
 
@@ -49,10 +49,10 @@ export function Studys(): JSX.Element {
           <p>Rockeatseat </p>
           <time>
             <AiOutlineCalendar />
-            08/2020 - 06/2023
+            04/2022 - 04/2022
           </time>
         </div>
-      </Work>
+      </Study>
     </Container>
   );
 }

@@ -15,7 +15,7 @@ export function Welcome(): JSX.Element {
           Desenvolvedor Front-End | Javascript | TypeScript | NextJS | ReactJS
         </strong>
 
-        <a href="/">
+        <a href="mailto:luaan.carlos@hotmail.com">
           Mandar Oi <BiSend />
         </a>
       </div>

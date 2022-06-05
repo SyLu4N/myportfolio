@@ -1,25 +1,35 @@
+import { useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
-import { Studys } from './Studys';
 
+import { Studys } from './Studys';
+import { Works } from './Works';
 import { Container, Header, Content } from './styles';
 
+type StudyOrWork = 'Study' | 'Work';
+
 export function StudyWork(): JSX.Element {
+  const [isWork, setIsWork] = useState<StudyOrWork>('Study');
+
   return (
-    <Container>
+    <Container id="estudo">
       <Header>
         <h1>Qualificações</h1>
-        <p>Estudos e Experiência</p>
+        <p>Estudos e Experiências</p>
       </Header>
 
-      <Content>
+      <Content isWork={isWork}>
         <h3>
-          <FaSuitcase size={24} /> Trabalho
+          <button type="button" onClick={() => setIsWork('Work')}>
+            <FaSuitcase size={24} /> Trabalho
+          </button>
         </h3>
         <h3>
-          Estudo <FaGraduationCap size={30} />
+          <button type="submit" onClick={() => setIsWork('Study')}>
+            Estudo <FaGraduationCap size={30} />
+          </button>
         </h3>
       </Content>
-      <Studys />
+      {isWork === 'Work' ? <Works /> : <Studys />}
     </Container>
   );
 }

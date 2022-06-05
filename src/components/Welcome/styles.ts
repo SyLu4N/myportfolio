@@ -20,7 +20,6 @@ export const Container = styled.div`
     h1 {
       width: 100%;
 
-      font-size: 2.5rem;
       text-align: left;
 
       animation: 1.5s hellow linear;
@@ -49,24 +48,6 @@ export const Container = styled.div`
       font-size: 1rem;
 
       padding: 0.7rem;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: blue;
-      border-radius: 0.8rem;
-      width: 140px;
-      padding: 1rem;
-      margin-top: 1rem;
-
-      color: white;
-
-      svg {
-        margin-left: 0.5rem;
-      }
     }
   }
 

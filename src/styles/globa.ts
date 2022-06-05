@@ -10,6 +10,12 @@ export const GlobalStyles = createGlobalStyle`
 
    body {
     padding: 3rem 10rem;
+    scroll-behavior: smooth;
+   }
+
+   html {
+    scroll-behavior: smooth;
+
    }
 
   a{

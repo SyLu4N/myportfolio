@@ -24,13 +24,13 @@ export function BackEnd(): JSX.Element {
 
   return (
     <Container>
-      <h1 onClick={handleBack}>
+      <h2 onClick={handleBack}>
         <MdOutlineBackupTable />
         Back End Developer
         <div>
           <MdKeyboardArrowDown size={30} className="svgBack" />
         </div>
-      </h1>
+      </h2>
 
       <Content className="hidden back">
         <div>

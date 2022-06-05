@@ -11,11 +11,6 @@ export const Container = styled.div`
   div {
     text-align: center;
     margin-bottom: 2rem;
-
-    h1 {
-      font-size: 2.5rem;
-      color: blue;
-    }
   }
 `;
 
@@ -39,24 +34,5 @@ export const Content = styled.div`
     height: 350px;
     font-size: 1.3rem;
     text-align: justify;
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 0.8rem;
-      background-color: blue;
-      color: white;
-      font-size: 1rem;
-
-      width: 200px;
-      height: 40px;
-      margin-top: 1rem;
-
-      svg {
-        margin-left: 0.5rem;
-      }
-    }
   }
 `;

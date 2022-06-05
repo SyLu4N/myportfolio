@@ -5,9 +5,4 @@ export const Header = styled.div`
   padding-top: 4rem;
 
   text-align: center;
-
-  h1 {
-    color: blue;
-    font-size: 2.5rem;
-  }
 `;

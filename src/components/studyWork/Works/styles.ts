@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
 
   position: relative;
+  animation: 500ms aparecer linear;
 
   span:nth-child(1) {
     height: 12px;
@@ -43,18 +44,13 @@ export const Container = styled.div`
     border-radius: 100%;
   }
 
-  span:nth-child(6) {
-    height: 80px;
-    width: 2px;
-    background-color: blue;
-    border-radius: 100%;
-  }
-
-  span:nth-child(7) {
-    height: 12px;
-    width: 12px;
-    background-color: blue;
-    border-radius: 100%;
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
@@ -72,32 +68,24 @@ export const Work = styled.div`
   div:nth-child(1) {
     position: absolute;
     top: -16%;
-    left: 27%;
+    left: 32%;
 
     text-align: right;
   }
 
   div:nth-child(2) {
     position: absolute;
-    top: 23.5%;
-    right: 28.8%;
+    top: 32%;
+    right: 33%;
 
     text-align: left;
   }
 
   div:nth-child(3) {
     position: absolute;
-    top: 55%;
+    top: 80%;
     left: 33%;
 
     text-align: right;
-  }
-
-  div:nth-child(4) {
-    position: absolute;
-    top: 87%;
-    right: 32.5%;
-
-    text-align: left;
   }
 `;

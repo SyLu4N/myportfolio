@@ -10,7 +10,7 @@ export function Header(): JSX.Element {
         <a href="#sobre">Sobre</a>
         <a href="#skills">Skills</a>
         <a href="#estudo">Experiência/Estudos</a>
-        <a href="#trabalhos">Trabalhos</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#contato">Contato</a>
       </nav>
     </Container>

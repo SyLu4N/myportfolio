@@ -25,12 +25,12 @@ export function FrontEnd(): JSX.Element {
 
   return (
     <Container>
-      <h1 onClick={handleFront}>
+      <h2 onClick={handleFront}>
         <BiCodeCurly /> Front End Developer
         <div>
           <MdKeyboardArrowDown size={30} className="svg" />
         </div>
-      </h1>
+      </h2>
 
       <Content className="hidden front">
         <div>

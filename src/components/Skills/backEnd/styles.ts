@@ -4,7 +4,7 @@ export const Container = styled.div`
   padding: 0 4rem;
   margin-top: 4rem;
 
-  h1 {
+  h2 {
     display: flex;
     align-items: center;
 
