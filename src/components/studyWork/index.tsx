@@ -3,7 +3,7 @@ import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
 import { Studys } from './Studys';
 import { Works } from './Works';
-import { Container, Header, Content } from './styles';
+import { Container, Header, Content, AnimaContent } from './styles';
 
 type StudyOrWork = 'Study' | 'Work';
 
@@ -16,7 +16,6 @@ export function StudyWork(): JSX.Element {
         <h1>Qualificações</h1>
         <p>Estudos e Experiências</p>
       </Header>
-
       <Content isWork={isWork}>
         <h3>
           <button type="button" onClick={() => setIsWork('Work')}>
@@ -29,7 +28,10 @@ export function StudyWork(): JSX.Element {
           </button>
         </h3>
       </Content>
-      {isWork === 'Work' ? <Works /> : <Studys />}
+
+      <AnimaContent>
+        <Works isWork={isWork} /> <Studys isWork={isWork} />
+      </AnimaContent>
     </Container>
   );
 }

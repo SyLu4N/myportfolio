@@ -1,13 +1,31 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  isWork: string;
+}
+
+export const Container = styled.div<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+
+  transition: all 400ms;
+  position: absolute;
+  left: ${({ isWork }) => (isWork === 'Work' ? '100%' : '3%')};
+  top: 0;
+  bottom: 0;
+`;
+
+export const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  width: 400px;
   position: relative;
-  animation: 500ms aparecer linear;
 
   span:nth-child(1) {
     height: 12px;
@@ -44,6 +62,21 @@ export const Container = styled.div`
     border-radius: 100%;
   }
 
+  span:nth-child(6) {
+    height: 80px;
+    width: 2px;
+    background-color: blue;
+    border-radius: 100%;
+  }
+
+  span:nth-child(7) {
+    height: 12px;
+    width: 12px;
+    background-color: blue;
+    border-radius: 100%;
+  }
+
+  animation: 500ms aparecer linear;
   @keyframes aparecer {
     0% {
       opacity: 0;
@@ -65,18 +98,22 @@ export const Work = styled.div`
     font-size: 0.9rem;
   }
 
+  div {
+    width: 250px;
+  }
+
   div:nth-child(1) {
     position: absolute;
-    top: -16%;
-    left: 32%;
+    top: -15%;
+    left: -17%;
 
     text-align: right;
   }
 
   div:nth-child(2) {
     position: absolute;
-    top: 32%;
-    right: 33%;
+    top: 33%;
+    right: -17%;
 
     text-align: left;
   }
@@ -84,7 +121,7 @@ export const Work = styled.div`
   div:nth-child(3) {
     position: absolute;
     top: 80%;
-    left: 33%;
+    left: -17%;
 
     text-align: right;
   }

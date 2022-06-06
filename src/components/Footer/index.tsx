@@ -18,19 +18,31 @@ export function Footer(): JSX.Element {
         <img src="/assets/Luan.png" alt="Minha foto" />
         <p>Aprendendo um pouco a cada dia, sempre em busca do próximo nível</p>
         <span>
-          <a href="https://www.linkedin.com/in/luan-sim%C3%B5es-617492236/">
+          <a
+            href="https://www.linkedin.com/in/luan-sim%C3%B5es-617492236/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FiLinkedin size={22} />
           </a>
 
-          <a href="https://github.com/sylu4n">
+          <a href="https://github.com/sylu4n " target="_blank" rel="noreferrer">
             <FiGithub size={22} />
           </a>
 
-          <a href="https://www.instagram.com/_luannsimoes_/">
+          <a
+            href="https://www.instagram.com/_luannsimoes_/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FiInstagram size={22} />
           </a>
 
-          <a href="mailto:luaan.carlos@hotmail.com">
+          <a
+            href="mailto:luaan.carlos@hotmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <MdOutlineMailOutline size={22} />
           </a>
         </span>

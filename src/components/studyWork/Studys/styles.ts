@@ -1,11 +1,39 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  isWork: string;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  transition: all 400ms;
+  position: absolute;
+  right: ${({ isWork }) => (isWork === 'Work' ? '3%' : '101%')};
+  top: 0;
+  bottom: 0;
+
+  animation: 400ms carrosel linear;
+  @keyframes carrosel {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: 34%;
+    }
+  }
+`;
+
+export const Center = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 400px;
   position: relative;
 
   span:nth-child(1) {
@@ -79,10 +107,14 @@ export const Study = styled.div`
     font-size: 0.9rem;
   }
 
+  div {
+    width: 250px;
+  }
+
   div:nth-child(1) {
     position: absolute;
     top: -10%;
-    left: 27%;
+    left: -17%;
 
     text-align: right;
   }
@@ -90,7 +122,7 @@ export const Study = styled.div`
   div:nth-child(2) {
     position: absolute;
     top: 22.5%;
-    right: 28.8%;
+    right: -17%;
 
     text-align: left;
   }
@@ -98,7 +130,7 @@ export const Study = styled.div`
   div:nth-child(3) {
     position: absolute;
     top: 55%;
-    left: 33%;
+    left: -17%;
 
     text-align: right;
   }
@@ -106,7 +138,7 @@ export const Study = styled.div`
   div:nth-child(4) {
     position: absolute;
     top: 87%;
-    right: 32.5%;
+    right: -17%;
 
     text-align: left;
   }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  margin-top: 8rem;
+  margin-top: 4rem;
   margin-bottom: 5rem;
   padding-top: 4rem;
 

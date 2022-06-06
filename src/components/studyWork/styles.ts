@@ -1,8 +1,18 @@
 import styled from 'styled-components';
 
+interface ContentProps {
+  isWork: string;
+}
+
 export const Container = styled.div`
   margin-top: 8rem;
   padding-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-x: hidden;
 `;
 
 export const Header = styled.div`
@@ -13,18 +23,13 @@ export const Header = styled.div`
   margin-bottom: 3rem;
 `;
 
-interface ContentProps {
-  isWork: string;
-}
-
 export const Content = styled.div<ContentProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 
   gap: 3rem;
-
-  margin-bottom: 7rem;
 
   button[type='button'] {
     color: ${({ isWork }) =>
@@ -51,4 +56,11 @@ export const Content = styled.div<ContentProps>`
       filter: brightness(0.6);
     }
   }
+`;
+
+export const AnimaContent = styled.div`
+  height: 400px;
+  width: 430px;
+  overflow: hidden;
+  position: relative;
 `;
