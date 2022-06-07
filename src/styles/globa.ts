@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { ligth, dark } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -8,14 +9,33 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Nunito', sans-serif;
   }
 
-   body {
-    padding: 3rem 10rem;
-    scroll-behavior: smooth;
-   }
+  :root{
+    --background: ${({ theme }) =>
+      theme === 'dark' ? `${dark.background}` : `${ligth.background}`};
+    --title: ${({ theme }) =>
+      theme === 'dark' ? `${dark.title}` : `${ligth.title}`};
+    --letter: ${({ theme }) =>
+      theme === 'dark' ? `${dark.letter}` : `${ligth.letter}`};
+    --details: ${({ theme }) =>
+      theme === 'dark' ? `${dark.details}` : `${ligth.details}`};
+  }
 
    html {
     scroll-behavior: smooth;
 
+      body {
+        background-color: var(--background);
+        padding: 3rem 10rem;
+        scroll-behavior: smooth;
+      }
+   }
+
+   h1, h2, h3 {
+     color: var(--title);
+   }
+
+   p {
+     color: var(--letter);
    }
 
   a{
