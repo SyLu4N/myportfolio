@@ -17,8 +17,8 @@ export const ligth: Ligth = {
 };
 
 export const dark: Dark = {
-  background: 'black',
-  title: 'blue',
+  background: '#202124',
+  title: 'orange',
   letter: 'white',
-  details: 'orange',
+  details: 'blue',
 };

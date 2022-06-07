@@ -12,10 +12,10 @@ export function AboutMe(): JSX.Element {
       </div>
       <Content>
         <Image
-          src="/assets/Luan.jpg"
+          src="/assets/luanAboutMe.png"
           alt="Minha foto"
-          width="350"
-          height="350"
+          width="400"
+          height="400"
         />
 
         <em>

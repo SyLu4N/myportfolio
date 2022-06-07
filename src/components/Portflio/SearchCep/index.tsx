@@ -7,10 +7,10 @@ export function SearchCep(): JSX.Element {
     <Container>
       <ImageContainer>
         <Image
-          src="/assets/searchCep.png"
+          src="/assets/apSearchCep.png"
           alt="Projeto"
-          width="400"
-          height="220"
+          width="350"
+          height="280"
         />
         <div>
           <p>

@@ -1,4 +1,5 @@
 import { MdKeyboardArrowDown, MdOutlineBackupTable } from 'react-icons/md';
+import { Bol } from '../Bol';
 
 import { Container, Content } from './styles';
 
@@ -35,22 +36,40 @@ export function BackEnd(): JSX.Element {
       <Content className="hidden back">
         <div>
           <em>Git</em>
-          <img src="/assets/semiFullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>NodeJs</em>
-          <img src="/assets/semiFullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>NoSQL</em>
-          <img src="/assets/tresSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>MySQL</em>
-          <img src="/assets/tresSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
       </Content>
     </Container>

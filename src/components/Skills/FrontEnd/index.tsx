@@ -2,6 +2,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { BiCodeCurly } from 'react-icons/bi';
 
 import { Container, Content } from './styles';
+import { Bol } from '../Bol';
 
 export function FrontEnd(): JSX.Element {
   let contador = 0;
@@ -35,31 +36,64 @@ export function FrontEnd(): JSX.Element {
       <Content className="hidden front">
         <div>
           <em>HTML</em>
-          <img src="/assets/fullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>CSS</em>
-          <img src="/assets/fullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>Javascript</em>
-          <img src="/assets/fullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
+
         <div>
           <em>TypeScript</em>
-          <img src="/assets/semiFullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>ReactJs</em>
-          <img src="/assets/semiFullSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
 
         <div>
           <em>NextJs</em>
-          <img src="/assets/tresSkill.png" alt="" />
+          <div className="skill">
+            <Bol />
+            <Bol />
+            <Bol />
+          </div>
         </div>
       </Content>
     </Container>

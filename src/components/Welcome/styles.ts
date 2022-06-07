@@ -6,7 +6,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 1rem;
 
-  margin-top: 8rem;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
 
   div {
     display: flex;
@@ -19,6 +20,7 @@ export const Container = styled.div`
 
     h1 {
       width: 100%;
+      color: var(--letter);
 
       text-align: left;
 
@@ -39,13 +41,14 @@ export const Container = styled.div`
       font-size: 1.5rem;
 
       span {
-        color: blue;
+        color: var(--title);
       }
     }
 
     strong {
       font-weight: normal;
       font-size: 1rem;
+      color: var(--letter);
 
       padding: 0.7rem;
     }

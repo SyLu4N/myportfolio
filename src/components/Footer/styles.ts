@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin: 20rem -10rem -5rem -10rem;
-  padding-top: 4rem;
+  margin: 15rem -10rem -5rem -10rem;
+  padding-top: 3rem;
   position: relative;
 
   background: linear-gradient(to bottom, blue, #4e4ec7);
@@ -10,24 +10,34 @@ export const Container = styled.footer`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  justify-content: center;
 
-  position: absolute;
-  top: -15%;
-  left: 15%;
+  width: 100%;
 
-  width: 1000px;
-  background-color: #141c3a;
-  padding: 3rem;
-  border-radius: 1rem;
-  color: white;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
+    position: absolute;
+    top: -15%;
+
+    background-color: #141c3a;
+    padding: 3rem;
+    border-radius: 1rem;
+    color: white;
+  }
+
+  h1 {
+    color: var(--background);
+  }
 
   p {
     text-align: center;
     max-width: 300px;
     font-size: 1.2rem;
+    color: var(--background);
   }
 
   a {
@@ -35,7 +45,7 @@ export const Content = styled.div`
     border: 2px solid blue;
     border-radius: 2rem;
 
-    transition: background-color 300ms;
+    transition: all 300ms;
     padding: 1rem;
 
     font-size: 1.2rem;
@@ -43,6 +53,7 @@ export const Content = styled.div`
     color: white;
 
     &:hover {
+      color: white;
       background-color: blue;
     }
   }

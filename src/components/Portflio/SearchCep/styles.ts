@@ -13,20 +13,22 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  height: 220px;
+  height: 280px;
 
   aside {
     margin-top: 1rem;
     font-style: italic;
+    color: var(--letter);
   }
 `;
 
 export const ImageContainer = styled.article`
   position: relative;
-  height: 220px;
 
   border-radius: 1rem;
   overflow: hidden;
+
+  height: 280px;
   img {
     transition: all 300ms;
     border-radius: 1rem;

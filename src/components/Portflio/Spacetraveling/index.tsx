@@ -7,10 +7,10 @@ export function Spacetraveling(): JSX.Element {
     <Container>
       <ImageContainer>
         <Image
-          src="/assets/spacetraveling.png"
+          src="/assets/apSpacetraveling.png"
           alt="Projeto"
-          width="400"
-          height="220"
+          width="350"
+          height="280"
         />
         <div>
           <p>As novidades e lançamento da tecnologia, em um piscar de olhos</p>

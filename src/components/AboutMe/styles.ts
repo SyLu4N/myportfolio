@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 8rem;
-  padding-top: 4rem;
+  margin-top: 4rem;
+  padding-top: 6rem;
 
   display: flex;
   flex-direction: column;
@@ -11,6 +11,10 @@ export const Container = styled.div`
   div {
     text-align: center;
     margin-bottom: 2rem;
+
+    p {
+      color: var(--details);
+    }
   }
 `;
 
@@ -21,18 +25,17 @@ export const Content = styled.div`
 
   margin-top: 2rem;
 
-  img {
-    border-radius: 1rem;
-  }
-
   em {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    padding-top: 1.3rem;
+
     max-width: 500px;
-    height: 350px;
+    height: 400px;
     font-size: 1.3rem;
     text-align: justify;
+    color: var(--letter);
   }
 `;

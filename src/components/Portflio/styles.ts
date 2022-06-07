@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  margin-top: 4rem;
   margin-bottom: 5rem;
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   text-align: center;
+
+  p {
+    color: var(--details);
+  }
 `;
 
 export const Projects = styled.div`

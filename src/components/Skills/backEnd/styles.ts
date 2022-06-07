@@ -9,17 +9,22 @@ export const Container = styled.div`
     align-items: center;
 
     font-size: 1.5rem;
-    color: blue;
+    color: var(--title);
 
     position: relative;
     width: 330px;
 
     svg {
       margin-right: 0.5rem;
+      transition: color 300ms;
     }
 
     &:hover {
       cursor: pointer;
+
+      .svgBack {
+        color: var(--details);
+      }
     }
 
     div {
@@ -59,11 +64,18 @@ export const Content = styled.div`
 
   animation: 400ms skills linear;
 
+  .skill {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
   em {
     display: block;
 
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
+    color: var(--letter);
   }
 
   @keyframes skills {

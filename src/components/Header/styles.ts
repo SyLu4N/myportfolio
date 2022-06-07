@@ -1,12 +1,36 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+interface ContainerProps {
+  theme: string;
+}
+
+export const Container = styled.header<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
 
   margin-bottom: 3rem;
+  padding: 1.3rem 10rem;
+  background-color: var(--background);
+  z-index: 2;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 400ms;
+
+  p {
+    position: absolute;
+    bottom: 0;
+    left: -15%;
+    right: -15.5%;
+
+    height: 1px;
+    background-color: ${({ theme }) =>
+      theme === 'ligth' ? '#eee' : '#303134'};
+  }
 
   h1 {
     font-size: 1.5rem;
@@ -20,6 +44,11 @@ export const Container = styled.header`
     a {
       display: inline-flex;
       align-items: center;
+      transition: 300ms;
+
+      &:hover {
+        color: var(--details);
+      }
     }
 
     div {
@@ -32,6 +61,7 @@ export const Container = styled.header`
       transition: all 400ms;
 
       animation: 300ms girar linear;
+
       img {
         display: block;
         cursor: pointer;

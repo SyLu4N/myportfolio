@@ -5,14 +5,16 @@ import { Container, Content, Finish } from './styles';
 
 export function Footer(): JSX.Element {
   return (
-    <Container id="contato">
+    <Container>
       <Content>
-        <h1>Iniciar um projeto</h1>
-        <p>
-          Se interessou no meu trabalho? <br />
-          Vamos marca uma conversa.
-        </p>
-        <a href="mailto:luaan.carlos@hotmail.com">Vamos fazer acontecer</a>
+        <div>
+          <h1>Iniciar um projeto</h1>
+          <p>
+            Se interessou no meu trabalho? <br />
+            Vamos marca uma conversa.
+          </p>
+          <a href="mailto:luaan.carlos@hotmail.com">Vamos fazer acontecer</a>
+        </div>
       </Content>
       <Finish>
         <img src="/assets/Luan.png" alt="Minha foto" />

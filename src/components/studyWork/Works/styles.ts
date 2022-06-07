@@ -30,49 +30,49 @@ export const Center = styled.div`
   span:nth-child(1) {
     height: 12px;
     width: 12px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(2) {
     height: 80px;
     width: 2px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(3) {
     height: 12px;
     width: 12px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(4) {
     height: 80px;
     width: 2px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(5) {
     height: 12px;
     width: 12px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(6) {
     height: 80px;
     width: 2px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
   span:nth-child(7) {
     height: 12px;
     width: 12px;
-    background-color: blue;
+    background-color: var(--title);
     border-radius: 100%;
   }
 
@@ -88,6 +88,8 @@ export const Center = styled.div`
 `;
 
 export const Work = styled.div`
+  color: var(--letter);
+
   time {
     display: inline-flex;
     align-items: center;

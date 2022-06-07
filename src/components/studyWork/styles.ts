@@ -6,7 +6,7 @@ interface ContentProps {
 
 export const Container = styled.div`
   margin-top: 8rem;
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   display: flex;
   flex-direction: column;
@@ -21,6 +21,10 @@ export const Header = styled.div`
 
   align-items: center;
   margin-bottom: 3rem;
+
+  p {
+    color: var(--details);
+  }
 `;
 
 export const Content = styled.div<ContentProps>`
@@ -32,13 +36,13 @@ export const Content = styled.div<ContentProps>`
   gap: 3rem;
 
   button[type='button'] {
-    color: ${({ isWork }) =>
-      isWork === 'Work' ? 'blue' : 'rgba(0, 0, 245, 0.5)'};
+    color: var(--title);
+    ${({ isWork }) => isWork !== 'Work' && 'filter: opacity(40%)'};
   }
 
   button[type='submit'] {
-    color: ${({ isWork }) =>
-      isWork === 'Study' ? 'blue' : 'rgba(0, 0, 245, 0.5)'};
+    color: var(--title);
+    ${({ isWork }) => isWork === 'Work' && 'filter: opacity(40%)'};
   }
 
   h3 button {
@@ -46,14 +50,14 @@ export const Content = styled.div<ContentProps>`
     align-items: center;
     gap: 0.5rem;
 
-    transition: 300ms;
+    transition: all 300ms;
 
     font-size: 1.2rem;
     font-weight: bold;
     background-color: transparent;
 
     &:hover {
-      filter: brightness(0.6);
+      filter: brightness(0.8);
     }
   }
 `;

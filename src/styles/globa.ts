@@ -23,9 +23,10 @@ export const GlobalStyles = createGlobalStyle`
    html {
     scroll-behavior: smooth;
 
-      body {
+    body {
+        transition: all 400ms;
         background-color: var(--background);
-        padding: 3rem 10rem;
+        padding: 0 10rem;
         scroll-behavior: smooth;
       }
    }
@@ -39,6 +40,7 @@ export const GlobalStyles = createGlobalStyle`
    }
 
   a{
+    color: var(--title);
     text-decoration: none;
   }
 

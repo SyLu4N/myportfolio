@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 export function Welcome(): JSX.Element {
   return (
-    <Container>
+    <Container id="home">
       <div>
         <h1>Hellow World!</h1>
         <p>

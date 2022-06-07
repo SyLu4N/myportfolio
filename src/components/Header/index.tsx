@@ -18,7 +18,8 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
   }
 
   return (
-    <Container>
+    <Container theme={theme}>
+      <p />
       <h1>SyLu4N</h1>
       <nav>
         <a href="#home">Home</a>

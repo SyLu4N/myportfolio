@@ -22,12 +22,13 @@ export const Content = styled.div`
   aside {
     margin-top: 1rem;
     font-style: italic;
+    color: var(--letter);
   }
 `;
 
 export const ImageContainer = styled.article`
   position: relative;
-  height: 220px;
+  height: 280px;
 
   border-radius: 1rem;
   overflow: hidden;

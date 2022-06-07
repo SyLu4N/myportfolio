@@ -5,7 +5,7 @@ export const Container = styled.main`
 
   h1 {
     font-size: 2.5rem;
-    color: blue;
+    color: var(--title);
   }
 
   a {
@@ -14,13 +14,19 @@ export const Container = styled.main`
     justify-content: center;
     gap: 0.5rem;
 
-    border-radius: 0.8rem;
+    border-radius: 0.6rem;
     background-color: blue;
     color: white;
     font-size: 1rem;
+    font-style: normal;
 
-    width: 200px;
+    width: 180px;
     height: 40px;
     margin-top: 1rem;
+    transition: 300ms;
+
+    &:hover {
+      background-color: var(--details);
+    }
   }
 `;
