@@ -31,9 +31,19 @@ export const Container = styled.header`
 
       transition: all 400ms;
 
+      animation: 300ms girar linear;
       img {
         display: block;
         cursor: pointer;
+      }
+    }
+
+    @keyframes girar {
+      0% {
+        transform: rotateX(40deg);
+      }
+      100% {
+        transform: rotate3d(0deg);
       }
     }
   }
