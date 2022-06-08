@@ -53,4 +53,10 @@ export const GlobalStyles = createGlobalStyle`
   .hidden {
     display: none;
   }
+
+  .animationHeader {
+    position: fixed;
+    animation: 400ms headerCima linear;
+    padding: 1.3rem 10rem;
+  }
 `;

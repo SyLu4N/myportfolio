@@ -23,6 +23,7 @@ export const Content = styled.div`
     margin-top: 1rem;
     font-style: italic;
     color: var(--letter);
+    font-size: 1.1rem;
   }
 `;
 
@@ -72,6 +73,8 @@ export const ImageContainer = styled.article`
       background-color: transparent;
       border: 2px solid var(--title);
       transition: background-color 300ms;
+      color: white;
+      font-weight: normal;
 
       svg {
         transition: all 300ms;

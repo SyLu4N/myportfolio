@@ -10,16 +10,15 @@ export const Container = styled.header<ContainerProps>`
   align-items: center;
   font-size: 1.2rem;
 
-  margin-bottom: 3rem;
-  padding: 1.3rem 10rem;
+  padding: 1.3rem 0rem;
   background-color: var(--background);
   z-index: 2;
 
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
-  transition: background-color 400ms;
+  transition: all 400ms;
 
   p {
     position: absolute;
@@ -76,6 +75,16 @@ export const Container = styled.header<ContainerProps>`
       100% {
         transform: rotate3d(0deg);
       }
+    }
+  }
+
+  @keyframes headerCima {
+    0% {
+      margin-top: -20%;
+    }
+
+    100% {
+      margin-top: 0%;
     }
   }
 `;
