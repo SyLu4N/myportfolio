@@ -64,14 +64,58 @@ export const Content = styled.div`
 
   animation: 400ms skills linear;
 
+  div {
+    max-width: 100px;
+    cursor: default;
+
+    &:hover em {
+      :nth-child(1) {
+        animation: 300ms anima;
+        animation-delay: 0s;
+      }
+
+      :nth-child(2) {
+        animation: 300ms anima;
+        animation-delay: 0.1s;
+      }
+
+      :nth-child(3) {
+        animation: 300ms anima;
+        animation-delay: 0.2s;
+      }
+
+      :nth-child(4) {
+        animation: 300ms anima;
+        animation-delay: 0.3s;
+      }
+
+      :nth-child(5) {
+        animation: 300ms anima;
+        animation-delay: 0.4s;
+      }
+    }
+
+    @keyframes anima {
+      0% {
+        padding-top: 0.1rem;
+      }
+      50% {
+        padding-top: 0.5rem;
+      }
+      100% {
+        margin-top: 0rem;
+      }
+    }
+  }
+
   .skill {
     display: flex;
     gap: 0.3rem;
     margin-bottom: 1rem;
   }
 
-  em {
-    display: block;
+  span {
+    display: inline-block;
 
     font-size: 1.1rem;
     margin-bottom: 0.3rem;

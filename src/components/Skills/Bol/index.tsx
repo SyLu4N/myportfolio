@@ -1,5 +1,9 @@
 import { Container } from './styles';
 
 export function Bol(): JSX.Element {
-  return <Container />;
+  return (
+    <Container>
+      <div />
+    </Container>
+  );
 }

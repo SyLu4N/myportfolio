@@ -5,7 +5,7 @@ export const Container = styled.footer`
   padding-top: 3rem;
   position: relative;
 
-  background: linear-gradient(to bottom, blue, #4e4ec7);
+  background: linear-gradient(to bottom, var(--title), #4e4ec7);
 `;
 
 export const Content = styled.div`
@@ -30,23 +30,27 @@ export const Content = styled.div`
   }
 
   h1 {
-    color: var(--background);
+    color: white;
   }
 
   p {
     text-align: center;
     max-width: 300px;
     font-size: 1.2rem;
-    color: var(--background);
+    color: white;
   }
 
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: transparent;
-    border: 2px solid blue;
-    border-radius: 2rem;
+    border: 2px solid var(--title);
+    border-radius: 1rem;
 
     transition: all 300ms;
-    padding: 1rem;
+    padding: 0.8rem;
 
     font-size: 1.2rem;
     font-weight: bold;
@@ -54,7 +58,7 @@ export const Content = styled.div`
 
     &:hover {
       color: white;
-      background-color: blue;
+      background-color: var(--title);
     }
   }
 `;

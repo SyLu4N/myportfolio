@@ -31,7 +31,7 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
         <a href="#contato">Contato</a>
         <div>
           <Image
-            src={theme === 'ligth' ? '/assets/moon.png' : '/assets/sun.png'}
+            src={theme === 'dark' ? '/assets/moon.png' : '/assets/sun.png'}
             width={35}
             height={35}
             alt="Imagem de uma lua"

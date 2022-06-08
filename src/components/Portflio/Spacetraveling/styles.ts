@@ -70,7 +70,7 @@ export const ImageContainer = styled.article`
 
     a {
       background-color: transparent;
-      border: 2px solid blue;
+      border: 2px solid var(--title);
       transition: background-color 300ms;
 
       svg {
@@ -78,7 +78,7 @@ export const ImageContainer = styled.article`
       }
 
       &:hover {
-        background-color: blue;
+        background-color: var(--title);
 
         svg {
           margin-right: -0.5rem;

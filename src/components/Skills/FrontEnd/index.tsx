@@ -35,7 +35,7 @@ export function FrontEnd(): JSX.Element {
 
       <Content className="hidden front">
         <div>
-          <em>HTML</em>
+          <span>HTML</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -46,7 +46,7 @@ export function FrontEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>CSS</em>
+          <span>CSS</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -57,7 +57,7 @@ export function FrontEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>Javascript</em>
+          <span>Javascript</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -68,7 +68,7 @@ export function FrontEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>TypeScript</em>
+          <span>TypeScript</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -78,7 +78,7 @@ export function FrontEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>ReactJs</em>
+          <span>ReactJs</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -88,7 +88,7 @@ export function FrontEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>NextJs</em>
+          <span>NextJs</span>
           <div className="skill">
             <Bol />
             <Bol />

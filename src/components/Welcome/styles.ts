@@ -20,7 +20,7 @@ export const Container = styled.div`
 
     h1 {
       width: 100%;
-      color: var(--letter);
+      color: var(--title);
 
       text-align: left;
 

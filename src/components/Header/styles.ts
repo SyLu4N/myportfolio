@@ -45,6 +45,7 @@ export const Container = styled.header<ContainerProps>`
       display: inline-flex;
       align-items: center;
       transition: 300ms;
+      font-size: 1rem;
 
       &:hover {
         color: var(--details);

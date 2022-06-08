@@ -15,10 +15,11 @@ export const Container = styled.main`
     gap: 0.5rem;
 
     border-radius: 0.6rem;
-    background-color: blue;
-    color: white;
+    background-color: var(--title);
+    color: var(--background);
     font-size: 1rem;
     font-style: normal;
+    font-weight: bold;
 
     width: 180px;
     height: 40px;

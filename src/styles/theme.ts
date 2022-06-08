@@ -11,14 +11,14 @@ export type Themes = Dark | Ligth;
 
 export const ligth: Ligth = {
   background: 'white',
-  title: 'blue',
-  letter: 'black',
-  details: 'orange',
+  title: '#0A2463',
+  letter: '#1E1B18',
+  details: '#2A72DE',
 };
 
 export const dark: Dark = {
-  background: '#202124',
-  title: 'orange',
-  letter: 'white',
-  details: 'blue',
+  background: '#151516',
+  title: '#9CA9DE',
+  letter: '#f8f8f2',
+  details: '#f8f8f2',
 };
