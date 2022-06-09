@@ -54,11 +54,44 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
 
+  #grid {
+    display: flex;
+
+    @media (max-width: 750px) {
+      display: grid;
+      background-color: var(--background);
+      padding-bottom: 1rem;
+      padding-left: 0.5rem;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+      border-radius: 0  0 1rem 1rem;
+      animation: 300ms aparecerMenuMobile linear;
+
+      span svg{
+        display: flex;
+      }
+
+      @keyframes aparecerMenuMobile {
+        0% {
+          bottom: 200%;
+          margin-top: -30%;
+        }
+        100% {
+          bottom: -240%;
+          margin-top: 0%;
+       }
+      }
+    }
+  }
+
   .animationHeaderUp {
     position: fixed;
     animation: 400ms headerCima linear;
     padding: 0 10rem;
     margin-top: 0px;
+
+    @media (max-width: 1000px) {
+      padding: 0 1rem;
+    }
   }
 
   .animationHeaderDow {
@@ -66,5 +99,9 @@ export const GlobalStyles = createGlobalStyle`
     animation: 1s headerBaixo linear;
     padding: 0 10rem;
     margin-top: -75px;
+
+    @media (max-width: 1000px) {
+      padding: 0 1rem;
+    }
   }
 `;

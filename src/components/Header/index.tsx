@@ -1,5 +1,8 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { RiMenu4Line } from 'react-icons/ri';
+import { IoIosClose } from 'react-icons/io';
+
 import { Container, Padding } from './styles';
 
 interface HeaderProps {
@@ -8,6 +11,8 @@ interface HeaderProps {
 }
 
 export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
+  const [isMenuMobileOpen, setIsMenuMobileOpen] = useState<boolean>(false);
+
   function handleTheme(): void {
     if (theme === 'ligth') {
       setTheme('dark');
@@ -21,8 +26,12 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
   useEffect(() => {
     let ultimaPosicao = 0;
     const header = document.querySelector('header') as HTMLElement;
+    const nav = document.querySelector('.nav') as HTMLElement;
 
     function positionScroll(): void {
+      nav.removeAttribute('id');
+      setIsMenuMobileOpen(false);
+
       if (window.scrollY > 200) {
         const atualPosicao = window.scrollY;
         header.classList.remove('animationHeaderDow');
@@ -43,6 +52,18 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
     window.addEventListener('scroll', positionScroll);
   }, []);
 
+  function handleNav(): void {
+    const nav = document.querySelector('.nav') as HTMLElement;
+
+    if (!isMenuMobileOpen) {
+      nav.setAttribute('id', 'grid');
+      setIsMenuMobileOpen(true);
+    } else {
+      nav.removeAttribute('id');
+      setIsMenuMobileOpen(false);
+    }
+  }
+
   return (
     <>
       <Padding />
@@ -50,13 +71,21 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
         <p />
         <h1>SyLu4N</h1>
         <nav>
-          <a href="#home">Home</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#skills">Skills</a>
-          <a href="#estudo">Experiência/Estudos</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contato">Contato</a>
-          <div>
+          <em onClick={handleNav}>
+            <RiMenu4Line size={35} />
+          </em>
+          <div className="nav">
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#skills">Skills</a>
+            <a href="#estudo">Experiência/Estudos</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contato">Contato</a>
+            <span>
+              <IoIosClose size={30} onClick={handleNav} />
+            </span>
+          </div>
+          <div className="theme">
             <Image
               src={theme === 'ligth' ? '/assets/moon.png' : '/assets/sun.png'}
               width={35}
