@@ -7,7 +7,7 @@ export function Welcome(): JSX.Element {
   return (
     <Container id="home">
       <div>
-        <h1>Hellow World!</h1>
+        <h1>Hello World!</h1>
         <p>
           I&apos;m <span>Luan Simões</span>
         </p>

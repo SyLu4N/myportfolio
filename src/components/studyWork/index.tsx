@@ -30,7 +30,7 @@ export function StudyWork(): JSX.Element {
       </Content>
 
       <AnimaContent>
-        <Works isWork={isWork} /> <Studys isWork={isWork} />
+        <Studys isWork={isWork} /> <Works isWork={isWork} />
       </AnimaContent>
     </Container>
   );

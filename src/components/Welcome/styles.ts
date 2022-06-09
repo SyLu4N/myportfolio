@@ -6,8 +6,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 1rem;
 
-  padding-top: 10rem;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
 
   div {
     display: flex;

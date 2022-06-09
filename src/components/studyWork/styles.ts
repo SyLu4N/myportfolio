@@ -42,7 +42,7 @@ export const Content = styled.div<ContentProps>`
 
   button[type='submit'] {
     color: var(--title);
-    ${({ isWork }) => isWork === 'Work' && 'filter: opacity(40%)'};
+    ${({ isWork }) => isWork !== 'Study' && 'filter: opacity(40%)'};
   }
 
   h3 button {

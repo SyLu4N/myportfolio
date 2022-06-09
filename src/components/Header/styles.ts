@@ -4,21 +4,26 @@ interface ContainerProps {
   theme: string;
 }
 
+export const Padding = styled.div`
+  height: 75px;
+`;
+
 export const Container = styled.header<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
 
-  padding: 1.3rem 0rem;
+  height: 75px;
+  padding: 0 10rem;
   background-color: var(--background);
   z-index: 2;
+  transition: background-color 600ms;
 
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transition: all 400ms;
 
   p {
     position: absolute;
@@ -85,6 +90,18 @@ export const Container = styled.header<ContainerProps>`
 
     100% {
       margin-top: 0%;
+    }
+  }
+
+  @keyframes headerBaixo {
+    0% {
+      margin-top: 0%;
+      position: fixed;
+    }
+
+    100% {
+      margin-top: -20%;
+      position: fixed;
     }
   }
 `;

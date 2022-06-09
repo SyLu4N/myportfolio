@@ -11,7 +11,7 @@ export function Footer(): JSX.Element {
           <h1>Iniciar um projeto</h1>
           <p>
             Se interessou no meu trabalho? <br />
-            Vamos marca uma conversa.
+            Vamos marcar uma conversa.
           </p>
           <a href="mailto:luaan.carlos@hotmail.com">Vamos fazer acontecer</a>
         </div>

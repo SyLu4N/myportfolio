@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { Container } from './styles';
+import { Container, Padding } from './styles';
 
 interface HeaderProps {
   theme: string;
@@ -23,18 +23,20 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
     const header = document.querySelector('header') as HTMLElement;
 
     function positionScroll(): void {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 200) {
         const atualPosicao = window.scrollY;
+        header.classList.remove('animationHeaderDow');
+        header.classList.remove('animationHeaderUp');
 
-        if (atualPosicao > ultimaPosicao) {
-          header.classList.remove('animationHeader');
+        if (atualPosicao < ultimaPosicao) {
+          header.classList.add('animationHeaderUp');
         } else {
-          header.classList.add('animationHeader');
+          header.classList.add('animationHeaderDow');
         }
 
         ultimaPosicao = atualPosicao;
       } else {
-        header.classList.remove('animationHeader');
+        header.classList.remove('animationHeaderShowUp');
       }
     }
 
@@ -42,27 +44,30 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
   }, []);
 
   return (
-    <Container theme={theme}>
-      <p />
-      <h1>SyLu4N</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#skills">Skills</a>
-        <a href="#estudo">Experiência/Estudos</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contato">Contato</a>
-        <div>
-          <Image
-            src={theme === 'dark' ? '/assets/moon.png' : '/assets/sun.png'}
-            width={35}
-            height={35}
-            alt="Imagem de uma lua"
-            // eslint-disable-next-line react/jsx-no-bind
-            onClick={handleTheme}
-          />
-        </div>
-      </nav>
-    </Container>
+    <>
+      <Padding />
+      <Container theme={theme}>
+        <p />
+        <h1>SyLu4N</h1>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#skills">Skills</a>
+          <a href="#estudo">Experiência/Estudos</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contato">Contato</a>
+          <div>
+            <Image
+              src={theme === 'ligth' ? '/assets/moon.png' : '/assets/sun.png'}
+              width={35}
+              height={35}
+              alt={theme === 'ligth' ? 'Imagem de uma Lua' : 'Imagem de um Sol'}
+              // eslint-disable-next-line react/jsx-no-bind
+              onClick={handleTheme}
+            />
+          </div>
+        </nav>
+      </Container>
+    </>
   );
 }

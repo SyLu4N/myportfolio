@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
 
     body {
-        transition: all 400ms;
+        transition: all 600ms;
         background-color: var(--background);
         padding: 0 10rem;
         scroll-behavior: smooth;
@@ -54,9 +54,17 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
 
-  .animationHeader {
+  .animationHeaderUp {
     position: fixed;
     animation: 400ms headerCima linear;
-    padding: 1.3rem 10rem;
+    padding: 0 10rem;
+    margin-top: 0px;
+  }
+
+  .animationHeaderDow {
+    position: relative;
+    animation: 1s headerBaixo linear;
+    padding: 0 10rem;
+    margin-top: -75px;
   }
 `;

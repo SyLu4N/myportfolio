@@ -13,7 +13,7 @@ export const Container = styled.div<ContainerProps>`
 
   transition: all 400ms;
   position: absolute;
-  left: ${({ isWork }) => (isWork === 'Work' ? '100%' : '3%')};
+  right: ${({ isWork }) => (isWork === 'Work' ? '3%' : '100%')};
   top: 0;
   bottom: 0;
 `;

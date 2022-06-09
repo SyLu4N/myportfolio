@@ -19,6 +19,6 @@ export const ligth: Ligth = {
 export const dark: Dark = {
   background: '#151516',
   title: '#9CA9DE',
-  letter: '#f8f8f2',
-  details: '#f8f8f2',
+  letter: '#EFF2F1',
+  details: '#EDF5FC',
 };
