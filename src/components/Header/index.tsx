@@ -78,7 +78,7 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
             <a href="#home">Home</a>
             <a href="#sobre">Sobre</a>
             <a href="#skills">Skills</a>
-            <a href="#estudo">Experiência/Estudos</a>
+            <a href="#estudo">Trabalho/Estudos</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contato">Contato</a>
             <span>

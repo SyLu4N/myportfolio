@@ -62,7 +62,7 @@ export const GlobalStyles = createGlobalStyle`
       background-color: var(--background);
       padding-bottom: 1rem;
       padding-left: 0.5rem;
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
       border-radius: 0  0 1rem 1rem;
       animation: 300ms aparecerMenuMobile linear;
 
