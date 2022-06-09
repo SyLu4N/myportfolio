@@ -49,6 +49,7 @@ export function Footer(): JSX.Element {
           </a>
         </span>
       </Finish>
+      <strong>© Luan Simões. All right reserved</strong>
     </Container>
   );
 }

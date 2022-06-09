@@ -6,7 +6,8 @@ interface ContentProps {
 
 export const Container = styled.div`
   margin-top: 8rem;
-  padding-top: 6rem;
+  padding-top: 4rem;
+  margin-bottom: 6rem;
 
   display: flex;
   flex-direction: column;

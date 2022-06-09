@@ -6,8 +6,10 @@ export const Container = styled.div`
   align-items: center;
   gap: 1rem;
 
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-bottom: 7rem;
+
+  position: relative;
 
   div {
     display: flex;
@@ -52,10 +54,5 @@ export const Container = styled.div`
 
       padding: 0.7rem;
     }
-  }
-
-  img {
-    border: 1px solid black;
-    padding: 1rem;
   }
 `;

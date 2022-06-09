@@ -35,7 +35,7 @@ export function BackEnd(): JSX.Element {
 
       <Content className="hidden back">
         <div>
-          <em>Git</em>
+          <span>Git</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -45,7 +45,7 @@ export function BackEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>NodeJs</em>
+          <span>NodeJs</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -55,7 +55,7 @@ export function BackEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>NoSQL</em>
+          <span>NoSQL</span>
           <div className="skill">
             <Bol />
             <Bol />
@@ -64,7 +64,7 @@ export function BackEnd(): JSX.Element {
         </div>
 
         <div>
-          <em>MySQL</em>
+          <span>MySQL</span>
           <div className="skill">
             <Bol />
             <Bol />

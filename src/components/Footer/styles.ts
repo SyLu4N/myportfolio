@@ -3,9 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   margin: 15rem -10rem -5rem -10rem;
   padding-top: 3rem;
+  text-align: center;
   position: relative;
 
   background: linear-gradient(to bottom, var(--title), #4e4ec7);
+
+  strong {
+    display: block;
+    color: white;
+    font-weight: normal;
+    padding-bottom: 2rem;
+    margin-top: -2rem;
+  }
 `;
 
 export const Content = styled.div`
