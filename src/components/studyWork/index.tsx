@@ -4,8 +4,8 @@ import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 import { Studys } from './Studys';
 import { Works } from './Works';
 import { Container, Header, Content, AnimaContent } from './styles';
-
 type StudyOrWork = 'Study' | 'Work';
+
 
 export function StudyWork(): JSX.Element {
   const [isWork, setIsWork] = useState<StudyOrWork>('Study');
