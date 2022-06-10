@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { BiSend } from 'react-icons/bi';
 
 import { Container } from './styles';

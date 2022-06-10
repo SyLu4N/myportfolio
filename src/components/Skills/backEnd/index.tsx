@@ -6,7 +6,7 @@ import { Container, Content } from './styles';
 export function BackEnd(): JSX.Element {
   let contador = 0;
 
-  function handleBack(e: unknown): void {
+  function handleBack(): void {
     const front = document.querySelector('.back') as HTMLElement;
     const svg = document.querySelector('.svgBack') as HTMLElement;
 
