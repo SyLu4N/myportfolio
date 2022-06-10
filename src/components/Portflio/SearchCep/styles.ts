@@ -3,6 +3,17 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: flex;
   gap: 3rem;
+
+  div {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -30,6 +41,7 @@ export const ImageContainer = styled.article`
   overflow: hidden;
 
   height: 280px;
+
   img {
     transition: all 300ms;
     border-radius: 1rem;
@@ -96,5 +108,9 @@ export const ImageContainer = styled.article`
         opacity: 1;
       }
     }
+  }
+
+  @media (max-width: 394px) {
+    max-height: 19.5rem;
   }
 `;

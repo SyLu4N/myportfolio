@@ -53,7 +53,7 @@ export const Content = styled.div`
     gap: 0rem;
 
     em {
-      padding-top: 0.4rem;
+      padding-top: 1.2rem;
       justify-content: start;
     }
   }

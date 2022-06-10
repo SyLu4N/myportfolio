@@ -7,6 +7,17 @@ export const Container = styled.section`
   img {
     border-radius: 1rem;
   }
+
+  div {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -99,5 +110,9 @@ export const ImageContainer = styled.article`
         opacity: 1;
       }
     }
+  }
+
+  @media (max-width: 394px) {
+    height: 40vh;
   }
 `;

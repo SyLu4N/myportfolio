@@ -15,6 +15,10 @@ export const Container = styled.footer`
     padding-bottom: 2rem;
     margin-top: -2rem;
   }
+
+  @media (max-width: 1000px) {
+    margin: 15rem -1rem 0 -1rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -30,7 +34,7 @@ export const Content = styled.div`
     gap: 4rem;
 
     position: absolute;
-    top: -15%;
+    top: -14%;
 
     background-color: #141c3a;
     padding: 3rem;
@@ -68,6 +72,18 @@ export const Content = styled.div`
     &:hover {
       color: white;
       background-color: var(--title);
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding-top: 3rem;
+
+    div {
+      flex-direction: column;
+      top: -22%;
+      width: 80vw;
+      padding: 2rem;
+      gap: 2rem;
     }
   }
 `;
