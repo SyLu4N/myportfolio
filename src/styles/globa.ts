@@ -28,7 +28,12 @@ export const GlobalStyles = createGlobalStyle`
         background-color: var(--background);
         padding: 0 10rem;
         scroll-behavior: smooth;
+
+        @media (max-width: 1000px) {
+          padding: 0 1rem;
+        }
       }
+
    }
 
    h1, h2, h3 {
@@ -60,8 +65,9 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: 750px) {
       display: grid;
       background-color: var(--background);
-      padding-bottom: 1rem;
+      padding-bottom: 2rem;
       padding-left: 0.5rem;
+      padding-top: 1rem;
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
       border-radius: 0  0 1rem 1rem;
       animation: 300ms aparecerMenuMobile linear;
@@ -73,13 +79,14 @@ export const GlobalStyles = createGlobalStyle`
       @keyframes aparecerMenuMobile {
         0% {
           bottom: 200%;
-          margin-top: -30%;
+          margin-top: -40%;
         }
         100% {
-          bottom: -240%;
+          bottom: -300%;
           margin-top: 0%;
        }
       }
+
     }
   }
 
@@ -102,6 +109,18 @@ export const GlobalStyles = createGlobalStyle`
 
     @media (max-width: 1000px) {
       padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    html{
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html{
+      font-size: 87.5%;
     }
   }
 `;

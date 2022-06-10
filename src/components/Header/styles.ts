@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { HiOutlineHome } from 'react-icons/hi';
 
 interface ContainerProps {
   theme: string;
@@ -7,6 +8,8 @@ interface ContainerProps {
 export const Padding = styled.div`
   height: 75px;
 `;
+
+export const SocialIcon = styled(HiOutlineHome)``;
 
 export const Container = styled.header<ContainerProps>`
   display: flex;
@@ -65,7 +68,7 @@ export const Container = styled.header<ContainerProps>`
 
       span {
         position: absolute;
-        top: -1rem;
+        top: -1.4rem;
         right: 0;
 
         svg {
@@ -179,12 +182,13 @@ export const Container = styled.header<ContainerProps>`
         left: -98px;
         right: -15px;
         top: 0;
-        bottom: -240%;
+        gap: 0;
+        bottom: -300%;
         z-index: 2;
 
         a {
-          display: inline-block;
-          text-align: center;
+          display: inline-flex;
+          flex-direction: column;
         }
       }
     }

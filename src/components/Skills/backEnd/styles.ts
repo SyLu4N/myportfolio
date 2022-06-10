@@ -57,6 +57,16 @@ export const Container = styled.div`
       transform: rotate(180deg);
     }
   }
+
+  @media (max-width: 500px) {
+    padding: 0;
+
+    h1 {
+      border: 1px solid white;
+      width: 100%;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Content = styled.div`

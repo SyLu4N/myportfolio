@@ -19,14 +19,6 @@ export const Container = styled.div`
       transition: color 300ms;
     }
 
-    &:hover {
-      cursor: pointer;
-
-      .svg {
-        color: var(--details);
-      }
-    }
-
     div {
       display: flex;
       align-items: center;
@@ -34,6 +26,14 @@ export const Container = styled.div`
 
       position: absolute;
       right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .svg {
+        color: var(--details);
+      }
     }
   }
 
@@ -55,6 +55,16 @@ export const Container = styled.div`
   @keyframes close {
     0% {
       transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 0;
+
+    h1 {
+      border: 1px solid white;
+      width: 100%;
+      justify-content: center;
     }
   }
 `;

@@ -19,7 +19,7 @@ export function Welcome(): JSX.Element {
           Mandar Oi <BiSend />
         </a>
       </div>
-      <Image src="/assets/Luan.png" alt="Minha foto" width="300" height="300" />
+      <img src="/assets/Luan.png" alt="Minha foto" />
     </Container>
   );
 }

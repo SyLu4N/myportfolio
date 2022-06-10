@@ -9,4 +9,8 @@ export const Header = styled.div`
   p {
     color: var(--details);
   }
+
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+  }
 `;

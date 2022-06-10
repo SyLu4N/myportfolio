@@ -11,6 +11,10 @@ export const Container = styled.div`
 
   position: relative;
 
+  img {
+    width: 300px;
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -53,6 +57,37 @@ export const Container = styled.div`
       color: var(--letter);
 
       padding: 0.7rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    img {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    padding-bottom: 20rem;
+    margin-top: -5rem;
+    padding-top: 14rem;
+
+    div {
+      text-align: center;
+      margin-top: 8rem;
+
+      h1 {
+        text-align: center;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 227px;
+      margin-top: -38rem;
     }
   }
 `;

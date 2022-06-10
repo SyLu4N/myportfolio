@@ -14,6 +14,10 @@ export const Container = styled.div`
   align-items: center;
 
   overflow-x: hidden;
+
+  @media (max-width: 400px) {
+    font-size: 90%;
+  }
 `;
 
 export const Header = styled.div`

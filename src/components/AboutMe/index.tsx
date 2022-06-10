@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FiDownloadCloud } from 'react-icons/fi';
 
 import { Container, Content } from './styles';
@@ -11,12 +10,7 @@ export function AboutMe(): JSX.Element {
         <p>Introdução</p>
       </div>
       <Content>
-        <Image
-          src="/assets/luanAboutMe.png"
-          alt="Minha foto"
-          width="400"
-          height="400"
-        />
+        <img src="/assets/luanAboutMe.png" alt="Minha foto" />
 
         <em>
           Sempre fui muito apaixonado por tecnologia, seja pela forma de como
