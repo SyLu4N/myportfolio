@@ -22,8 +22,8 @@ export const GlobalStyles = createGlobalStyle`
 
    html {
     scroll-behavior: smooth;
-
     overflow-x: hidden;
+    
     body {
         transition: all 600ms;
         background-color: var(--background);
