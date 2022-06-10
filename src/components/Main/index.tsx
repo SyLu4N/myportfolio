@@ -4,8 +4,8 @@ import { Portfolio } from '../Portflio';
 import { Skills } from '../Skills';
 import { StudyWork } from '../studyWork';
 
-
 import { Container } from './styles';
+
 export function Main(): JSX.Element {
   return (
     <Container>

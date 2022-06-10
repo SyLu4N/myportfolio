@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.footer`
   margin: 15rem -10rem -5rem -10rem;
@@ -17,7 +17,7 @@ export const Container = styled.footer`
   }
 
   @media (max-width: 1000px) {
-    margin: 15rem -1rem 0 -1rem;
+    margin: 8rem -1rem 0 -1rem;
   }
 `;
 
