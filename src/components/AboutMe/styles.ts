@@ -45,21 +45,43 @@ export const Content = styled.div`
     font-size: 1.3rem;
     text-align: justify;
     color: var(--letter);
+
+    a {
+      padding: 1rem;
+    }
   }
 
   @media (max-width: 1200px) {
-    flex-direction: column;
     padding-top: 0rem;
-    gap: 0rem;
 
     em {
       padding-top: 1.2rem;
       justify-content: start;
+      max-width: 800px;
+      margin-right: -5rem;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    em {
+      padding-top: 1rem;
+      margin-right: 0;
     }
   }
 
   @media (max-width: 650px) {
+    flex-direction: column;
     margin-top: 0rem;
+    padding: 2rem;
+    gap: 1rem;
+
+    em {
+      padding-top: 1rem;
+    }
 
     img {
       width: 100%;

@@ -10,7 +10,7 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 645px) {
     flex-direction: column;
     gap: 1rem;
   }
@@ -20,7 +20,6 @@ export const Content = styled.div`
   max-width: 350px;
 
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
 
@@ -31,6 +30,30 @@ export const Content = styled.div`
     font-style: italic;
     color: var(--letter);
     font-size: 1.1rem;
+
+    a {
+      display: none;
+    }
+
+    @media (max-width: 820px) {
+      a {
+        display: flex;
+        width: 100%;
+
+        svg {
+          transition: all 300ms;
+        }
+
+        &:hover {
+          background-color: var(--details);
+
+          svg {
+            margin-right: -0.5rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
   }
 `;
 

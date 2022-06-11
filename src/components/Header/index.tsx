@@ -43,7 +43,9 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
     <>
       <Padding />
       <Container theme={theme}>
-        <p />
+        <div>
+          <p />
+        </div>
         <h1>SyLu4N</h1>
         <Nav
           theme={theme}

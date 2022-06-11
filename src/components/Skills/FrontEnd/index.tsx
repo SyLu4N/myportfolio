@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { BiCodeCurly } from 'react-icons/bi';
 
@@ -5,22 +6,22 @@ import { Container, Content } from './styles';
 import { Bol } from '../Bol';
 
 export function FrontEnd(): JSX.Element {
-  let contador = 0;
+  const [skillsOpen, setSkillsOpen] = useState<boolean>(true);
 
   function handleFront(e: any): void {
     const front = document.querySelector('.front') as HTMLElement;
     const svg = document.querySelector('.svg') as HTMLElement;
 
-    if (contador === 0) {
+    if (!skillsOpen) {
       svg.setAttribute('class', 'opem svg');
       svg.setAttribute('title', 'Abrir');
       front.classList.remove('hidden');
-      contador++;
+      setSkillsOpen(true);
     } else {
       svg.setAttribute('class', 'close svg');
       svg.setAttribute('title', 'Fechar');
       front.classList.add('hidden');
-      contador--;
+      setSkillsOpen(false);
     }
   }
 
@@ -33,7 +34,7 @@ export function FrontEnd(): JSX.Element {
         </div>
       </h2>
 
-      <Content className="hidden front">
+      <Content className="front">
         <div>
           <span>HTML</span>
           <div className="skill">

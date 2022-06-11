@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.footer`
   margin: 15rem -10rem -5rem -10rem;
@@ -38,6 +38,7 @@ export const Content = styled.div`
 
     background-color: #141c3a;
     padding: 3rem;
+    margin: 0 1rem;
     border-radius: 1rem;
     color: white;
   }
@@ -81,7 +82,7 @@ export const Content = styled.div`
     div {
       flex-direction: column;
       top: -22%;
-      width: 80vw;
+      width: 92vw;
       padding: 2rem;
       gap: 2rem;
     }

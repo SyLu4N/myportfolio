@@ -34,6 +34,13 @@ export function SearchCep(): JSX.Element {
             para simular um back-end, é possível localizar endereços pelo CEP, e
             salvamos, a principio estava usando JSON Server para amarzenar os
             dados, mais com a necessidade do deploy, migrei para o localStorage.
+            <a
+              href="https://newsearchcep.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar agora! <HiArrowNarrowRight size={25} />{' '}
+            </a>
           </aside>
         </Content>
       </div>

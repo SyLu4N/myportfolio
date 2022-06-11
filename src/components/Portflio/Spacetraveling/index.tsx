@@ -32,6 +32,13 @@ export function Spacetraveling(): JSX.Element {
             o NextJs para gerenciar rotas e o meu Head, implementei o sistema de
             login com GitHub e passei os dados para os meus componentes usando o
             SessionProvider do NextJs
+            <a
+              href="https://newspacetraveling.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar agora <HiArrowNarrowRight size={25} />
+            </a>
           </aside>
         </Content>
       </div>
