@@ -8,7 +8,7 @@ import { Bol } from '../Bol';
 export function FrontEnd(): JSX.Element {
   const [skillsOpen, setSkillsOpen] = useState<boolean>(true);
 
-  function handleFront(e: any): void {
+  function handleFront(): void {
     const front = document.querySelector('.front') as HTMLElement;
     const svg = document.querySelector('.svg') as HTMLElement;
 
