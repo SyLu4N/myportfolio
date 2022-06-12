@@ -30,6 +30,19 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0 10rem;
         scroll-behavior: smooth;
 
+        &::-webkit-scrollbar{
+          width: 12px;
+          background: var(--background);
+        }
+
+        &::-webkit-scrollbar-thumb{
+          background-color: var(--title);
+          transition: all 300ms;
+
+          &:hover {
+            background-color: var(--details);
+          }
+        }
 
         @media (max-width: 1000px) {
           padding: 0 1rem;
@@ -96,6 +109,7 @@ export const GlobalStyles = createGlobalStyle`
     position: fixed;
     animation: 400ms headerCima linear;
     padding: 0 10rem;
+    padding-left: 0;
     margin-top: 0px;
 
     @media (max-width: 1000px) {
@@ -107,6 +121,7 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
     animation: 1s headerBaixo linear;
     padding: 0 10rem;
+    padding-left: 0;
     margin-top: -75px;
 
     @media (max-width: 1000px) {

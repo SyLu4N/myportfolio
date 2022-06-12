@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { HiOutlineHome } from 'react-icons/hi';
+import styled from "styled-components";
+import { HiOutlineHome } from "react-icons/hi";
 
 interface ContainerProps {
   theme: string;
@@ -19,6 +19,7 @@ export const Container = styled.header<ContainerProps>`
 
   height: 75px;
   padding: 0 10rem;
+  padding-left: 0;
   background-color: var(--background);
   z-index: 2;
   transition: background-color 600ms;
@@ -36,11 +37,12 @@ export const Container = styled.header<ContainerProps>`
 
     height: 1px;
     background-color: ${({ theme }) =>
-      theme === 'ligth' ? '#eee' : '#303134'};
+      theme === "ligth" ? "#eee" : "#303134"};
   }
 
   h1 {
     font-size: 1.5rem;
+    margin-left: -20vw;
   }
 
   @keyframes headerCima {
@@ -71,6 +73,12 @@ export const Container = styled.header<ContainerProps>`
     nav .theme {
       margin-right: 0rem;
       margin-left: 1.2rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    h1 {
+      margin-left: 0vw;
     }
   }
 `;
