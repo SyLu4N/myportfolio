@@ -2,7 +2,9 @@
   Seja bem vindo ao meu portfolio, ou como costumo dizer...
   <br />
   <br />
-  <img src="./public/assets/helloWorld.png" alt="Hello World" align="center" />
+  <div align="center">
+    <img src="./public/assets/helloWorld.png" alt="Hello World" />
+  </div>
   <br />
   <br />
   <p>
