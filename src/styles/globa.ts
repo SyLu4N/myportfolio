@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { ligth, dark } from "./theme";
+import { createGlobalStyle } from 'styled-components';
+import { light, dark } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -11,19 +11,19 @@ export const GlobalStyles = createGlobalStyle`
 
   :root{
     --background: ${({ theme }) =>
-      theme === "dark" ? `${dark.background}` : `${ligth.background}`};
+      theme === 'dark' ? `${dark.background}` : `${light.background}`};
     --title: ${({ theme }) =>
-      theme === "dark" ? `${dark.title}` : `${ligth.title}`};
+      theme === 'dark' ? `${dark.title}` : `${light.title}`};
     --letter: ${({ theme }) =>
-      theme === "dark" ? `${dark.letter}` : `${ligth.letter}`};
+      theme === 'dark' ? `${dark.letter}` : `${light.letter}`};
     --details: ${({ theme }) =>
-      theme === "dark" ? `${dark.details}` : `${ligth.details}`};
+      theme === 'dark' ? `${dark.details}` : `${light.details}`};
   }
 
    html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    
+
     body {
         transition: all 600ms;
         background-color: var(--background);
