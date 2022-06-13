@@ -12,17 +12,21 @@
   </p>
 </h1>
 
-<a href="https://sylu4n.vercel.app/">
+<div>
   Portfolio
-  <img src="./public/apresetacao60s.gif" />
-</a>
+  <a href="https://sylu4n.vercel.app/">
+    <img src="./public/assets/apresetacao60s.gif" />
+  </a>
+</div>
 
 <h2></h2>
 
-<a href="https://github.com/sylu4n/myportfolio">
+<div>
   Código
-  <img src="./public/apresetacaoCode.gif" />
-</a>
+  <a href="https://github.com/sylu4n/myportfolio">
+    <img src="./public/assets/apresetacaoCode.gif" />
+  </a>
+</div>
 
 <div align="center">
   <a href="https://sylu4n.vercel.app/">Link para o portfolio</a>
