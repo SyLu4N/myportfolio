@@ -30,6 +30,7 @@ export const Content = styled.div`
   margin-top: 2rem;
 
   img {
+    border-radius: 4rem 0rem;
     width: 400px;
   }
 
