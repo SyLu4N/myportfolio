@@ -1,3 +1,3 @@
 Seja bem vindo ao meu portfolio, ou como costumo dizer...
 
-<img src="/assets/helloWorld.png" alt="Hello World" />
+<img src="./public/assets/helloWorld.png" alt="Hello World" />
