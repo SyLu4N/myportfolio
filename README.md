@@ -17,7 +17,11 @@
   <img src="./public/apresetacao60s.gif" />
 </a>
 
-<a href="https://sylu4n.vercel.app/">
+<h2></h2>
+
+<a href="https://github.com/sylu4n/myportfolio">
   Código
   <img src="./public/apresetacaoCode.gif" />
 </a>
+
+<a href="https://sylu4n.vercel.app/">Link para o portfolio</a>
