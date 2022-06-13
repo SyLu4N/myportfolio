@@ -24,4 +24,6 @@
   <img src="./public/apresetacaoCode.gif" />
 </a>
 
-<a href="https://sylu4n.vercel.app/">Link para o portfolio</a>
+<div align="center">
+  <a href="https://sylu4n.vercel.app/">Link para o portfolio</a>
+</div>
