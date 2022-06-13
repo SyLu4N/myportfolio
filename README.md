@@ -6,5 +6,5 @@
   <br />
   <br />
 
-  <p>Nele falo um pouco sobre mim, explico minha trajetória até aqui, meus estudos, experiências e também aproveitei para mostrar um pouco do meu trabalho com ReactJs, NextJs, Styled-Components e entre outros... Espero que goste!</p>
+  <p styles="font-size: 0.5rem;">Nele falo um pouco sobre mim, explico minha trajetória até aqui, meus estudos, experiências e também aproveitei para mostrar um pouco do meu trabalho com ReactJs, NextJs, Styled-Components e entre outros... Espero que goste!</p>
 </h1>
