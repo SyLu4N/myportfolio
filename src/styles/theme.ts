@@ -5,11 +5,12 @@ export interface Theme {
   details: string;
 }
 
-export type Ligth = Theme;
-export type Dark = Theme;
-export type Themes = Dark | Ligth;
+type Light = Theme;
+type Dark = Theme;
 
-export const ligth: Ligth = {
+export type Themes = Dark | Light;
+
+export const light: Light = {
   background: 'white',
   title: '#0A2463',
   letter: '#1E1B18',
