@@ -12,8 +12,8 @@
   </p>
 </h1>
 
+<h3>Portfolio</h3><br />
 <div align="center">
-  Portfolio<br />
   <a href="https://sylu4n.vercel.app/">
     <img src="./public/assets/apresetacao60s.gif" />
   </a>
@@ -21,8 +21,8 @@
 
 <h2></h2>
 
+<h3>Código</h3><br />
 <div align="center">
-  Código<br />
   <a href="https://github.com/sylu4n/myportfolio">
     <img src="./public/assets/apresetacaoCode.gif" />
   </a>
