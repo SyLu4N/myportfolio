@@ -1,7 +1,8 @@
 <h1>
   Seja bem vindo ao meu portfolio, ou como costumo dizer...
   <br />
-  <img src="./public/assets/helloWorld.png" alt="Hello World" />
+  <br />
+  <img src="./public/assets/helloWorld.png" alt="Hello World" align="center" />
   <br />
   <br />
   <p>
