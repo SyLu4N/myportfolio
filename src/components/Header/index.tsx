@@ -46,7 +46,7 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
         <div>
           <p />
         </div>
-        <h1>SyLu4N</h1>
+        <h1>&lt; SyLu4N /&gt;</h1>
         <Nav
           theme={theme}
           setTheme={setTheme}

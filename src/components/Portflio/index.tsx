@@ -1,6 +1,7 @@
 import { Header, Projects } from './styles';
 import { Spacetraveling } from './Spacetraveling';
 import { SearchCep } from './SearchCep';
+import { Rodiziopizza } from './rodiziopizza';
 
 export function Portfolio(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export function Portfolio(): JSX.Element {
       <Projects>
         <Spacetraveling />
         <SearchCep />
+        <Rodiziopizza />
       </Projects>
       <div id="contato" />
     </>

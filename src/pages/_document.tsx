@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+          <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
           <meta charSet="utf-8" />
         </Head>
         <body>
