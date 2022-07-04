@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Nav } from './Nav';
-import { Container, Padding } from './styles';
+import { Container, Content, Padding } from './styles';
 
 interface HeaderProps {
   theme: string;
@@ -43,16 +43,18 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
     <>
       <Padding />
       <Container theme={theme}>
-        <div>
-          <p />
-        </div>
-        <h1>&lt; SyLu4N /&gt;</h1>
-        <Nav
-          theme={theme}
-          setTheme={setTheme}
-          isMenuMobileOpen={isMenuMobileOpen}
-          setIsMenuMobileOpen={setIsMenuMobileOpen}
-        />
+        <Content>
+          <div>
+            <p />
+          </div>
+          <h1>SyLu4N </h1>
+          <Nav
+            theme={theme}
+            setTheme={setTheme}
+            isMenuMobileOpen={isMenuMobileOpen}
+            setIsMenuMobileOpen={setIsMenuMobileOpen}
+          />
+        </Content>
       </Container>
     </>
   );

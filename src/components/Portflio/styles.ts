@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.div`
   padding-top: 4rem;
-  margin-bottom: 20rem;
+  margin-bottom: 4rem;
   text-align: center;
 
   p {

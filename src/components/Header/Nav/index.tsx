@@ -72,7 +72,7 @@ export function Nav({
 
         <a href="#estudo">
           <em>
-            <TbSchool />
+            <TbSchool size={16} />
           </em>
           Trabalho/Estudos
         </a>

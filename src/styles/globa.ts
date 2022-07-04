@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { light, dark } from './theme';
+import { createGlobalStyle } from "styled-components";
+import { light, dark } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -11,61 +11,64 @@ export const GlobalStyles = createGlobalStyle`
 
   :root{
     --background: ${({ theme }) =>
-      theme === 'dark' ? `${dark.background}` : `${light.background}`};
+      theme === "dark" ? `${dark.background}` : `${light.background}`};
     --title: ${({ theme }) =>
-      theme === 'dark' ? `${dark.title}` : `${light.title}`};
+      theme === "dark" ? `${dark.title}` : `${light.title}`};
     --letter: ${({ theme }) =>
-      theme === 'dark' ? `${dark.letter}` : `${light.letter}`};
+      theme === "dark" ? `${dark.letter}` : `${light.letter}`};
     --details: ${({ theme }) =>
-      theme === 'dark' ? `${dark.details}` : `${light.details}`};
+      theme === "dark" ? `${dark.details}` : `${light.details}`};
   }
 
-   html {
+  html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 
-    body {
-        transition: all 600ms;
-        background-color: var(--background);
-        padding: 0 10rem;
-        scroll-behavior: smooth;
+    @media (max-width: 1000px) {
+      font-size: 93.75%;   
+    }
 
-        &::-webkit-scrollbar{
-          width: 12px;
-          border-left: 1px solid rgba(0, 0, 0, 0.1);
-          background: var(--background);
-        }
+    @media (max-width: 720px) {  
+        font-size: 87.5%;
+    }
+  }
 
-        &::-webkit-scrollbar-thumb{
-          background-color: var(--title);
-          transition: all 300ms;
+  body {
+    transition: all 600ms;
+    background-color: var(--background);
+    scroll-behavior: smooth;
 
-          &:hover {
-            background-color: var(--details);
-          }
-        }
+    &::-webkit-scrollbar{
+      width: 12px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      background: var(--background);
+    }
 
-        @media (max-width: 1000px) {
-          padding: 0 1rem;
-        }
+    &::-webkit-scrollbar-thumb{
+      background-color: var(--title);
+      transition: all 300ms;
+
+      &:hover {
+        background-color: var(--details);
       }
+    }
+  }
 
-   }
 
-   h1, h2, h3 {
-     color: var(--title);
-   }
+  h1, h2, h3 {
+    color: var(--title);
+  }
 
-   p {
-     color: var(--letter);
-   }
+  p {
+    color: var(--letter);
+  }
 
-  a{
+  a {
     color: var(--title);
     text-decoration: none;
   }
 
-  button{
+  button {
     cursor: pointer;
     outline: none;
     border: none;
@@ -81,10 +84,7 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: 750px) {
       display: grid;
       background-color: var(--background);
-      padding-bottom: 2rem;
-      padding-left: 0.5rem;
-      padding-top: 1rem;
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
       border-radius: 0  0 1rem 1rem;
       animation: 300ms aparecerMenuMobile linear;
 
@@ -94,11 +94,9 @@ export const GlobalStyles = createGlobalStyle`
 
       @keyframes aparecerMenuMobile {
         0% {
-          bottom: 200%;
           margin-top: -40%;
         }
         100% {
-          bottom: -300%;
           margin-top: 0%;
        }
       }
@@ -109,8 +107,6 @@ export const GlobalStyles = createGlobalStyle`
   .animationHeaderUp {
     position: fixed;
     animation: 400ms headerCima linear;
-    padding: 0 10rem;
-    padding-left: 0;
     margin-top: 0px;
 
     @media (max-width: 1000px) {
@@ -121,8 +117,6 @@ export const GlobalStyles = createGlobalStyle`
   .animationHeaderDow {
     position: relative;
     animation: 1s headerBaixo linear;
-    padding: 0 10rem;
-    padding-left: 0;
     margin-top: -75px;
 
     @media (max-width: 1000px) {
@@ -130,15 +124,4 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  @media (max-width: 1000px) {
-    html{
-      font-size: 93.75%;
-    }
-  }
-
-  @media (max-width: 720px) {
-    html{
-      font-size: 87.5%;
-    }
-  }
 `;

@@ -9,31 +9,34 @@ export const Padding = styled.div`
   height: 75px;
 `;
 
-export const SocialIcon = styled(HiOutlineHome)``;
-
 export const Container = styled.header<ContainerProps>`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.2rem;
-
   height: 75px;
-  padding: 0 10rem;
-  padding-left: 0;
   background-color: var(--background);
   z-index: 2;
-  transition: background-color 600ms;
+
+  padding: 0 1rem;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+  position: relative;
 
   p {
     position: absolute;
     bottom: 0;
     left: -15%;
-    right: 0%;
+    right: -15%;
 
     height: 1px;
     background-color: ${({ theme }) =>
@@ -41,8 +44,8 @@ export const Container = styled.header<ContainerProps>`
   }
 
   h1 {
+    width: 30%;
     font-size: 1.5rem;
-    margin-left: -20vw;
   }
 
   @keyframes headerCima {
@@ -64,21 +67,6 @@ export const Container = styled.header<ContainerProps>`
     100% {
       margin-top: -20%;
       position: fixed;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    padding: 0 1rem;
-
-    nav .theme {
-      margin-right: 0rem;
-      margin-left: 1.2rem;
-    }
-  }
-
-  @media (max-width: 750px) {
-    h1 {
-      margin-left: 0vw;
     }
   }
 `;
