@@ -14,7 +14,8 @@ export function StudyWork(): JSX.Element {
   useEffect(() => {
     animaContentRef.current?.addEventListener('scroll', () => {
       if (animaContentRef.current?.scrollLeft === 0) setIsWork('Work');
-      if (animaContentRef.current?.scrollLeft === 385) setIsWork('Study');
+      if (animaContentRef.current?.scrollLeft === 412) setIsWork('Study');
+      console.log(animaContentRef.current?.scrollLeft);
     })
   })
 

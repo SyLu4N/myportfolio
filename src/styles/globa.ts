@@ -37,6 +37,7 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 600ms;
     background-color: var(--background);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar{
       width: 12px;

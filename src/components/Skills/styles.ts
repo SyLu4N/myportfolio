@@ -16,5 +16,5 @@ export const Header = styled.div`
 `;
 
 export const Container = styled.div`
-  padding: 0 10rem;
+  padding: 0 10%;
 `;
