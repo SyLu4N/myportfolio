@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ContainerProps {
   isWork: string;
@@ -10,12 +10,11 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   height: 300px;
+  scroll-snap-align: center;
 
   transition: all 400ms;
-  position: absolute;
-  right: ${({ isWork }) => (isWork === 'Work' ? '3%' : '100%')};
-  top: 0;
-  bottom: 0;
+  padding-left: 1rem;
+  padding-right: 0.9rem;
 `;
 
 export const Center = styled.div`

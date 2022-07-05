@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ContentProps {
   isWork: string;
@@ -12,8 +12,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow-x: hidden;
 
   @media (max-width: 400px) {
     font-size: 90%;
@@ -40,14 +38,14 @@ export const Content = styled.div<ContentProps>`
 
   gap: 3rem;
 
-  button[type='button'] {
+  .work {
     color: var(--title);
-    ${({ isWork }) => isWork !== 'Work' && 'filter: opacity(40%)'};
+    ${({ isWork }) => isWork !== "Work" && "filter: opacity(40%)"};
   }
 
-  button[type='submit'] {
+  .study {
     color: var(--title);
-    ${({ isWork }) => isWork !== 'Study' && 'filter: opacity(40%)'};
+    ${({ isWork }) => isWork !== "Study" && "filter: opacity(40%)"};
   }
 
   h3 button {
@@ -64,12 +62,25 @@ export const Content = styled.div<ContentProps>`
     &:hover {
       filter: brightness(0.8);
     }
+
+    &:disabled {
+      cursor: default;
+      filter: none;
+    }
   }
 `;
 
 export const AnimaContent = styled.div`
+  display: flex;
+
   height: 400px;
   width: 430px;
-  overflow: hidden;
-  position: relative;
+  overflow-x: scroll;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;

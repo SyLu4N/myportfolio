@@ -7,7 +7,7 @@ export function Rodiziopizza(): JSX.Element {
     <Container>
       <ImageContainer>
         <Image
-          src="/assets/rodiziopizza.svg"
+          src="/assets/rodiziopizza.png"
           alt="Projeto"
           width="350"
           height="280"

@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  min-height: 1200px;
+  margin-bottom: 10rem;
+`;
+
 export const Header = styled.div`
   padding-top: 4rem;
   margin-bottom: 4rem;
@@ -17,4 +22,38 @@ export const Projects = styled.div`
   gap: 3rem;
 
   text-align: justify;
+
+  .aparecerLeft {
+    display: flex !important;
+    animation: aparecerLeft 700ms linear;
+  }
+
+  .aparecerRight {
+    display: flex;
+    animation: aparecerRight 700ms linear;
+  }
+
+  @keyframes aparecerLeft {
+    0% {
+      opacity: 0.3;
+      margin-left: -20%;
+    }
+
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+
+  @keyframes aparecerRight {
+    0% {
+      opacity: 0.3;
+      margin-right: -20%;
+    }
+
+    100% {
+      opacity: 1;
+      margin-right: 0;
+    }
+  }
 `;

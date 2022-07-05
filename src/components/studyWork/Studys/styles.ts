@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ContainerProps {
   isWork: string;
@@ -11,10 +11,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: center;
 
   transition: all 400ms;
-  position: absolute;
-  left: ${({ isWork }) => (isWork === 'Work' ? '101%' : '3%')};
-  top: 0;
-  bottom: 0;
+  scroll-snap-align: center;
 
   animation: 400ms carrosel linear;
   @keyframes carrosel {
