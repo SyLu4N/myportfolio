@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -27,18 +27,29 @@ export const Container = styled.div`
     h1 {
       width: 100%;
       color: var(--title);
+      position: relative;
+      height: 47px;
 
       text-align: left;
-
       animation: 1.5s hellow linear;
-      @keyframes hellow {
+
+      &::after {
+        content: "|";
+
+        position: absolute;
+        top: -0.17rem;
+        font-weight: normal;
+        color: var(--letter);
+
+        animation: pisca 500ms infinite alternate-reverse;
+      }
+
+      @keyframes pisca {
         0% {
           opacity: 0;
-          margin-left: -2rem;
         }
         100% {
-          opacity: 1;
-          margin-left: 0rem;
+          opacity: 0.6;
         }
       }
     }
@@ -61,6 +72,10 @@ export const Container = styled.div`
   }
 
   @media (max-width: 650px) {
+    h1 {
+      margin-left: 9px;
+    }
+
     img {
       width: 50%;
     }

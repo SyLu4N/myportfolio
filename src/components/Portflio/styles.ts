@@ -25,12 +25,12 @@ export const Projects = styled.div`
 
   .aparecerLeft {
     display: flex !important;
-    animation: aparecerLeft 700ms linear;
+    animation: aparecerLeft 800ms linear;
   }
 
   .aparecerRight {
     display: flex;
-    animation: aparecerRight 700ms linear;
+    animation: aparecerRight 800ms linear;
   }
 
   @keyframes aparecerLeft {

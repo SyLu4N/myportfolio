@@ -12,9 +12,9 @@ export function Portfolio(): JSX.Element {
   useEffect(() => {
     addEventListener('scroll', function aparecer(e) {
       if (scrollY >= 3100) spaceRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3250) searchRef.current?.classList.add('aparecerRight');
-      if (scrollY >= 3600) rodizioRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3700) removeEventListener('scroll', aparecer);
+      if (scrollY >= 3350) searchRef.current?.classList.add('aparecerRight');
+      if (scrollY >= 3700) rodizioRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 3800) removeEventListener('scroll', aparecer);
     })
   }, [])
 
