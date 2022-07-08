@@ -72,10 +72,6 @@ export const Container = styled.div`
   }
 
   @media (max-width: 650px) {
-    h1 {
-      margin-left: 9px;
-    }
-
     img {
       width: 50%;
     }
