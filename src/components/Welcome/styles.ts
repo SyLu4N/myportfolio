@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export const Container = styled.div`
       animation: 1.5s hellow linear;
 
       &::after {
-        content: "|";
+        content: '|';
 
         position: absolute;
         top: -0.17rem;

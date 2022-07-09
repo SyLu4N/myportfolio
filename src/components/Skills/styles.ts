@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Header = styled.div`
-  margin-top: 8rem;
-  padding-top: 6rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
 
   text-align: center;
 

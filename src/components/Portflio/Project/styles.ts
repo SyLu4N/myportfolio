@@ -1,8 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
+  justify-content: space-between;
   gap: 3rem;
+
+  img {
+    border-radius: 1rem;
+  }
 
   div {
     h3 {
@@ -18,12 +23,19 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   max-width: 350px;
+  height: 100%;
 
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
 
   aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 81%;
     margin-top: 1rem;
     font-style: italic;
     color: var(--letter);

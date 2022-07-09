@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   min-height: 1200px;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
 `;
 
 export const Header = styled.div`
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin-bottom: 4rem;
   text-align: center;
 

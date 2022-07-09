@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface ContentProps {
   isWork: string;
@@ -6,7 +6,7 @@ interface ContentProps {
 
 export const Container = styled.div`
   margin-top: 8rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin-bottom: 6rem;
 
   display: flex;
@@ -40,12 +40,12 @@ export const Content = styled.div<ContentProps>`
 
   .work {
     color: var(--title);
-    ${({ isWork }) => isWork !== "Work" && "filter: opacity(40%)"};
+    ${({ isWork }) => isWork !== 'Work' && 'filter: opacity(40%)'};
   }
 
   .study {
     color: var(--title);
-    ${({ isWork }) => isWork !== "Study" && "filter: opacity(40%)"};
+    ${({ isWork }) => isWork !== 'Study' && 'filter: opacity(40%)'};
   }
 
   h3 button {

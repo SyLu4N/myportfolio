@@ -1,8 +1,7 @@
-import { Header, Projects, Container } from './styles';
-import { Spacetraveling } from './Spacetraveling';
-import { SearchCep } from './SearchCep';
-import { Rodiziopizza } from './rodiziopizza';
 import { useEffect, useRef } from 'react';
+
+import { Project } from './Project';
+import { Header, Projects, Container } from './styles';
 
 export function Portfolio(): JSX.Element {
   const spaceRef = useRef<HTMLDivElement>(null);
@@ -10,13 +9,13 @@ export function Portfolio(): JSX.Element {
   const rodizioRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    addEventListener('scroll', function aparecer(e) {
-      if (scrollY >= 3100) spaceRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3350) searchRef.current?.classList.add('aparecerRight');
-      if (scrollY >= 3700) rodizioRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3800) removeEventListener('scroll', aparecer);
-    })
-  }, [])
+    addEventListener('scroll', function aparecer() {
+      if (scrollY >= 2700) spaceRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 3150) searchRef.current?.classList.add('aparecerRight');
+      if (scrollY >= 3500) rodizioRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 3600) removeEventListener('scroll', aparecer);
+    });
+  }, []);
 
   return (
     <Container>
@@ -26,13 +25,42 @@ export function Portfolio(): JSX.Element {
       </Header>
       <Projects>
         <div ref={spaceRef} className="hidden">
-          <Spacetraveling />
+          <Project
+            title="Spacetraveling."
+            src="/assets/apSpacetraveling.png"
+            summary="As novidades e lançamento da tecnologia, em um piscar de olhos"
+            link="https://newspacetraveling.vercel.app/"
+            description="Desenvolvi o Spacetraveling, como desafio do curso da rockeatseat,
+            da trilha de front-end, usei CMS Prismic para carregar as postagem e
+            o NextJs para gerenciar rotas e o meu Head, implementei o sistema de
+            login com GitHub e passei os dados para os meus componentes usando o
+            SessionProvider do NextJs."
+          />
         </div>
         <div ref={searchRef} className="hidden">
-          <SearchCep />
+          <Project
+            title="SearchCep"
+            src="/assets/apSearchCep.png"
+            summary="Gerenciar endereços nunca foi tão facil, apenas com o CEP localize e
+            salve seus endereços."
+            link="https://newsearchcep.netlify.app/"
+            description="Desenvolvi como treinamento de consumo de dados e usando fake API
+            para simular um back-end, é possível localizar endereços pelo CEP, e
+            salvamos, a principio estava usando JSON Server para amarzenar os
+            dados, mais com a necessidade do deploy, migrei para o localStorage."
+          />
         </div>
         <div ref={rodizioRef} className="hidden">
-          <Rodiziopizza />
+          <Project
+            title="Rodiziopizza"
+            src="/assets/rodiziopizza.png"
+            summary="Gerenciar o seu rodízio nunca foi tão fácil, com poucos cliques tenha o resultado em tela"
+            link="https://rodiziopizza.vercel.app/"
+            description="Desenvolvi como treinamento de consumo de dados e usando fake API
+            para simular um back-end, é possível localizar endereços pelo CEP, e
+            salvamos, a principio estava usando JSON Server para amarzenar os
+            dados, mais com a necessidade do deploy, migrei para o localStorage."
+          />
         </div>
       </Projects>
       <div id="contato" />

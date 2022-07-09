@@ -2,22 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
 import { Studys } from './Studys';
-import { Works } from './Works';
 import { Container, Header, Content, AnimaContent } from './styles';
+import { Works } from './Works';
 
 type StudyOrWork = 'Study' | 'Work';
 
 export function StudyWork(): JSX.Element {
-  const animaContentRef = useRef<HTMLDivElement>(null)
+  const animaContentRef = useRef<HTMLDivElement>(null);
   const [isWork, setIsWork] = useState<StudyOrWork>('Work');
 
   useEffect(() => {
     animaContentRef.current?.addEventListener('scroll', () => {
       if (animaContentRef.current?.scrollLeft === 0) setIsWork('Work');
       if (animaContentRef.current?.scrollLeft === 412) setIsWork('Study');
-      console.log(animaContentRef.current?.scrollLeft);
-    })
-  })
+    });
+  });
 
   function work() {
     if (!animaContentRef.current) return;
@@ -41,17 +40,13 @@ export function StudyWork(): JSX.Element {
       </Header>
       <Content isWork={isWork}>
         <h3>
-          <button
-            className='work'
-            disabled={isWork === 'Work'}
-            onClick={work}
-          >
+          <button className="work" disabled={isWork === 'Work'} onClick={work}>
             <FaSuitcase size={24} /> Trabalho
           </button>
         </h3>
         <h3>
           <button
-            className='study'
+            className="study"
             disabled={isWork === 'Study'}
             onClick={study}
           >
