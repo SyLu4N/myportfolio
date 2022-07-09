@@ -17,14 +17,10 @@ export function Studys({ isWork }: StudysProps): JSX.Element {
         <span />
         <span />
         <span />
-        <span />
 
         <Study>
           <div>
-            <strong>
-              HTML5 e CSS3 do básico
-              <br /> ao avançando
-            </strong>
+            <strong>HTML5 e CSS3 do básico ao avançando</strong>
             <p>Curso em Vídeo </p>
             <time>
               <AiOutlineCalendar />

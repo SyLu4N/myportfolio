@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-interface TitleProps {
+interface TypewriterProps {
   msg: string;
   scroll: number;
 }
 
-export function Title({ msg, scroll }: TitleProps) {
+export function Typewriter({ msg, scroll }: TypewriterProps) {
   const [textRender, setTextRender] = useState('');
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export function Title({ msg, scroll }: TitleProps) {
         }, i * 150);
       }, 1300);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <h1>{textRender}</h1>;

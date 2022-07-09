@@ -106,6 +106,11 @@ export const Study = styled.div`
     font-size: 0.9rem;
   }
 
+  strong {
+    display: inline-block;
+    max-width: 175px;
+  }
+
   div {
     width: 250px;
   }
