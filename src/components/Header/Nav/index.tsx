@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import { RiMenu4Line } from 'react-icons/ri';
-import { IoIosClose } from 'react-icons/io';
-import { CgFileDocument } from 'react-icons/cg';
-import { WiStars } from 'react-icons/wi';
-import { TbSchool, TbSend, TbHome } from 'react-icons/tb';
 import { BsCreditCard2Front } from 'react-icons/bs';
+import { CgFileDocument } from 'react-icons/cg';
+import { IoIosClose } from 'react-icons/io';
+import { RiMenu4Line } from 'react-icons/ri';
+import { TbSchool, TbSend, TbHome } from 'react-icons/tb';
+import { WiStars } from 'react-icons/wi';
+
+import Image from 'next/image';
 
 import { Container } from './styles';
 

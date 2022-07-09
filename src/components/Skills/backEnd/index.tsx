@@ -1,6 +1,6 @@
 import { MdKeyboardArrowDown, MdOutlineBackupTable } from 'react-icons/md';
-import { Bol } from '../Bol';
 
+import { Bol } from '../Bol';
 import { Container, Content } from './styles';
 
 export function BackEnd(): JSX.Element {

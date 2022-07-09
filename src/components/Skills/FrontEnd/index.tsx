@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 import { BiCodeCurly } from 'react-icons/bi';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
-import { Container, Content } from './styles';
 import { Bol } from '../Bol';
+import { Container, Content } from './styles';
 
 export function FrontEnd(): JSX.Element {
   const [skillsOpen, setSkillsOpen] = useState<boolean>(true);

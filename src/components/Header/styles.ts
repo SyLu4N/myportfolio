@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { HiOutlineHome } from "react-icons/hi";
+import styled from 'styled-components';
 
 interface ContainerProps {
   theme: string;
@@ -40,7 +39,7 @@ export const Content = styled.div`
 
     height: 1px;
     background-color: ${({ theme }) =>
-      theme === "ligth" ? "#eee" : "#303134"};
+      theme === 'ligth' ? '#eee' : '#303134'};
   }
 
   h1 {

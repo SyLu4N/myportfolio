@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
 import { Container, Study, Center } from './styles';

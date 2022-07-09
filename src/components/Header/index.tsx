@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import { Nav } from './Nav';
 import { Container, Content, Padding } from './styles';
 
