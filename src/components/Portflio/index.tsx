@@ -56,10 +56,7 @@ export function Portfolio(): JSX.Element {
             src="/assets/rodiziopizza.png"
             summary="Gerenciar o seu rodízio nunca foi tão fácil, com poucos cliques tenha o resultado em tela"
             link="https://rodiziopizza.vercel.app/"
-            description="Desenvolvi como treinamento de consumo de dados e usando fake API
-            para simular um back-end, é possível localizar endereços pelo CEP, e
-            salvamos, a principio estava usando JSON Server para amarzenar os
-            dados, mais com a necessidade do deploy, migrei para o localStorage."
+            description='Um dos primeiros projetos que desenvolvi por uma necessidade do "dia a dia", aproveitei para treinar um pouco o designer. A experiência de transformar uma imagem em um site funcional é incrível. Gostei muito do resultado atual, mas tenho mudanças em mente e estou implementando aos poucos.'
           />
         </div>
       </Projects>
