@@ -7,13 +7,15 @@ export function Portfolio(): JSX.Element {
   const spaceRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const rodizioRef = useRef<HTMLDivElement>(null);
+  const worldtrip = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     addEventListener('scroll', function aparecer() {
       if (scrollY >= 2700) spaceRef.current?.classList.add('aparecerLeft');
       if (scrollY >= 3150) searchRef.current?.classList.add('aparecerRight');
       if (scrollY >= 3500) rodizioRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3600) removeEventListener('scroll', aparecer);
+      if (scrollY >= 3800) worldtrip.current?.classList.add('aparecerRight');
+      if (scrollY >= 3900) removeEventListener('scroll', aparecer);
     });
   }, []);
 
@@ -57,6 +59,15 @@ export function Portfolio(): JSX.Element {
             summary="Gerenciar o seu rodízio nunca foi tão fácil, com poucos cliques tenha o resultado em tela"
             link="https://rodiziopizza.vercel.app/"
             description='Um dos primeiros projetos que desenvolvi por uma necessidade do "dia a dia", aproveitei para treinar um pouco o designer. A experiência de transformar uma imagem em um site funcional é incrível. Gostei muito do resultado atual, mas tenho mudanças em mente e estou implementando aos poucos.'
+          />
+        </div>
+        <div ref={worldtrip} className="hidden">
+          <Project
+            title="Worldtrip"
+            src="/assets/apWorldtrip.png"
+            summary="Quer viajar? Mas não sabe para onde? Na Worldtrip mostramos os melhores continentes e cidades!"
+            link="https://worldtrip-pearl.vercel.app/"
+            description="O Worldtrip foi outro desafio proposto pelo curso da rockeatseat, da trilha de front-end, nele praticamos o uso do Chakra UI para estilização do site e responsividade, o projeto em um todo foi bem desafiante, mas até que obtive um resultado satisfatório."
           />
         </div>
       </Projects>
