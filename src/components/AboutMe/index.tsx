@@ -24,11 +24,7 @@ export function AboutMe(): JSX.Element {
           apaixonado.
         </em>
         <div>
-          <a
-            href="https://github.com/sylu4n"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/sylu4n" target="_blank" rel="noreferrer">
             GitHub <FiGithub />
           </a>
 
