@@ -25,72 +25,83 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  align-items: flex-start;
-  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 
-  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--title);
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 110px;
 
   img {
-    border-radius: 4rem 0rem;
-    width: 400px;
+    position: absolute;
+    top: -24%;
+    border-radius: 10rem;
+    width: 200px;
+    height: 200px;
+  }
+
+  h3 {
+    padding-top: 78px;
+    color: var(--background);
+  }
+
+  p {
+    margin-top: -1.2rem;
+    color: var(--background) !important;
   }
 
   em {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 
-    padding-top: 1.3rem;
-
-    max-width: 400px;
-    height: 400px;
+    max-width: 700px;
     font-size: 1.3rem;
     text-align: justify;
-    color: var(--letter);
+    color: var(--background);
+    margin: 0 auto;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 0;
+    max-width: 700px;
+    width: 100%;
 
     a {
+      border: 1px solid var(--background);
+      background-color: var(--background);
+      color: var(--title);
       padding: 1rem;
+
+      &:hover {
+        background-color: var(--title);
+        color: var(--background);
+      }
     }
   }
 
-  @media (max-width: 1200px) {
-    padding-top: 0rem;
-
-    em {
-      padding-top: 1.2rem;
-      justify-content: start;
-      max-width: 800px;
-      margin-right: -5rem;
+  @media (max-width: 500px) {
+    h3 {
+      padding-top: 78px;
     }
 
     img {
-      width: 50%;
+      top: -18%;
     }
-  }
-
-  @media (max-width: 1000px) {
-    em {
-      padding-top: 1rem;
-      margin-right: 0;
-    }
-  }
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-    margin-top: 0rem;
-    padding: 2rem;
-    gap: 1rem;
 
     em {
-      padding-top: 1rem;
+      text-align: center;
     }
 
-    img {
-      width: 100%;
-    }
-
-    em a {
-      width: 100%;
+    a {
+      width: auto !important;
     }
   }
 `;

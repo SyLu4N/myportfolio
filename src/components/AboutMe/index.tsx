@@ -1,4 +1,4 @@
-import { FiDownloadCloud } from 'react-icons/fi';
+import { FiDownloadCloud, FiGithub } from 'react-icons/fi';
 
 import { Container, Content } from './styles';
 
@@ -10,7 +10,9 @@ export function AboutMe(): JSX.Element {
         <p>Introdução</p>
       </div>
       <Content>
-        <img src="/assets/luanAboutMe.png" alt="Minha foto" />
+        <img src="/assets/luanAboutMe.jpg" alt="Minha foto" />
+        <h3>Luan Simões</h3>
+        <p>Desenvolvedor Front-End</p>
 
         <em>
           Sempre fui muito apaixonado por tecnologia, seja pela forma de como
@@ -20,6 +22,15 @@ export function AboutMe(): JSX.Element {
           programação, me interessei, comecei a estudar como um hobby, até que
           estava totalmente imerso no mundo de desenvolvimento, que hoje sou
           apaixonado.
+        </em>
+        <div>
+          <a
+            href="https://github.com/sylu4n"
+            target="_blank"
+          >
+            GitHub <FiGithub />
+          </a>
+
           <a
             href="/assets/Luan_Simoes.pdf"
             download="Luan Simoes"
@@ -27,7 +38,7 @@ export function AboutMe(): JSX.Element {
           >
             Download CV <FiDownloadCloud />
           </a>
-        </em>
+        </div>
       </Content>
     </Container>
   );
