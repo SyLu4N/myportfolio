@@ -27,6 +27,7 @@ export function AboutMe(): JSX.Element {
           <a
             href="https://github.com/sylu4n"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub <FiGithub />
           </a>
