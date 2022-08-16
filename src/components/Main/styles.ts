@@ -3,11 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.main`
   margin-top: 2rem;
 
-  h1 {
-    font-size: 2.5rem;
-    color: var(--title);
-  }
-
   a {
     display: flex;
     align-items: center;

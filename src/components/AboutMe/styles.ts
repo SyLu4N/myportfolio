@@ -9,15 +9,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  div {
-    text-align: center;
-    margin-bottom: 2rem;
-
-    p {
-      color: var(--details);
-    }
-  }
-
   @media (max-width: 1200px) {
     padding-top: 5rem;
   }

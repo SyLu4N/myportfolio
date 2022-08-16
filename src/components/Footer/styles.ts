@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin: 15rem -10rem -5rem -10rem;
+  margin: 15rem -9rem -5rem -9rem;
   padding-top: 3rem;
   text-align: center;
   position: relative;

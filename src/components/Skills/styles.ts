@@ -6,10 +6,6 @@ export const Header = styled.div`
 
   text-align: center;
 
-  p {
-    color: var(--details);
-  }
-
   @media (max-width: 500px) {
     margin-top: 2rem;
   }

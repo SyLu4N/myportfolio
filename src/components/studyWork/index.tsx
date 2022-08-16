@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
+import { Title } from '../Title';
 import { Studys } from './Studys';
-import { Container, Header, Content, AnimaContent } from './styles';
+import { Container, Content, AnimaContent } from './styles';
 import { Works } from './Works';
 
 type StudyOrWork = 'Study' | 'Work';
@@ -34,10 +35,8 @@ export function StudyWork(): JSX.Element {
 
   return (
     <Container id="estudo">
-      <Header>
-        <h1>Qualificações</h1>
-        <p>Estudos e Experiências</p>
-      </Header>
+      <Title text="Qualificações" scroll={1700} />
+
       <Content isWork={isWork}>
         <h3>
           <button className="work" disabled={isWork === 'Work'} onClick={work}>

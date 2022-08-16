@@ -18,22 +18,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  margin-bottom: 3rem;
-
-  p {
-    color: var(--details);
-  }
-`;
-
 export const Content = styled.div<ContentProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1.2rem;
   margin-bottom: 1rem;
 
   gap: 3rem;

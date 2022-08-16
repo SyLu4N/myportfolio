@@ -1,13 +1,15 @@
 import { BiSend } from 'react-icons/bi';
 
-import { Typewriter } from '../Effects/Typewriter';
+import { Typewriter } from '../Typewriter';
 import { Container } from './styles';
 
 export function Welcome(): JSX.Element {
   return (
     <Container id="home">
       <div>
-        <Typewriter msg="Hello World!" scroll={0} />
+        <h1>
+          <Typewriter msg="Hello World!" scroll={0} />
+        </h1>
 
         <p>
           I&apos;m <span>Luan Simões</span>

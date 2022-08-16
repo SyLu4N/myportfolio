@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 
+import { Title } from '../Title';
 import { Project } from './Project';
-import { Header, Projects, Container } from './styles';
+import { Projects, Container } from './styles';
 
 export function Portfolio(): JSX.Element {
   const spaceRef = useRef<HTMLDivElement>(null);
@@ -11,7 +12,7 @@ export function Portfolio(): JSX.Element {
 
   useEffect(() => {
     addEventListener('scroll', function aparecer() {
-      if (scrollY >= 2700) spaceRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 2850) spaceRef.current?.classList.add('aparecerLeft');
       if (scrollY >= 3150) searchRef.current?.classList.add('aparecerRight');
       if (scrollY >= 3500) rodizioRef.current?.classList.add('aparecerLeft');
       if (scrollY >= 3800) worldtrip.current?.classList.add('aparecerRight');
@@ -21,10 +22,7 @@ export function Portfolio(): JSX.Element {
 
   return (
     <Container>
-      <Header id="portfolio">
-        <h1>Portfolio</h1>
-        <p>Meus projetos</p>
-      </Header>
+      <Title text="Portfolio" scroll={2750} />
       <Projects>
         <div ref={spaceRef} className="hidden">
           <Project
