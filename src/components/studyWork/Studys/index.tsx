@@ -17,6 +17,10 @@ export function Studys({ isWork }: StudysProps): JSX.Element {
         <span />
         <span />
         <span />
+        <span />
+        <span />
+        <span />
+        <span />
 
         <Study>
           <div>
@@ -52,6 +56,24 @@ export function Studys({ isWork }: StudysProps): JSX.Element {
             <time>
               <AiOutlineCalendar />
               04/2022 - 04/2022
+            </time>
+          </div>
+
+          <div>
+            <strong>Trilha Front-End Ignite</strong>
+            <p>Rockeatseat </p>
+            <time>
+              <AiOutlineCalendar />
+              02/2022 - 09/2022
+            </time>
+          </div>
+
+          <div>
+            <strong>Análise e desenvolvimento de...</strong>
+            <p>Wyden UniFavip </p>
+            <time>
+              <AiOutlineCalendar />
+              01/2023 - Cursando
             </time>
           </div>
         </Study>

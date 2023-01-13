@@ -9,11 +9,13 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 620px;
 
   transition: all 400ms;
   scroll-snap-align: center;
 
   animation: 400ms carrosel linear;
+
   @keyframes carrosel {
     0% {
       right: 0;
@@ -82,6 +84,34 @@ export const Center = styled.div`
     border-radius: 100%;
   }
 
+  span:nth-child(8) {
+    height: 80px;
+    width: 2px;
+    background-color: var(--title);
+    border-radius: 100%;
+  }
+
+  span:nth-child(9) {
+    height: 12px;
+    width: 12px;
+    background-color: var(--title);
+    border-radius: 100%;
+  }
+
+  span:nth-child(10) {
+    height: 80px;
+    width: 2px;
+    background-color: var(--title);
+    border-radius: 100%;
+  }
+
+  span:nth-child(11) {
+    height: 12px;
+    width: 12px;
+    background-color: var(--title);
+    border-radius: 100%;
+  }
+
   animation: 500ms aparecer linear;
   @keyframes aparecer {
     0% {
@@ -117,7 +147,7 @@ export const Study = styled.div`
 
   div:nth-child(1) {
     position: absolute;
-    top: -10%;
+    top: -8%;
     left: -17%;
 
     text-align: right;
@@ -125,7 +155,7 @@ export const Study = styled.div`
 
   div:nth-child(2) {
     position: absolute;
-    top: 22.5%;
+    top: 13%;
     right: -17%;
 
     text-align: left;
@@ -133,7 +163,7 @@ export const Study = styled.div`
 
   div:nth-child(3) {
     position: absolute;
-    top: 55%;
+    top: 33%;
     left: -17%;
 
     text-align: right;
@@ -141,7 +171,23 @@ export const Study = styled.div`
 
   div:nth-child(4) {
     position: absolute;
-    top: 87%;
+    top: 52%;
+    right: -17%;
+
+    text-align: left;
+  }
+
+  div:nth-child(5) {
+    position: absolute;
+    top: 71%;
+    left: -17%;
+
+    text-align: right;
+  }
+
+  div:nth-child(6) {
+    position: absolute;
+    top: 91%;
     right: -17%;
 
     text-align: left;

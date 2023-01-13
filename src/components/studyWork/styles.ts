@@ -62,7 +62,6 @@ export const Content = styled.div<ContentProps>`
 export const AnimaContent = styled.div`
   display: flex;
 
-  height: 400px;
   width: 430px;
   overflow-x: scroll;
 
