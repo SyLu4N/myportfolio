@@ -85,7 +85,7 @@ export const Content = styled.div`
     }
 
     img {
-      top: -18%;
+      top: -12%;
     }
 
     em {
