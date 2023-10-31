@@ -29,7 +29,7 @@ export const Content = styled.div`
 
   img {
     position: absolute;
-    top: -24%;
+    top: -15%;
     border-radius: 10rem;
     width: 200px;
     height: 200px;
