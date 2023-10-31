@@ -22,8 +22,11 @@ export default function Home(): JSX.Element {
       </Head>
 
       <Header setTheme={setTheme} theme={theme} />
+
       <GlobalStyles theme={theme} />
+
       <Main />
+
       <Footer />
     </>
   );

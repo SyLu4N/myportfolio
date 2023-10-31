@@ -9,9 +9,13 @@ export function Main(): JSX.Element {
   return (
     <Container>
       <Welcome />
+
       <AboutMe />
+
       <Skills />
+
       <StudyWork />
+
       <Portfolio />
     </Container>
   );

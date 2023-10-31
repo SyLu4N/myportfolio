@@ -33,6 +33,7 @@ export const Content = styled.div`
     border-radius: 10rem;
     width: 200px;
     height: 200px;
+    transform: rotate(20deg);
   }
 
   h3 {

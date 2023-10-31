@@ -11,10 +11,6 @@ export const Container = styled.div`
 
   position: relative;
 
-  img {
-    width: 300px;
-  }
-
   div {
     display: flex;
     flex-direction: column;
@@ -100,5 +96,26 @@ export const Container = styled.div`
       width: 227px;
       margin-top: -38rem;
     }
+  }
+`;
+
+export const ContainerImg = styled.div`
+  position: relative;
+  width: 300px;
+  padding-top: 0px !important;
+
+  div {
+    background-color: var(--title);
+    border-radius: 100%;
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+  }
+
+  img {
+    margin: auto;
+    width: 100%;
+    border-radius: 100%;
+    transform: rotate(-22deg);
   }
 `;

@@ -1,7 +1,7 @@
 import { BiSend } from 'react-icons/bi';
 
 import { Typewriter } from '../Typewriter';
-import { Container } from './styles';
+import { Container, ContainerImg } from './styles';
 
 export function Welcome(): JSX.Element {
   return (
@@ -22,7 +22,11 @@ export function Welcome(): JSX.Element {
           Mandar Oi <BiSend />
         </a>
       </div>
-      <img src="/assets/Luan.png" alt="Minha foto" />
+
+      <ContainerImg>
+        <div />
+        <img src="/assets/Luan.png" alt="Minha foto" />
+      </ContainerImg>
     </Container>
   );
 }

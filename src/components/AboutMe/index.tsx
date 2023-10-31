@@ -7,8 +7,9 @@ export function AboutMe(): JSX.Element {
   return (
     <Container id="sobre">
       <Title text="Sobre mim" scroll={600} />
+
       <Content>
-        <img src="/assets/luanAboutMe.jpg" alt="Minha foto" />
+        <img src="/assets/luanAboutMe.png" alt="Minha foto" />
         <h3>Luan Simões</h3>
         <p>Desenvolvedor Front-End</p>
 

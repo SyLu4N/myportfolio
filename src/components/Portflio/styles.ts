@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-height: 1200px;
   margin-bottom: 15rem;
 `;
 
@@ -11,7 +10,7 @@ export const Projects = styled.div`
   align-items: center;
   gap: 3rem;
 
-  height: 1255px;
+  min-height: 1255px;
   margin-top: 5rem;
   text-align: justify;
 
