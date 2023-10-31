@@ -14,14 +14,24 @@ export function AboutMe(): JSX.Element {
         <p>Desenvolvedor Front-End</p>
 
         <em>
-          Sempre fui muito apaixonado por tecnologia, seja pela forma de como
-          funciona, peças e entre outras coisas que me fascinam, comecei a
-          trabalhar com computador em 2018, com uma oportunidade de designer, e
-          foi trabalhando que acabei vendo um anúncio de um curso de
-          programação, me interessei, comecei a estudar como um hobby, até que
-          estava totalmente imerso no mundo de desenvolvimento, que hoje sou
-          apaixonado.
+          Olá! Eu sou o Luan Simões, tenho 21 anos e sou de Suzano, SP. Sou um
+          fanático por tecnologia e um entusiasta do desenvolvimento Front-end.
+          <br />
+          <br />
+          Minha jornada de aprendizado me levou desde a construção de páginas
+          HTML até a integração de APIs locais e públicas, passando por
+          JavaScript, ReactJS, React com TypeScript e até CSS puro. Também
+          arrisquei meu lado back-end com a linguagem Python. Além das
+          habilidades técnicas, desenvolvi várias habilidades pessoais, como
+          gerenciamento de tempo, produtividade e comunicação clara.
+          <br />
+          <br />
+          Atualmente, estou na faculdade WYDEN, onde curso Análise e
+          Desenvolvimento de Sistemas. Estou ansioso para começar minha carreira
+          como desenvolvedor e continuar minha jornada apaixonada pelo mundo da
+          tecnologia.
         </em>
+
         <div>
           <a href="https://github.com/sylu4n" target="_blank" rel="noreferrer">
             GitHub <FiGithub />

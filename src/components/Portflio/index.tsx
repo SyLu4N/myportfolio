@@ -13,12 +13,12 @@ export function Portfolio(): JSX.Element {
 
   useEffect(() => {
     addEventListener('scroll', function aparecer() {
-      if (scrollY >= 2850) spaceRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3150) searchRef.current?.classList.add('aparecerRight');
-      if (scrollY >= 3500) rodizioRef.current?.classList.add('aparecerLeft');
-      if (scrollY >= 3800) worldtrip.current?.classList.add('aparecerRight');
-      if (scrollY >= 4100) slCosmeticos.current?.classList.add('aparecerLeft');
-      if (scrollY >= 4200) removeEventListener('scroll', aparecer);
+      if (scrollY >= 3150) spaceRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 3450) searchRef.current?.classList.add('aparecerRight');
+      if (scrollY >= 3800) rodizioRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 4100) worldtrip.current?.classList.add('aparecerRight');
+      if (scrollY >= 4400) slCosmeticos.current?.classList.add('aparecerLeft');
+      if (scrollY >= 4500) removeEventListener('scroll', aparecer);
     });
   }, []);
 

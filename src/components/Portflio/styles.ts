@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  transition: all 300ms;
   margin-bottom: 15rem;
 `;
 
