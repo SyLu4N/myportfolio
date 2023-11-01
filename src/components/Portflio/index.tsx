@@ -13,11 +13,11 @@ export function Portfolio(): JSX.Element {
 
   useEffect(() => {
     addEventListener('scroll', function aparecer() {
-      if (scrollY >= 3150) spaceRef.current?.classList.add('aparecerLeft');
+      if (scrollY >= 3150) slCosmeticos.current?.classList.add('aparecerLeft');
       if (scrollY >= 3450) searchRef.current?.classList.add('aparecerRight');
       if (scrollY >= 3800) rodizioRef.current?.classList.add('aparecerLeft');
       if (scrollY >= 4100) worldtrip.current?.classList.add('aparecerRight');
-      if (scrollY >= 4400) slCosmeticos.current?.classList.add('aparecerLeft');
+      if (scrollY >= 4400) spaceRef.current?.classList.add('aparecerLeft');
       if (scrollY >= 4500) removeEventListener('scroll', aparecer);
     });
   }, []);
@@ -27,6 +27,16 @@ export function Portfolio(): JSX.Element {
       <Title text="Portfolio" scroll={2750} />
 
       <Projects>
+        <div ref={slCosmeticos} className="hidden">
+          <Project
+            title="SL Cosméticos"
+            src="/assets/apSlCosmeticos.png"
+            summary="Beleza em um clique! SL Cosméticos: produtos profissionais para cabelos e maquiagens."
+            link="https://slcosmeticos.com.br/"
+            description="Meu primeiro freelancer, foi uma experiência que me preparou para o mercado de trabalho. Lidar com prazos e desafios reais foi muito desafiante, tive que estudar muito e até sacrificar algumas noites de sono. No entanto, valeu muito a pena. Sem dúvida, foi o meu maior aprendizado até agora. Graças a essa jornada, hoje me sinto preparado e confiante para fazer parte do mercado."
+          />
+        </div>
+
         <div ref={spaceRef} className="hidden">
           <Project
             title="Spacetraveling."
@@ -72,16 +82,6 @@ export function Portfolio(): JSX.Element {
             summary="Quer viajar? Mas não sabe para onde? Na Worldtrip mostramos os melhores continentes e cidades!"
             link="https://worldtrip-pearl.vercel.app/"
             description="O Worldtrip foi outro desafio proposto pelo curso da rockeatseat, da trilha de front-end, nele praticamos o uso do Chakra UI para estilização do site e responsividade, o projeto em um todo foi bem desafiante, mas até que obtive um resultado satisfatório."
-          />
-        </div>
-
-        <div ref={slCosmeticos} className="hidden">
-          <Project
-            title="SL Cosméticos"
-            src="/assets/apSlCosmeticos.png"
-            summary="Beleza em um clique! SL Cosméticos: produtos profissionais para cabelos e maquiagens."
-            link="https://slcosmeticos.com.br/"
-            description="Meu primeiro freelancer, foi uma experiência que me preparou para o mercado de trabalho. Lidar com prazos e desafios reais foi muito desafiante, tive que estudar muito e até sacrificar algumas noites de sono. No entanto, valeu muito a pena. Sem dúvida, foi o meu maior aprendizado até agora. Graças a essa jornada, hoje me sinto preparado e confiante para fazer parte do mercado."
           />
         </div>
       </Projects>
