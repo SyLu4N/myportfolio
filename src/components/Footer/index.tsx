@@ -16,9 +16,11 @@ export function Footer(): JSX.Element {
           <a href="mailto:luaan.carlos@hotmail.com">Vamos fazer acontecer</a>
         </div>
       </Content>
+
       <Finish>
         <img src="/assets/Luan.png" alt="Minha foto" />
         <p>Aprendendo um pouco a cada dia, sempre em busca do próximo nível</p>
+
         <span>
           <a
             href="https://www.linkedin.com/in/luan-sim%C3%B5es-617492236/"
@@ -49,6 +51,7 @@ export function Footer(): JSX.Element {
           </a>
         </span>
       </Finish>
+
       <strong>© Luan Simões. All right reserved</strong>
     </Container>
   );

@@ -13,7 +13,9 @@ export const Container = styled.footer`
     color: white;
     font-weight: normal;
     padding-bottom: 2rem;
+    margin: auto;
     margin-top: -2rem;
+    max-width: 300px;
   }
 
   @media (max-width: 1000px) {

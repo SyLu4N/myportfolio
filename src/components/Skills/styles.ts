@@ -13,4 +13,8 @@ export const Header = styled.div`
 
 export const Container = styled.div`
   padding: 0 10%;
+
+  @media (max-width: 500px) {
+    padding: 0 4%;
+  }
 `;

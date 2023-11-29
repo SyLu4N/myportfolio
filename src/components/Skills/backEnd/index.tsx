@@ -1,6 +1,6 @@
 import { MdKeyboardArrowDown, MdOutlineBackupTable } from 'react-icons/md';
 
-import { Bol } from '../Bol';
+import { SkillBall } from '../../SkillBall';
 import { Container, Content } from './styles';
 
 export function BackEnd(): JSX.Element {
@@ -34,43 +34,13 @@ export function BackEnd(): JSX.Element {
       </h2>
 
       <Content className="hidden back">
-        <div>
-          <span>Git</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={5} skillName="Git" />
 
-        <div>
-          <span>NodeJs</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={4} skillName="NodeJs" />
 
-        <div>
-          <span>NoSQL</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={3} skillName="NoSQL" />
 
-        <div>
-          <span>MySQL</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={4} skillName="MySQL" />
       </Content>
     </Container>
   );

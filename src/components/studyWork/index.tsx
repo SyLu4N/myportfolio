@@ -17,7 +17,7 @@ export function StudyWork(): JSX.Element {
       if (animaContentRef.current?.scrollLeft === 0) setIsWork('Work');
       if (animaContentRef.current?.scrollLeft === 412) setIsWork('Study');
     });
-  });
+  }, []);
 
   function work() {
     if (!animaContentRef.current) return;

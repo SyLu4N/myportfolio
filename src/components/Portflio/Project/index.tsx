@@ -30,8 +30,10 @@ export function Project({
           </a>
         </div>
       </ImageContainer>
-      <div>
+
+      <div className="center">
         <h3>{title}</h3>
+
         <Content>
           <aside>
             {description}

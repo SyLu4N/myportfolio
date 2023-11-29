@@ -17,4 +17,15 @@ export const Container = styled.div`
     font-size: 2rem;
     font-weight: bold;
   }
+
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      margin-top: -2.4rem;
+      font-size: 1.8rem;
+    }
+  }
 `;

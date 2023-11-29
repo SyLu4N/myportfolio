@@ -85,15 +85,22 @@ export const Content = styled.div`
     }
 
     img {
-      top: -12%;
+      top: -19%;
     }
 
     em {
       text-align: center;
+      font-size: 12px;
     }
 
     a {
       width: auto !important;
+    }
+
+    div {
+      a {
+        padding: 0.5rem;
+      }
     }
   }
 `;

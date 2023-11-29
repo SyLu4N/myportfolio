@@ -15,6 +15,12 @@ export const Container = styled.section`
     }
   }
 
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media (max-width: 645px) {
     flex-direction: column;
     gap: 1rem;
@@ -22,7 +28,7 @@ export const Container = styled.section`
 `;
 
 export const Content = styled.div`
-  max-width: 350px;
+  max-width: 300px;
   height: 100%;
 
   display: flex;

@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { BiCodeCurly } from 'react-icons/bi';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-import { Bol } from '../Bol';
+import { SkillBall } from '../../SkillBall';
 import { Container, Content } from './styles';
 
-export function FrontEnd(): JSX.Element {
+export function FrontEnd() {
   const [skillsOpen, setSkillsOpen] = useState<boolean>(true);
 
   function handleFront(): void {
@@ -35,67 +35,17 @@ export function FrontEnd(): JSX.Element {
       </h2>
 
       <Content className="front">
-        <div>
-          <span>HTML</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={5} skillName="HTML" />
 
-        <div>
-          <span>CSS</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={5} skillName="CSS" />
 
-        <div>
-          <span>Javascript</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={5} skillName="Javascript" />
 
-        <div>
-          <span>TypeScript</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={5} skillName="TypeScript" />
 
-        <div>
-          <span>ReactJs</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={4} skillName="ReactJs" />
 
-        <div>
-          <span>NextJs</span>
-          <div className="skill">
-            <Bol />
-            <Bol />
-            <Bol />
-          </div>
-        </div>
+        <SkillBall counter={4} skillName="NextJs" />
       </Content>
     </Container>
   );
