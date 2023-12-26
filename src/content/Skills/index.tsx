@@ -1,4 +1,4 @@
-import { Title } from '../Title';
+import { Title } from '../../components/Title';
 import { BackEnd } from './backEnd';
 import { FrontEnd } from './FrontEnd';
 import { Container, Header } from './styles';

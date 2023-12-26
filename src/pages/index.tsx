@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 import Head from 'next/head';
 
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
-import { Main } from '../components/Main';
+import { Footer } from '../content/Footer';
+import { Header } from '../content/Header';
+import { Main } from '../content/Main';
 import { GlobalStyles } from '../styles/globa';
 
 export default function Home(): JSX.Element {

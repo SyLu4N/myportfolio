@@ -2,8 +2,60 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  min-height: 280px;
+  width: 100%;
+
+  .sentinela {
+    position: absolute;
+
+    width: 1px;
+    height: 280px;
+  }
+
+  .aparecerLeft {
+    display: flex !important;
+    animation: aparecerLeft 800ms linear;
+  }
+
+  .aparecerRight {
+    display: flex;
+    animation: aparecerRight 800ms linear;
+  }
+
+  @media (max-width: 394px) {
+    padding: 1rem;
+  }
+
+  @keyframes aparecerLeft {
+    0% {
+      margin-left: -20%;
+    }
+
+    100% {
+      margin-left: 0;
+    }
+  }
+
+  @keyframes aparecerRight {
+    0% {
+      margin-right: -20%;
+    }
+
+    100% {
+      margin-right: 0;
+    }
+  }
+`;
+
+export const Content = styled.section`
+  display: flex;
   justify-content: space-between;
   gap: 3rem;
+  min-height: 100px;
 
   img {
     border-radius: 1rem;
@@ -27,7 +79,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Content = styled.div`
+export const Aside = styled.aside`
   max-width: 300px;
   height: 100%;
 
@@ -36,7 +88,7 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  aside {
+  div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,9 +199,5 @@ export const ImageContainer = styled.article`
         opacity: 1;
       }
     }
-  }
-
-  @media (max-width: 394px) {
-    max-height: 19.5rem;
   }
 `;

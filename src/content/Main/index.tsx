@@ -1,7 +1,7 @@
 import { AboutMe } from '../AboutMe';
-import { Portfolio } from '../Portflio';
+import { Portfolio } from '../Projects';
 import { Skills } from '../Skills';
-import { StudyWork } from '../studyWork';
+import { StudyWork } from '../StudyWork';
 import { Welcome } from '../Welcome';
 import { Container } from './styles';
 

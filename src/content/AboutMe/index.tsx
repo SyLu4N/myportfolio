@@ -1,6 +1,6 @@
 import { FiDownloadCloud, FiGithub } from 'react-icons/fi';
 
-import { Title } from '../Title';
+import { Title } from '../../components/Title';
 import { Container, Content } from './styles';
 
 export function AboutMe(): JSX.Element {

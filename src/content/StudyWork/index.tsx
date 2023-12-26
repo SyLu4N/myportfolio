@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
-import { Title } from '../Title';
+import { Title } from '../../components/Title';
 import { Studys } from './Studys';
 import { Container, Content, AnimaContent } from './styles';
 import { Works } from './Works';

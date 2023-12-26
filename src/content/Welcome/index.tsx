@@ -1,6 +1,6 @@
 import { BiSend } from 'react-icons/bi';
 
-import { Typewriter } from '../Typewriter';
+import { Typewriter } from '../../components/Typewriter';
 import { Container, ContainerImg } from './styles';
 
 export function Welcome(): JSX.Element {
