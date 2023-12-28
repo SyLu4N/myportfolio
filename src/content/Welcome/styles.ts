@@ -102,7 +102,8 @@ export const ContainerImg = styled.div`
     border-radius: 100%;
     position: absolute;
     bottom: -5px;
-    width: 101%;
+
+    width: 99%;
   }
 
   .container-img {
