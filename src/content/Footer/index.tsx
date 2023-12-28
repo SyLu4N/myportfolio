@@ -35,17 +35,24 @@ export function Footer(): JSX.Element {
             href="https://www.linkedin.com/in/luan-sim%C3%B5es-617492236/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Link para o meu Linked-In"
           >
             <FiLinkedin size={22} />
           </a>
 
-          <a href="https://github.com/sylu4n " target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/sylu4n"
+            aria-label="Link para o meu GitHub"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FiGithub size={22} />
           </a>
 
           <a
             href="https://www.instagram.com/_luannsimoes_/"
             target="_blank"
+            aria-label="Link para o meu Instagram"
             rel="noreferrer"
           >
             <FiInstagram size={22} />
@@ -53,6 +60,7 @@ export function Footer(): JSX.Element {
 
           <a
             href="mailto:luaan.carlos@hotmail.com"
+            aria-label="Direcionamento para o meu e-mail"
             target="_blank"
             rel="noreferrer"
           >

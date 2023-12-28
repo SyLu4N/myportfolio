@@ -19,7 +19,7 @@ export function AboutMe(): JSX.Element {
             height="300px"
           />
         </div>
-        <h3>Luan Simões</h3>
+        <h1>Luan Simões</h1>
         <p>Desenvolvedor Front-End</p>
 
         <em>

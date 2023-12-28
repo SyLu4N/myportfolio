@@ -39,8 +39,9 @@ export const Content = styled.div`
     height: 200px !important;
   }
 
-  h3 {
+  h1 {
     padding-top: 78px;
+    font-size: 17px;
     color: var(--background);
   }
 
@@ -83,7 +84,7 @@ export const Content = styled.div`
   }
 
   @media (max-width: 500px) {
-    h3 {
+    h1 {
       padding-top: 50px;
     }
 

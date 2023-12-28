@@ -29,7 +29,12 @@ export function Welcome(): JSX.Element {
         <div className="shadow" />
 
         <div className="container-img">
-          <Image src="/assets/Luan.png" alt="Minha foto" layout="fill" />
+          <Image
+            src="/assets/Luan.png"
+            alt="Minha foto"
+            layout="fill"
+            priority={true}
+          />
         </div>
       </ContainerImg>
     </Container>

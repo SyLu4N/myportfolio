@@ -40,16 +40,17 @@ export function StudyWork(): JSX.Element {
       <Content isWork={isWork}>
         <h3>
           <button className="work" disabled={isWork === 'Work'} onClick={work}>
-            <FaSuitcase size={24} /> Trabalho
+            <FaSuitcase size={24} /> <p>Trabalho</p>
           </button>
         </h3>
+
         <h3>
           <button
             className="study"
             disabled={isWork === 'Study'}
             onClick={study}
           >
-            Estudo <FaGraduationCap size={30} />
+            <p>Estudo</p> <FaGraduationCap size={30} />
           </button>
         </h3>
       </Content>
