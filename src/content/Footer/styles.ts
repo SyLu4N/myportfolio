@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin: 15rem -9rem -5rem -9rem;
+  margin: 15rem -9rem 0 -9rem;
   padding-top: 3rem;
   text-align: center;
   position: relative;
@@ -98,7 +98,7 @@ export const Finish = styled.div`
   margin-top: 8rem;
   padding-bottom: 4rem;
 
-  img {
+  .container-img {
     width: 90px;
     height: 90px;
     border-radius: 100%;

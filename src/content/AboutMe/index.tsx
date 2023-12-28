@@ -1,5 +1,7 @@
 import { FiDownloadCloud, FiGithub } from 'react-icons/fi';
 
+import Image from 'next/image';
+
 import { Title } from '../../components/Title';
 import { Container, Content } from './styles';
 
@@ -9,7 +11,14 @@ export function AboutMe(): JSX.Element {
       <Title text="Sobre mim" scroll={600} />
 
       <Content>
-        <img src="/assets/luanAboutMe.png" alt="Minha foto" />
+        <div className="container-img">
+          <Image
+            src="/assets/luanAboutMe.png"
+            alt="Minha foto"
+            width="300px"
+            height="300px"
+          />
+        </div>
         <h3>Luan Simões</h3>
         <p>Desenvolvedor Front-End</p>
 

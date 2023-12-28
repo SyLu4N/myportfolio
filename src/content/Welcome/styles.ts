@@ -89,18 +89,24 @@ export const Container = styled.div`
 
 export const ContainerImg = styled.div`
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 300px;
   padding-top: 0px !important;
 
-  div {
+  .shadow {
     background-color: var(--title);
     border-radius: 100%;
     position: absolute;
     bottom: -5px;
-    width: 100%;
+    width: 101%;
   }
 
-  img {
+  .container-img {
+    overflow: hidden;
     margin: auto;
     width: 100%;
     border-radius: 100%;

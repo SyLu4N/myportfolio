@@ -1,5 +1,7 @@
 import { BiSend } from 'react-icons/bi';
 
+import Image from 'next/image';
+
 import { Typewriter } from '../../components/Typewriter';
 import { Container, ContainerImg } from './styles';
 
@@ -24,8 +26,11 @@ export function Welcome(): JSX.Element {
       </div>
 
       <ContainerImg>
-        <div />
-        <img src="/assets/Luan.png" alt="Minha foto" />
+        <div className="shadow" />
+
+        <div className="container-img">
+          <Image src="/assets/Luan.png" alt="Minha foto" layout="fill" />
+        </div>
       </ContainerImg>
     </Container>
   );

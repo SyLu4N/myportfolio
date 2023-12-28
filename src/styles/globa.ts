@@ -40,7 +40,6 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     overflow: hidden;
     
-
     &::-webkit-scrollbar{
       width: 12px;
       border-left: 1px solid rgba(0, 0, 0, 0.1);

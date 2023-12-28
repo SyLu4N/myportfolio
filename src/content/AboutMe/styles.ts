@@ -27,13 +27,16 @@ export const Content = styled.div`
   position: relative;
   margin-top: 110px;
 
-  img {
+  .container-img {
     position: absolute;
     top: -15%;
+
     border-radius: 10rem;
-    width: 200px;
-    height: 200px;
     transform: rotate(20deg);
+    overflow: hidden;
+
+    width: 200px !important;
+    height: 200px !important;
   }
 
   h3 {
@@ -81,11 +84,14 @@ export const Content = styled.div`
 
   @media (max-width: 500px) {
     h3 {
-      padding-top: 78px;
+      padding-top: 50px;
     }
 
-    img {
-      top: -19%;
+    .container-img {
+      top: -14%;
+
+      width: 140px !important;
+      height: 140px !important;
     }
 
     em {

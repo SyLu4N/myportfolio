@@ -52,7 +52,13 @@ export function Project({
       <div className={`main ${isVisible ? animation : 'hidden'} `}>
         <Content {...rest}>
           <ImageContainer>
-            <Image src={src} alt="Projeto" width="350" height="280" />
+            <Image
+              src={src}
+              alt="Ilustração do projeto"
+              width="350"
+              height="280"
+            />
+
             <div>
               <p>{summary}</p>
               <a href={link} target="_blank" rel="noreferrer">

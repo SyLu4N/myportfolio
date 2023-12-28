@@ -80,7 +80,7 @@ export const Content = styled.section`
 `;
 
 export const Aside = styled.aside`
-  max-width: 300px;
+  max-width: 350px;
   height: 100%;
 
   display: flex;
@@ -93,7 +93,6 @@ export const Aside = styled.aside`
     flex-direction: column;
     justify-content: space-between;
 
-    height: 81%;
     margin-top: 1rem;
     font-style: italic;
     color: var(--letter);
@@ -120,6 +119,15 @@ export const Aside = styled.aside`
             margin-left: 0.5rem;
           }
         }
+      }
+    }
+
+    @media (max-width: 645px) {
+      a {
+        display: flex;
+        width: 100%;
+        height: 35px;
+        border-radius: 4px;
       }
     }
   }
