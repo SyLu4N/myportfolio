@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
           property="og:description"
           content="Explore os projetos e experiências de Luan Simões na área de desenvolvedor front-end."
         />
-        <meta property="og:image" content="/assets/capa.png" />
+        <meta property="og:image" content="https://ibb.co/v1Pv0tg" />
         <meta property="og:type" content="website" />
 
         <link rel="canonical" href="https://sylu4n.com.br/" />
