@@ -1,8 +1,6 @@
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { MdOutlineMailOutline } from 'react-icons/md';
 
-import Image from 'next/image';
-
 import { Container, Content, Finish } from './styles';
 
 export function Footer(): JSX.Element {
@@ -20,14 +18,6 @@ export function Footer(): JSX.Element {
       </Content>
 
       <Finish>
-        <div className="container-img">
-          <Image
-            src="/assets/Luan.png"
-            alt="Minha foto"
-            height="300"
-            width="300px"
-          />
-        </div>
         <p>Aprendendo um pouco a cada dia, sempre em busca do próximo nível</p>
 
         <span>

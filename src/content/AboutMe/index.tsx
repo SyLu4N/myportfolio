@@ -6,6 +6,20 @@ import { Title } from '../../components/Title';
 import { Container, Content } from './styles';
 
 export function AboutMe(): JSX.Element {
+  const myAge = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+
+    let age = year - 2001;
+
+    if (month < 11 || (month === 11 && date.getDate() < 1)) {
+      age--;
+    }
+
+    return age;
+  };
+
   return (
     <Container id="sobre">
       <Title text="Sobre mim" scroll={600} />
@@ -23,8 +37,9 @@ export function AboutMe(): JSX.Element {
         <p>Desenvolvedor Front-End</p>
 
         <em>
-          Olá! Eu sou o Luan Simões, tenho 21 anos e sou de Suzano, SP. Sou um
-          fanático por tecnologia e um entusiasta do desenvolvimento Front-end.
+          Olá! Eu sou o Luan Simões, tenho {myAge()} anos e sou de Suzano, SP.
+          Sou um fanático por tecnologia e um entusiasta do desenvolvimento
+          Front-end.
           <br />
           <br />
           Minha jornada de aprendizado me levou desde a construção de páginas
