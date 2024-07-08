@@ -4,7 +4,7 @@ interface ContentProps {
   isWork: string;
 }
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 8rem;
   padding-top: 2rem;
   margin-bottom: 6rem;
@@ -29,12 +29,12 @@ export const Content = styled.div<ContentProps>`
 
   .work {
     color: var(--title);
-    ${({ isWork }) => isWork !== 'Work' && 'filter: opacity(40%)'};
+    opacity: ${({ isWork }) => (isWork === 'Work' ? 1 : 0.4)};
   }
 
   .study {
     color: var(--title);
-    ${({ isWork }) => isWork !== 'Study' && 'filter: opacity(40%)'};
+    opacity: ${({ isWork }) => (isWork !== 'Work' ? 1 : 0.4)};
   }
 
   h3 button {
@@ -48,13 +48,16 @@ export const Content = styled.div<ContentProps>`
     font-weight: bold;
     background-color: transparent;
 
-    &:hover {
-      filter: brightness(0.8);
-    }
-
     &:disabled {
       cursor: default;
       filter: none;
+    }
+
+    @media (min-width: 500px) {
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
     }
   }
 `;

@@ -1,42 +1,48 @@
-import { BiSend } from 'react-icons/bi';
-
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
+import { MouseDown } from '../../components/MouseDown';
 import { Typewriter } from '../../components/Typewriter';
-import { Container, ContainerImg } from './styles';
+import { Send } from '../../icons/send';
+import { Container, Content, Img, Presentation } from './styles';
 
-export function Welcome(): JSX.Element {
+export function Welcome() {
+  const rout = useRouter();
+
   return (
-    <Container id="home">
-      <div>
-        <h1>
-          <Typewriter msg="Hello World!" scroll={0} />
-        </h1>
+    <Container>
+      <Content id="home">
+        <Presentation>
+          <div>
+            <h1>
+              <Typewriter msg="Hello World!" scroll={0} delay={1000} />
+            </h1>
 
-        <p>
-          I&apos;m <span>Luan Simões</span>
-        </p>
-        <strong>
-          Desenvolvedor Front-End | Javascript | TypeScript | NextJS | ReactJS
-        </strong>
+            <p>
+              I&apos;m <span>Luan Simões</span>
+            </p>
+          </div>
 
-        <a href="mailto:luaan.carlos@hotmail.com">
-          Mandar Oi <BiSend />
-        </a>
-      </div>
+          <strong>
+            Desenvolvedor Front-End | Javascript | TypeScript | NextJS | ReactJS
+          </strong>
 
-      <ContainerImg>
-        <div className="shadow" />
+          <button onClick={() => rout.push('mailto:luaan.carlos@hotmail.com')}>
+            Mandar Olá <Send />
+          </button>
 
-        <div className="container-img">
+          <MouseDown />
+        </Presentation>
+
+        <Img>
           <Image
-            src="/assets/Luan.png"
+            src="/assets/luan.png"
             alt="Minha foto"
             layout="fill"
             priority={true}
           />
-        </div>
-      </ContainerImg>
+        </Img>
+      </Content>
     </Container>
   );
 }

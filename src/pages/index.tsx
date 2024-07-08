@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react';
-
 import Head from 'next/head';
 
-import { Footer } from '../content/Footer';
-import { Header } from '../content/Header';
-import { Main } from '../content/Main';
-import { GlobalStyles } from '../styles/globa';
+import { AboutMe } from '../content/AboutMe';
+import { Portfolio } from '../content/Projects';
+import { Skills } from '../content/Skills';
+import { StudyWork } from '../content/StudyWork';
+import { Welcome } from '../content/Welcome';
 
 export default function Home(): JSX.Element {
-  const [theme, setTheme] = useState('');
-
-  useEffect(
-    () => setTheme(localStorage.getItem('USER_THEME') || 'ligth'),
-    [theme]
-  );
-
   return (
     <>
       <Head>
@@ -42,13 +34,17 @@ export default function Home(): JSX.Element {
         <meta name="author" content="Luan Simões" />
       </Head>
 
-      <Header setTheme={setTheme} theme={theme} />
+      <main>
+        <Welcome />
 
-      <GlobalStyles theme={theme} />
+        <AboutMe />
 
-      <Main />
+        <Skills />
 
-      <Footer />
+        <StudyWork />
+
+        <Portfolio />
+      </main>
     </>
   );
 }

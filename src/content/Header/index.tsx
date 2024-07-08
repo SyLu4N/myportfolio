@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Nav } from './Nav';
-import { Container, Content, Padding } from './styles';
+import { Container, Content } from './styles';
 
 interface HeaderProps {
   theme: string;
@@ -11,27 +11,30 @@ interface HeaderProps {
 export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
   const [isMenuMobileOpen, setIsMenuMobileOpen] = useState<boolean>(false);
 
+  const headerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    let ultimaPosicao = 0;
-    const header = document.querySelector('header') as HTMLElement;
-    const nav = document.querySelector('.nav') as HTMLElement;
+    if (!headerRef.current) return;
+    const header = headerRef.current;
+
+    let ULTIMA_POSICAO = 0;
 
     function positionScroll(): void {
-      nav.removeAttribute('id');
       setIsMenuMobileOpen(false);
 
       if (window.scrollY > 200) {
-        const atualPosicao = window.scrollY;
+        const ATUAL_POSICAO = window.scrollY;
+
         header.classList.remove('animationHeaderDow');
         header.classList.remove('animationHeaderUp');
 
-        if (atualPosicao < ultimaPosicao) {
+        if (ATUAL_POSICAO < ULTIMA_POSICAO) {
           header.classList.add('animationHeaderUp');
         } else {
           header.classList.add('animationHeaderDow');
         }
 
-        ultimaPosicao = atualPosicao;
+        ULTIMA_POSICAO = ATUAL_POSICAO;
       } else {
         header.classList.remove('animationHeaderShowUp');
       }
@@ -41,22 +44,17 @@ export function Header({ theme, setTheme }: HeaderProps): JSX.Element {
   }, []);
 
   return (
-    <>
-      <Padding />
-      <Container theme={theme}>
-        <Content>
-          <div>
-            <p />
-          </div>
-          <h1>SyLu4N</h1>
-          <Nav
-            theme={theme}
-            setTheme={setTheme}
-            isMenuMobileOpen={isMenuMobileOpen}
-            setIsMenuMobileOpen={setIsMenuMobileOpen}
-          />
-        </Content>
-      </Container>
-    </>
+    <Container theme={theme} ref={headerRef}>
+      <Content>
+        <h1>SyLu4N</h1>
+
+        <Nav
+          theme={theme}
+          setTheme={setTheme}
+          isMenuMobileOpen={isMenuMobileOpen}
+          setIsMenuMobileOpen={setIsMenuMobileOpen}
+        />
+      </Content>
+    </Container>
   );
 }

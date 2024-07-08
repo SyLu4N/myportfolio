@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 4rem;
   padding: 1rem;
   padding-top: 2rem;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.article`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,17 +32,27 @@ export const Content = styled.div`
     top: -15%;
 
     border-radius: 10rem;
-    transform: rotate(20deg);
     overflow: hidden;
 
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
+
+    @media (max-width: 500px) {
+      top: -14%;
+
+      width: 140px;
+      height: 140px;
+    }
   }
 
   h1 {
     padding-top: 78px;
     font-size: 17px;
     color: var(--background);
+
+    @media (max-width: 500px) {
+      padding-top: 50px;
+    }
   }
 
   p {
@@ -60,11 +70,17 @@ export const Content = styled.div`
     text-align: justify;
     color: var(--background);
     margin: 0 auto;
+
+    @media (max-width: 500px) {
+      text-align: center;
+      font-size: 12px;
+    }
   }
 
   div {
     display: flex;
     justify-content: space-evenly;
+    gap: 12px;
 
     margin: 0;
     max-width: 700px;
@@ -80,33 +96,9 @@ export const Content = styled.div`
         background-color: var(--title);
         color: var(--background);
       }
-    }
-  }
 
-  @media (max-width: 500px) {
-    h1 {
-      padding-top: 50px;
-    }
-
-    .container-img {
-      top: -14%;
-
-      width: 140px !important;
-      height: 140px !important;
-    }
-
-    em {
-      text-align: center;
-      font-size: 12px;
-    }
-
-    a {
-      width: auto !important;
-    }
-
-    div {
-      a {
-        padding: 0.5rem;
+      @media (max-width: 500px) {
+        width: 100%;
       }
     }
   }

@@ -27,12 +27,13 @@ export function AboutMe(): JSX.Element {
       <Content>
         <div className="container-img">
           <Image
-            src="/assets/luanAboutMe.png"
+            src="/assets/about.png"
             alt="Minha foto"
             width="300px"
             height="300px"
           />
         </div>
+
         <h1>Luan Simões</h1>
         <p>Desenvolvedor Front-End</p>
 

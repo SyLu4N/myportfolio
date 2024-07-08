@@ -1,9 +1,9 @@
-import { BsCreditCard2Front } from 'react-icons/bs';
+import { useRef } from 'react';
+import { BsCreditCard2Front, BsStars } from 'react-icons/bs';
 import { CgFileDocument } from 'react-icons/cg';
 import { IoIosClose } from 'react-icons/io';
 import { RiMenu4Line } from 'react-icons/ri';
 import { TbSchool, TbSend, TbHome } from 'react-icons/tb';
-import { WiStars } from 'react-icons/wi';
 
 import Image from 'next/image';
 
@@ -22,7 +22,16 @@ export function Nav({
   isMenuMobileOpen,
   setIsMenuMobileOpen,
 }: NavProps): JSX.Element {
+  const imgRef = useRef<HTMLImageElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+
   function handleTheme(): void {
+    if (!imgRef.current) return;
+
+    imgRef.current.style.animation = 'none';
+    void imgRef.current.offsetHeight;
+    imgRef.current.style.animation = 'newTheme 400ms';
+
     if (theme === 'ligth') {
       setTheme('dark');
       localStorage.setItem('USER_THEME', 'dark');
@@ -33,14 +42,23 @@ export function Nav({
   }
 
   function handleNav(): void {
-    const nav = document.querySelector('.nav') as HTMLElement;
+    if (!navRef.current) return;
+    const nav = navRef.current;
+
+    nav.style.animation = 'none';
+    void nav.offsetHeight;
 
     if (!isMenuMobileOpen) {
+      nav.style.animation = 'headerCima 400ms';
       nav.setAttribute('id', 'grid');
       setIsMenuMobileOpen(true);
     } else {
-      nav.removeAttribute('id');
-      setIsMenuMobileOpen(false);
+      nav.style.animation = 'headerBaixo 400ms';
+
+      setTimeout(() => {
+        nav.removeAttribute('id');
+        setIsMenuMobileOpen(false);
+      }, 300);
     }
   }
 
@@ -49,7 +67,8 @@ export function Nav({
       <em className="close" onClick={handleNav}>
         <RiMenu4Line size={35} />
       </em>
-      <div className="nav">
+
+      <div className="nav" ref={navRef}>
         <a href="#home">
           <em>
             <TbHome />
@@ -64,9 +83,9 @@ export function Nav({
           Sobre
         </a>
 
-        <a href="#skills" className="skills">
+        <a href="#skills">
           <em>
-            <WiStars size={25} />
+            <BsStars size={16} />
           </em>
           Skills
         </a>
@@ -91,19 +110,21 @@ export function Nav({
           </em>
           Contato
         </a>
+
         <span>
           <IoIosClose size={30} onClick={handleNav} />
         </span>
       </div>
+
       <div className="theme">
-        <Image
-          src={theme === 'ligth' ? '/assets/moon.png' : '/assets/sun.png'}
-          width={35}
-          height={35}
-          alt={theme === 'ligth' ? 'Imagem de uma Lua' : 'Imagem de um Sol'}
-          // eslint-disable-next-line react/jsx-no-bind
-          onClick={handleTheme}
-        />
+        <span ref={imgRef} onClick={handleTheme}>
+          <Image
+            src={theme === 'ligth' ? '/assets/moon.png' : '/assets/sun.png'}
+            width={35}
+            height={35}
+            alt={theme === 'ligth' ? 'Imagem de uma Lua' : 'Imagem de um Sol'}
+          />
+        </span>
       </div>
     </Container>
   );

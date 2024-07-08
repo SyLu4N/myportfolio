@@ -1,34 +1,20 @@
-import { HTMLAttributes, useEffect, useRef, useState } from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import { HTMLAttributes, useRef } from 'react';
 
 import Image from 'next/image';
 
-import { Aside, Container, Content, ImageContainer } from './styles';
+import { Container, Content, ImageContainer } from './styles';
 
 interface ProjectProps extends HTMLAttributes<HTMLDivElement> {
   src: string;
   summary: string;
   link: string;
-  description: string;
   title: string;
-  lado?: 'Right' | 'Left';
 }
 
-export function Project({
-  src,
-  summary,
-  link,
-  description,
-  title,
-  lado = 'Left',
-  ...rest
-}: ProjectProps) {
+export function Project({ src, summary, link, title, ...rest }: ProjectProps) {
   const sentinelaRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
-  const animation = `aparecer${lado}`;
-
-  useEffect(() => {
+  /* useEffect(() => {
     if (!sentinelaRef?.current) return;
 
     const intersectionObserver = new IntersectionObserver(
@@ -43,45 +29,31 @@ export function Project({
     intersectionObserver.observe(sentinelaRef.current);
 
     return () => intersectionObserver.disconnect();
-  }, []);
+  }, []); */
 
   return (
     <Container>
       <div ref={sentinelaRef} className="sentinela" />
 
-      <div className={`main ${isVisible ? animation : 'hidden'} `}>
-        <Content {...rest}>
-          <ImageContainer>
-            <Image
-              src={src}
-              alt="Ilustração do projeto"
-              width="350"
-              height="280"
-            />
+      <Content {...rest}>
+        <ImageContainer>
+          <Image
+            src={src}
+            alt="Ilustração do projeto"
+            width="300"
+            height="200"
+          />
 
-            <div>
-              <p>{summary}</p>
-              <a href={link} target="_blank" rel="noreferrer">
-                Acessar agora <HiArrowNarrowRight size={25} />
-              </a>
-            </div>
-          </ImageContainer>
+          <a href={link} target="_blank" rel="noreferrer">
+            Visualizar
+          </a>
+        </ImageContainer>
 
-          <div className="center">
-            <h3>{title}</h3>
-
-            <Aside>
-              <div>
-                {description}
-
-                <a href={link} target="_blank" rel="noreferrer">
-                  Acessar agora <HiArrowNarrowRight size={25} />
-                </a>
-              </div>
-            </Aside>
-          </div>
-        </Content>
-      </div>
+        <div>
+          <h3>{title}</h3>
+          <p>{summary}</p>
+        </div>
+      </Content>
     </Container>
   );
 }

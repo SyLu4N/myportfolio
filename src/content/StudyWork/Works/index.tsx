@@ -2,13 +2,9 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 
 import { Container, Work, Center } from './styles';
 
-interface StudysProps {
-  isWork: string;
-}
-
-export function Works({ isWork }: StudysProps): JSX.Element {
+export function Works(): JSX.Element {
   return (
-    <Container isWork={isWork}>
+    <Container>
       <Center>
         <span />
         <span />

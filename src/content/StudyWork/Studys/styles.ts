@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface ContainerProps {
-  isWork: string;
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 interface TypewriterProps {
   msg: string;
   scroll?: number;
+  delay?: number;
 }
 
-export function Typewriter({ msg, scroll }: TypewriterProps) {
+export function Typewriter({ msg, scroll, delay = 0 }: TypewriterProps) {
   const [textRender, setTextRender] = useState('');
   const scrollFixed = scroll;
 
@@ -16,12 +17,14 @@ export function Typewriter({ msg, scroll }: TypewriterProps) {
       const text = msg;
       let newText = '';
 
-      for (let i = 0; i < text.length; i++) {
-        setTimeout(() => {
-          newText += text[i];
-          setTextRender(newText);
-        }, i * 150);
-      }
+      setTimeout(() => {
+        for (let i = 0; i < text.length; i++) {
+          setTimeout(() => {
+            newText += text[i];
+            setTextRender(newText);
+          }, i * 150);
+        }
+      }, delay);
     }
 
     fnTypewriter = typerwriter;

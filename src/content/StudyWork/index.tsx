@@ -14,8 +14,10 @@ export function StudyWork(): JSX.Element {
 
   useEffect(() => {
     animaContentRef.current?.addEventListener('scroll', () => {
-      if (animaContentRef.current?.scrollLeft === 0) setIsWork('Work');
-      if (animaContentRef.current?.scrollLeft === 412) setIsWork('Study');
+      if (!animaContentRef.current) return;
+
+      if (animaContentRef.current.scrollLeft < 212) setIsWork('Work');
+      if (animaContentRef.current.scrollLeft > 212) setIsWork('Study');
     });
   }, []);
 
@@ -37,27 +39,34 @@ export function StudyWork(): JSX.Element {
     <Container id="estudo">
       <Title text="Qualificações" scroll={1700} />
 
-      <Content isWork={isWork}>
-        <h3>
-          <button className="work" disabled={isWork === 'Work'} onClick={work}>
-            <FaSuitcase size={24} /> <p>Trabalho</p>
-          </button>
-        </h3>
+      <article>
+        <Content isWork={isWork}>
+          <h3>
+            <button
+              className="work"
+              disabled={isWork === 'Work'}
+              onClick={work}
+            >
+              <FaSuitcase size={24} /> <p>Trabalho</p>
+            </button>
+          </h3>
 
-        <h3>
-          <button
-            className="study"
-            disabled={isWork === 'Study'}
-            onClick={study}
-          >
-            <p>Estudo</p> <FaGraduationCap size={30} />
-          </button>
-        </h3>
-      </Content>
+          <h3>
+            <button
+              className="study"
+              disabled={isWork === 'Study'}
+              onClick={study}
+            >
+              <p>Estudo</p> <FaGraduationCap size={30} />
+            </button>
+          </h3>
+        </Content>
 
-      <AnimaContent ref={animaContentRef}>
-        <Works isWork={isWork} /> <Studys isWork={isWork} />
-      </AnimaContent>
+        <AnimaContent ref={animaContentRef}>
+          <Works />
+          <Studys />
+        </AnimaContent>
+      </article>
     </Container>
   );
 }
