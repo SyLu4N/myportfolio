@@ -36,7 +36,7 @@ export function Welcome() {
 
         <Img>
           <Image
-            src="/assets/luan.png"
+            src="/assets/welcome.png"
             alt="Minha foto"
             layout="fill"
             priority={true}

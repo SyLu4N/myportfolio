@@ -29,7 +29,7 @@ const projects = [
     lado: 'Right',
     title: 'Rodiziopizza',
     type: 'personal',
-    src: '/assets/rodizioPizza.png',
+    src: '/assets/rodizio.png',
     link: 'https://rodiziopizza.vercel.app/',
     summary:
       'Gerenciar o seu rodízio nunca foi tão fácil, com poucos cliques tenha o resultado em tela',
@@ -47,7 +47,7 @@ const projects = [
   {
     title: 'Worldtrip',
     type: 'others',
-    src: '/assets/worldtrip.png',
+    src: '/assets/world.png',
     link: 'https://worldtrip-pearl.vercel.app/',
     summary:
       'Quer viajar? Mas não sabe para onde? Na Worldtrip mostramos os melhores continentes e cidades!',
