@@ -18,29 +18,10 @@ export const Content = styled.article`
 
   position: relative;
 
-  animation: reveal 800ms;
-
   @media (max-width: 500px) {
     flex-direction: column-reverse;
     align-items: center;
     padding-top: 16rem;
-  }
-
-  @keyframes reveal {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-
-    70% {
-      transform: scale(0);
-      opacity: 0;
-    }
-
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
   }
 `;
 

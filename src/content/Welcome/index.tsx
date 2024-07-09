@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -9,30 +10,47 @@ import { Container, Content, Img, Presentation } from './styles';
 export function Welcome() {
   const rout = useRouter();
 
+  const MotionContainer = motion(Container);
+
   return (
-    <Container>
+    <MotionContainer
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{
+        type: 'spring',
+        damping: 4,
+        mass: 0.2,
+        stiffness: 100,
+        delay: 0.3,
+      }}
+    >
       <Content id="home">
-        <Presentation>
-          <div>
-            <h1>
-              <Typewriter msg="Hello World!" scroll={0} delay={1000} />
-            </h1>
+        <motion.div>
+          <Presentation>
+            <div>
+              <h1>
+                <Typewriter msg="Hello World!" scroll={0} delay={800} />
+              </h1>
 
-            <p>
-              I&apos;m <span>Luan Simões</span>
-            </p>
-          </div>
+              <p>
+                I&apos;m <span>Luan Simões</span>
+              </p>
+            </div>
 
-          <strong>
-            Desenvolvedor Front-End | Javascript | TypeScript | NextJS | ReactJS
-          </strong>
+            <strong>
+              Desenvolvedor Front-End | Javascript | TypeScript | NextJS |
+              ReactJS
+            </strong>
 
-          <button onClick={() => rout.push('mailto:luaan.carlos@hotmail.com')}>
-            Mandar Olá <Send />
-          </button>
+            <button
+              onClick={() => rout.push('mailto:luaan.carlos@hotmail.com')}
+            >
+              Mandar Olá <Send />
+            </button>
 
-          <MouseDown />
-        </Presentation>
+            <MouseDown />
+          </Presentation>
+        </motion.div>
 
         <Img>
           <Image
@@ -43,6 +61,6 @@ export function Welcome() {
           />
         </Img>
       </Content>
-    </Container>
+    </MotionContainer>
   );
 }

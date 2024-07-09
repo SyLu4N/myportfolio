@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { IconType } from 'react-icons';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+
+import { Variants, motion } from 'framer-motion';
 
 import { Skill as SkillType } from '../../@types/Skill';
 import { Skill } from './skill';
@@ -20,70 +22,86 @@ export function Skills({
   defaultValue = false,
 }: SkillsProps) {
   const [isOpen, setIsOpen] = useState(defaultValue);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const IconElement = icon;
 
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentVariants: Variants = {
+    open: {
+      opacity: 1,
+      height: 'auto',
 
-  useEffect(() => {
-    if (!contentRef.current) return;
-    const content = contentRef.current;
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 24,
+        duration: 0.5,
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+      },
+    },
 
-    setIsAnimating(true);
+    closed: {
+      height: 0,
+      opacity: 0,
 
-    if (isOpen) {
-      content.style.display = 'flex';
-      content.classList.add('open');
-      content.classList.remove('close');
-    } else {
-      content.classList.add('close');
-      content.classList.remove('open');
-    }
-  }, [isOpen]);
+      transition: {
+        type: 'spring',
+        bounce: 0,
+        duration: 0.3,
+      },
+    },
+  };
 
-  function handleIsOpen() {
-    if (isAnimating) return;
+  const iconVariants: Variants = {
+    open: { rotate: 180 },
+    closed: { rotate: 0 },
+  };
 
-    setIsOpen(!isOpen);
-  }
+  const itemVariants: Variants = {
+    open: {
+      opacity: 1,
+      x: 0,
 
-  function endAnimation(e: React.AnimationEvent<HTMLDivElement>) {
-    const content = e.currentTarget;
+      transition: { type: 'spring', stiffness: 150, damping: 10 },
+    },
 
-    if (!isOpen) {
-      content.style.display = 'none';
-    }
-
-    content.classList.remove('open', 'close');
-    setIsAnimating(false);
-  }
+    closed: { opacity: 0, x: -30, transition: { duration: 0.2 } },
+  };
 
   return (
     <Container>
-      <Title onClick={handleIsOpen}>
+      <Title onClick={() => setIsOpen(!isOpen)}>
         <IconElement size={25} />
+
         <h2>{title}</h2>
 
-        <MdKeyboardArrowDown
-          size={30}
-          style={{
-            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            transition: '300ms all',
+        <motion.span
+          variants={iconVariants}
+          animate={isOpen ? 'open' : 'closed'}
+          transition={{
+            duration: 0.3,
+            type: 'spring',
+            stiffness: 150,
+            damping: 16,
           }}
-        />
+        >
+          <MdKeyboardArrowDown size={30} />
+        </motion.span>
       </Title>
 
-      <Content ref={contentRef} onAnimationEnd={endAnimation}>
-        {skillsObject.map((element, index) => (
-          <Skill
-            element={element}
-            key={element.name}
-            isOpen={isOpen}
-            index={index}
-          />
-        ))}
-      </Content>
+      <motion.div
+        initial={'closed'}
+        variants={contentVariants}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <Content>
+          {skillsObject.map((element) => (
+            <motion.div key={element.name} variants={itemVariants}>
+              <Skill element={element} />
+            </motion.div>
+          ))}
+        </Content>
+      </motion.div>
     </Container>
   );
 }

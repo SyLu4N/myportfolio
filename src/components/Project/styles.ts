@@ -70,13 +70,15 @@ export const ImageContainer = styled.article`
 
   &:hover a {
     opacity: 1;
+    display: flex;
   }
 
   a {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 
     position: absolute;
     top: -16px;

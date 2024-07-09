@@ -27,31 +27,9 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
 
-  transition: 300ms all;
-
+  height: 100%;
+  overflow: hidden;
   padding: 38px;
-
-  @keyframes closeSkills {
-    0% {
-      padding: 38px;
-      height: 376px;
-    }
-
-    100% {
-      padding: 0px;
-      height: 0px;
-    }
-  }
-
-  @keyframes openSkills {
-    0% {
-      height: 64px;
-    }
-
-    100% {
-      height: 376px;
-    }
-  }
 `;
 
 export const Title = styled.div`
@@ -72,5 +50,10 @@ export const Title = styled.div`
 
     font-size: 1.5rem;
     color: var(--title);
+  }
+
+  span {
+    display: flex;
+    align-items: center;
   }
 `;

@@ -97,11 +97,11 @@ export function Nav({
           Trabalho/Estudos
         </a>
 
-        <a href="#portfolio">
+        <a href="#projetos">
           <em>
             <BsCreditCard2Front />
           </em>
-          Portfolio
+          Projetos
         </a>
 
         <a href="#contato">

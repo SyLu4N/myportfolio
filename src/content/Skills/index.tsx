@@ -3,7 +3,14 @@ import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
 import { MdOutlineBackupTable } from 'react-icons/md';
 import { RiJavascriptFill } from 'react-icons/ri';
-import { SiFastify, SiFauna, SiNextdotjs, SiPrisma } from 'react-icons/si';
+import {
+  SiFastify,
+  SiFauna,
+  SiJest,
+  SiNextdotjs,
+  SiPrisma,
+  SiVitest,
+} from 'react-icons/si';
 
 import { Skills as SkillsElements } from '../../components/Skills';
 import { Title } from '../../components/Title';
@@ -23,6 +30,8 @@ const BACK_END_SKILLS = [
   { name: 'MySQL', icon: GrMysql, counter: 4 },
   { name: 'Prisma', icon: SiPrisma, counter: 4 },
   { name: 'Fastify', icon: SiFastify, counter: 4 },
+  { name: 'Jest', icon: SiJest, counter: 3 },
+  { name: 'Vitest', icon: SiVitest, counter: 4 },
 ];
 
 export function Skills(): JSX.Element {

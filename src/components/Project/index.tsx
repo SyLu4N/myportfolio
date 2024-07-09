@@ -1,4 +1,4 @@
-import { HTMLAttributes, useRef } from 'react';
+import { HTMLAttributes } from 'react';
 
 import Image from 'next/image';
 
@@ -12,29 +12,8 @@ interface ProjectProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export function Project({ src, summary, link, title, ...rest }: ProjectProps) {
-  const sentinelaRef = useRef<HTMLDivElement>(null);
-
-  /* useEffect(() => {
-    if (!sentinelaRef?.current) return;
-
-    const intersectionObserver = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    intersectionObserver.observe(sentinelaRef.current);
-
-    return () => intersectionObserver.disconnect();
-  }, []); */
-
   return (
     <Container>
-      <div ref={sentinelaRef} className="sentinela" />
-
       <Content {...rest}>
         <ImageContainer>
           <Image

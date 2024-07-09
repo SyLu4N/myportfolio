@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  position: relative;
+
   transition: all 300ms;
   margin-bottom: 15rem;
 `;
@@ -55,4 +57,14 @@ export const Filter = styled.p<FilterProps>`
 
     padding: 4px 10px;
   }
+`;
+
+export const Sentinela = styled.div`
+  height: 200px;
+  margin-top: 150px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
 `;
