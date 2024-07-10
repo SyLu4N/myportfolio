@@ -115,6 +115,7 @@ export function Portfolio(): JSX.Element {
         >
           Todos
         </Filter>
+
         <Filter
           name="professionals"
           filterCurrent={filter}
@@ -122,6 +123,7 @@ export function Portfolio(): JSX.Element {
         >
           Profissionais
         </Filter>
+
         <Filter
           name="personal"
           filterCurrent={filter}
@@ -129,6 +131,7 @@ export function Portfolio(): JSX.Element {
         >
           Pessoais
         </Filter>
+
         <Filter
           name="others"
           filterCurrent={filter}

@@ -67,4 +67,9 @@ export const Sentinela = styled.div`
   left: 0;
   right: 0;
   bottom: 10%;
+
+  @media (max-width: 500px) {
+    bottom: auto;
+    top: 10%;
+  }
 `;
