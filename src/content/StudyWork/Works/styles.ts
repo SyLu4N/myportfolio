@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 450px;
   scroll-snap-align: center;
 
   transition: all 400ms;
@@ -71,6 +71,13 @@ export const Center = styled.div`
     border-radius: 100%;
   }
 
+  span:nth-child(8) {
+    height: 80px;
+    width: 2px;
+    background-color: var(--title);
+    border-radius: 100%;
+  }
+
   animation: 500ms aparecer linear;
   @keyframes aparecer {
     0% {
@@ -101,23 +108,31 @@ export const Work = styled.div`
 
   div:nth-child(1) {
     position: absolute;
-    top: -15%;
-    left: -17%;
-
-    text-align: right;
-  }
-
-  div:nth-child(2) {
-    position: absolute;
-    top: 33%;
+    top: -10%;
     right: -17%;
 
     text-align: left;
   }
 
+  div:nth-child(2) {
+    position: absolute;
+    top: 22%;
+    left: -17%;
+
+    text-align: right;
+  }
+
   div:nth-child(3) {
     position: absolute;
-    top: 80%;
+    top: 52%;
+    right: -17%;
+
+    text-align: left;
+  }
+
+  div:nth-child(4) {
+    position: absolute;
+    top: 85%;
     left: -17%;
 
     text-align: right;

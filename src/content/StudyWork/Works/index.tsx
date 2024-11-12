@@ -11,19 +11,34 @@ export function Works(): JSX.Element {
         <span />
         <span />
         <span />
+        <span />
+        <span />
+
         <Work>
+          <div>
+            <strong>Service Desk</strong>
+            <p>Movida</p>
+
+            <time>
+              <AiOutlineCalendar />
+              11/2024 - Presente
+            </time>
+          </div>
+
           <div>
             <strong>Gerente em marketing</strong>
             <p>Asimões Cosméticos</p>
+
             <time>
               <AiOutlineCalendar />
-              12/2020 - Presente
+              12/2020 - 01/2022
             </time>
           </div>
 
           <div>
             <strong>Designer</strong>
             <p>Asimões Cosméticos </p>
+
             <time>
               <AiOutlineCalendar />
               07/2018 - 08/2020
@@ -33,6 +48,7 @@ export function Works(): JSX.Element {
           <div>
             <strong>Ajudante Geral</strong>
             <p>Asimões Cosméticos </p>
+
             <time>
               <AiOutlineCalendar />
               06/2017 - 06/2018
