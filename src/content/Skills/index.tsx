@@ -1,7 +1,10 @@
+import { BiCodeCurly } from 'react-icons/bi';
+import { MdOutlineBackupTable } from 'react-icons/md';
+
+import { Skills as SkillsElements } from '../../components/Skills';
 import { Title } from '../../components/Title';
-import { BackEnd } from './backEnd';
-import { FrontEnd } from './FrontEnd';
-import { Container, Header } from './styles';
+import { BACK_END_SKILLS, FRONT_END_SKILLS } from '../../constant/skills';
+import { Container, Header, Content } from './styles';
 
 export function Skills(): JSX.Element {
   return (
@@ -10,8 +13,20 @@ export function Skills(): JSX.Element {
         <Title text="Habilidades" scroll={1300} />
       </Header>
 
-      <FrontEnd />
-      <BackEnd />
+      <Content>
+        <SkillsElements
+          skillsObject={FRONT_END_SKILLS}
+          title="Front End Developer"
+          defaultValue={true}
+          icon={BiCodeCurly}
+        />
+
+        <SkillsElements
+          skillsObject={BACK_END_SKILLS}
+          title="Back End Developer"
+          icon={MdOutlineBackupTable}
+        />
+      </Content>
     </Container>
   );
 }

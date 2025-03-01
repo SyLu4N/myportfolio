@@ -1,42 +1,66 @@
-import { BiSend } from 'react-icons/bi';
-
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
+import { MouseDown } from '../../components/MouseDown';
 import { Typewriter } from '../../components/Typewriter';
-import { Container, ContainerImg } from './styles';
+import { Send } from '../../icons/send';
+import { Container, Content, Img, Presentation } from './styles';
 
-export function Welcome(): JSX.Element {
+export function Welcome() {
+  const rout = useRouter();
+
+  const MotionContainer = motion(Container);
+
   return (
-    <Container id="home">
-      <div>
-        <h1>
-          <Typewriter msg="Hello World!" scroll={0} />
-        </h1>
+    <MotionContainer
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{
+        type: 'spring',
+        damping: 4,
+        mass: 0.2,
+        stiffness: 100,
+        delay: 0.3,
+      }}
+    >
+      <Content id="home">
+        <motion.div>
+          <Presentation>
+            <div>
+              <h1>
+                <Typewriter msg="Hello World!" scroll={0} delay={800} />
+              </h1>
 
-        <p>
-          I&apos;m <span>Luan Simões</span>
-        </p>
-        <strong>
-          Desenvolvedor Front-End | Javascript | TypeScript | NextJS | ReactJS
-        </strong>
+              <p>
+                I&apos;m <span>Luan Simões</span>
+              </p>
+            </div>
 
-        <a href="mailto:luaan.carlos@hotmail.com">
-          Mandar Oi <BiSend />
-        </a>
-      </div>
+            <strong>
+              Desenvolvedor Front-End | Javascript | TypeScript | NextJS |
+              ReactJS
+            </strong>
 
-      <ContainerImg>
-        <div className="shadow" />
+            <button
+              onClick={() => rout.push('mailto:luaan.carlos@hotmail.com')}
+            >
+              Mandar Olá <Send />
+            </button>
 
-        <div className="container-img">
+            <MouseDown />
+          </Presentation>
+        </motion.div>
+
+        <Img>
           <Image
-            src="/assets/Luan.png"
+            src="/assets/welcome.png"
             alt="Minha foto"
             layout="fill"
             priority={true}
           />
-        </div>
-      </ContainerImg>
-    </Container>
+        </Img>
+      </Content>
+    </MotionContainer>
   );
 }

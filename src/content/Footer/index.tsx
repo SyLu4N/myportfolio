@@ -1,33 +1,25 @@
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { MdOutlineMailOutline } from 'react-icons/md';
 
-import Image from 'next/image';
-
 import { Container, Content, Finish } from './styles';
 
 export function Footer(): JSX.Element {
   return (
-    <Container>
+    <Container id="contato">
       <Content>
         <div>
           <h1>Iniciar um projeto</h1>
+
           <p>
             Se interessou no meu trabalho? <br />
             Vamos marcar uma conversa.
           </p>
+
           <a href="mailto:luaan.carlos@hotmail.com">Vamos fazer acontecer</a>
         </div>
       </Content>
 
       <Finish>
-        <div className="container-img">
-          <Image
-            src="/assets/Luan.png"
-            alt="Minha foto"
-            height="300"
-            width="300px"
-          />
-        </div>
         <p>Aprendendo um pouco a cada dia, sempre em busca do próximo nível</p>
 
         <span>

@@ -4,16 +4,16 @@ interface ContainerProps {
   theme: string;
 }
 
-export const Padding = styled.div`
-  height: 75px;
-`;
-
 export const Container = styled.header<ContainerProps>`
   height: 75px;
-  background-color: var(--background);
+  padding: 0 1rem;
+
+  transition: 500ms all;
   z-index: 2;
 
-  padding: 0 1rem;
+  background-color: var(--background);
+  border-bottom: 1px solid black;
+  border-color: ${({ theme }) => (theme === 'ligth' ? '#eee' : '#303134')};
 
   position: fixed;
   top: 0;
@@ -23,24 +23,13 @@ export const Container = styled.header<ContainerProps>`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   height: 100%;
   width: 100%;
   font-size: 1.2rem;
   position: relative;
-
-  p {
-    position: absolute;
-    bottom: 0;
-    left: -15%;
-    right: -15%;
-
-    height: 1px;
-    background-color: ${({ theme }) =>
-      theme === 'ligth' ? '#eee' : '#303134'};
-  }
 
   h1 {
     width: 30%;

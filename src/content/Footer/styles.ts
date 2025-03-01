@@ -36,7 +36,7 @@ export const Content = styled.div`
     gap: 4rem;
 
     position: absolute;
-    top: -14%;
+    top: -17.5%;
 
     background-color: #141c3a;
     padding: 3rem;
@@ -68,9 +68,10 @@ export const Content = styled.div`
     transition: all 300ms;
     padding: 0.8rem;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
+    text-wrap: nowrap;
 
     &:hover {
       color: white;
@@ -129,6 +130,7 @@ export const Finish = styled.div`
 
       display: flex;
       align-items: center;
+      background-color: transparent;
       justify-content: center;
 
       transition: 300ms;

@@ -10,21 +10,70 @@ export const Container = styled.nav`
   .nav {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 10px;
+
+    display: flex;
 
     a {
-      display: inline-flex;
+      display: flex;
+      gap: 4px;
       align-items: center;
+      width: auto;
+
+      margin-top: 0;
+
       transition: 300ms;
       font-size: 1rem;
+      font-weight: normal;
 
-      &:hover {
-        color: var(--details);
-      }
+      background-color: transparent;
+      color: var(--title);
 
       em {
         display: none;
       }
+    }
+
+    a:hover,
+    a:focus {
+      transition: 0.6s;
+      outline: none;
+      color: var(--details);
+      background-color: transparent;
+    }
+
+    /* Menu */
+    a::before,
+    a::after {
+      opacity: 0;
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.2s;
+      transition: transform 400ms, opacity 0.2s;
+    }
+
+    a::before {
+      content: '[';
+      -webkit-transform: translateX(20px);
+      -moz-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    a::after {
+      content: ']';
+      width: 0px;
+      -webkit-transform: translateX(-20px);
+      -moz-transform: translateX(-20px);
+      transform: translateX(-20px);
+    }
+
+    a:hover::before,
+    a:hover::after,
+    a:focus::before,
+    a:focus::after {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      transform: translateX(0px);
     }
 
     span {
@@ -44,28 +93,44 @@ export const Container = styled.nav`
         }
       }
     }
+
+    @media (max-width: 850px) {
+      gap: 1rem;
+    }
   }
 
   .theme {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
-    margin: 0 3rem;
-    transition: all 400ms;
+    padding-left: 3rem;
 
-    img {
-      display: block;
+    span {
+      display: inline-flex;
+      align-items: center;
+
       cursor: pointer;
-    }
-  }
-
-  @media (max-width: 850px) {
-    .nav {
-      gap: 1rem;
+      animation: newTheme 400ms;
     }
 
-    .theme {
-      margin: 0 1rem;
+    @keyframes newTheme {
+      0% {
+        transform: scale(0) rotate(-80deg);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 850px) {
+      padding-left: 1rem;
     }
   }
 
@@ -91,7 +156,8 @@ export const Container = styled.nav`
     .nav {
       display: none;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1;
+      gap: 12px;
+      padding: 12px;
 
       position: absolute;
       right: -1rem;
@@ -100,18 +166,14 @@ export const Container = styled.nav`
       z-index: 2;
 
       a {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
+        gap: 1px;
+
         em {
           display: flex;
           align-items: center;
           justify-content: center;
-        }
-      }
-
-      .skills {
-        em {
-          margin-bottom: -5px;
         }
       }
     }

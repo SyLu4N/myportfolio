@@ -19,6 +19,17 @@ export const GlobalStyles = createGlobalStyle`
       theme === 'dark' ? `${dark.letter}` : `${light.letter}`};
     --details: ${({ theme }) =>
       theme === 'dark' ? `${dark.details}` : `${light.details}`};
+
+    --backgroundScroll: ${({ theme }) =>
+      theme === 'dark' ? `#2A2A2C` : `#F1F3F5`};
+
+    --projects-background: ${({ theme }) =>
+      theme === 'dark' ? `rgba(0, 0, 0, 0.1)` : `rgba(200, 200, 200, 0.1)`};
+
+    --projects-border: ${({ theme }) =>
+      theme === 'dark'
+        ? `rgba(255, 255, 255, 0.1)`
+        : `rgba(100, 100, 100, 0.1)`};
   }
 
   html {
@@ -43,12 +54,14 @@ export const GlobalStyles = createGlobalStyle`
     &::-webkit-scrollbar{
       width: 12px;
       border-left: 1px solid rgba(0, 0, 0, 0.1);
-      background: var(--background);
+      background: var(--backgroundScroll);
     }
 
     &::-webkit-scrollbar-thumb{
       background-color: var(--title);
+      opacity: 0.8;
       transition: all 300ms;
+      border-radius: 6px;
 
       &:hover {
         background-color: var(--details);
@@ -68,6 +81,27 @@ export const GlobalStyles = createGlobalStyle`
   a {
     color: var(--title);
     text-decoration: none;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    border-radius: 0.6rem;
+    background-color: var(--title);
+    color: var(--background);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+
+    width: 180px;
+    height: 40px;
+    margin-top: 1rem;
+    transition: 300ms;
+
+    &:hover {
+      background-color: var(--details);
+    }
   }
 
   button {
