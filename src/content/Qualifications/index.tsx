@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
+import SwiperProps from 'swiper';
 import { A11y, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -15,7 +16,7 @@ export function Qualifications(): JSX.Element {
   const [slideKey, setSlideKey] = useState<number>(0);
   const [choice, setChoice] = useState<'studys' | 'works'>('studys');
 
-  function handleSlideChange(e?: any, choice?: 'studys' | 'works') {
+  function handleSlideChange(e?: SwiperProps, choice?: 'studys' | 'works') {
     setSlideKey(slideKey + 1);
     let newChoice: 'studys' | 'works' = 'studys';
 
@@ -34,7 +35,7 @@ export function Qualifications(): JSX.Element {
           <h3>
             <button
               className="prev"
-              onClick={() => handleSlideChange(null, 'studys')}
+              onClick={() => handleSlideChange(undefined, 'studys')}
             >
               <FaGraduationCap size={30} />
               <p>Estudo</p>
@@ -44,7 +45,7 @@ export function Qualifications(): JSX.Element {
           <h3>
             <button
               className="next"
-              onClick={() => handleSlideChange(null, 'works')}
+              onClick={() => handleSlideChange(undefined, 'works')}
             >
               <p>Trabalho</p>
               <FaSuitcase size={24} />
