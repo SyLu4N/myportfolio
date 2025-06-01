@@ -13,9 +13,16 @@ import 'swiper/css';
 
 export function Qualifications(): JSX.Element {
   const [slideKey, setSlideKey] = useState<number>(0);
+  const [choice, setChoice] = useState<'studys' | 'works'>('studys');
 
-  function handleSlideChange() {
+  function handleSlideChange(e?: any, choice?: 'studys' | 'works') {
     setSlideKey(slideKey + 1);
+    let newChoice: 'studys' | 'works' = 'studys';
+
+    if (choice) newChoice = choice;
+    if (e) newChoice = e.activeIndex === 0 ? 'studys' : 'works';
+
+    setChoice(newChoice);
   }
 
   return (
@@ -25,14 +32,20 @@ export function Qualifications(): JSX.Element {
       <article>
         <Content>
           <h3>
-            <button className="prev" onClick={handleSlideChange}>
+            <button
+              className="prev"
+              onClick={() => handleSlideChange(null, 'studys')}
+            >
               <FaGraduationCap size={30} />
               <p>Estudo</p>
             </button>
           </h3>
 
           <h3>
-            <button className="next" onClick={handleSlideChange}>
+            <button
+              className="next"
+              onClick={() => handleSlideChange(null, 'works')}
+            >
               <p>Trabalho</p>
               <FaSuitcase size={24} />
             </button>
@@ -43,14 +56,14 @@ export function Qualifications(): JSX.Element {
           navigation={{ prevEl: `.prev`, nextEl: `.next` }}
           modules={[Navigation, A11y]}
           style={{ padding: '5rem 0 2rem 0', maxWidth: '520px' }}
-          onSlideChange={handleSlideChange}
+          onSlideChange={(e) => handleSlideChange(e)}
         >
           <SwiperSlide>
-            <Studys slideKey={slideKey} key={slideKey} />
+            <Studys key={slideKey} choice={choice} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <Works slideKey={slideKey} key={slideKey} />
+            <Works key={slideKey} choice={choice} />
           </SwiperSlide>
         </Swiper>
       </article>

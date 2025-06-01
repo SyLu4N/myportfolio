@@ -8,7 +8,7 @@ import { side } from '../../utils/side';
 import { Sentinela } from './styles';
 
 interface StudysProps {
-  slideKey: number;
+  choice: 'studys' | 'works';
 }
 
 const containerVariants: Variants = {
@@ -20,16 +20,16 @@ const containerVariants: Variants = {
   },
 };
 
-export function Works({ slideKey }: StudysProps) {
+export function Works({ choice }: StudysProps) {
   const sentinela = useRef<HTMLDivElement>(null);
 
   const controls = useAnimation();
   const isInView = useInView(sentinela, { once: true, amount: 0 });
 
   useEffect(() => {
-    if (side(slideKey) === 'right') return;
+    if (choice !== 'works') return;
     if (isInView) controls.start('visible');
-  }, [isInView]);
+  }, [isInView, choice]);
 
   return (
     <div>
