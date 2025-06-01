@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FaGraduationCap, FaSuitcase } from 'react-icons/fa';
 
-import SwiperProps from 'swiper';
 import { A11y, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperClass } from 'swiper/types';
 
 import { Title } from '../../components/Title';
 import { Studys } from '../Studys';
@@ -16,7 +16,7 @@ export function Qualifications(): JSX.Element {
   const [slideKey, setSlideKey] = useState<number>(0);
   const [choice, setChoice] = useState<'studys' | 'works'>('studys');
 
-  function handleSlideChange(e?: SwiperProps, choice?: 'studys' | 'works') {
+  function handleSlideChange(e?: SwiperClass, choice?: 'studys' | 'works') {
     setSlideKey(slideKey + 1);
     let newChoice: 'studys' | 'works' = 'studys';
 
@@ -57,7 +57,7 @@ export function Qualifications(): JSX.Element {
           navigation={{ prevEl: `.prev`, nextEl: `.next` }}
           modules={[Navigation, A11y]}
           style={{ padding: '5rem 0 2rem 0', maxWidth: '520px' }}
-          onSlideChange={(e) => handleSlideChange(e)}
+          onSlideChange={(e: SwiperClass) => handleSlideChange(e)}
         >
           <SwiperSlide>
             <Studys key={slideKey} choice={choice} />
