@@ -32,12 +32,12 @@ export const COURSES = [
   {
     title: 'Análise e desenvolvimento de...',
     description: 'Wyden UniFavip',
-    date: '01/2023 - Cursando',
+    date: '01/2023 - 06/2025',
   },
 
   {
     title: 'React Native',
     description: 'Rocketseat',
-    date: '02/2025 - Cursando',
+    date: '02/2025 - 05/2025',
   },
 ];

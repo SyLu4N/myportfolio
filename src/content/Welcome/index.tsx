@@ -38,8 +38,8 @@ export function Welcome() {
             </div>
 
             <strong>
-              Desenvolvedor Front-End | Javascript | TypeScript | NextJS |
-              ReactJS
+              Desenvolvedor NextJS | NodeJS | React Native | ElectronJS |
+              Puppeteer
             </strong>
 
             <button

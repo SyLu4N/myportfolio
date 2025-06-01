@@ -12,8 +12,11 @@ import { Container, Content } from './styles';
 import 'swiper/css';
 
 export function Qualifications(): JSX.Element {
-  const [keyMotion, setKeyMotion] = useState(0);
-  const [choice, setChoice] = useState<'work' | 'study'>('study');
+  const [slideKey, setSlideKey] = useState<number>(0);
+
+  function handleSlideChange() {
+    setSlideKey(slideKey + 1);
+  }
 
   return (
     <Container id="qualificacoes">
@@ -22,17 +25,15 @@ export function Qualifications(): JSX.Element {
       <article>
         <Content>
           <h3>
-            <button className="prev" onClick={() => setChoice('study')}>
+            <button className="prev" onClick={handleSlideChange}>
               <FaGraduationCap size={30} />
-
               <p>Estudo</p>
             </button>
           </h3>
 
           <h3>
-            <button className="next" onClick={() => setChoice('work')}>
+            <button className="next" onClick={handleSlideChange}>
               <p>Trabalho</p>
-
               <FaSuitcase size={24} />
             </button>
           </h3>
@@ -42,14 +43,14 @@ export function Qualifications(): JSX.Element {
           navigation={{ prevEl: `.prev`, nextEl: `.next` }}
           modules={[Navigation, A11y]}
           style={{ padding: '5rem 0 2rem 0', maxWidth: '520px' }}
-          onSlideChange={() => setKeyMotion((keyMotion) => keyMotion + 1)}
+          onSlideChange={handleSlideChange}
         >
           <SwiperSlide>
-            <Studys key={keyMotion} choice={choice} />
+            <Studys slideKey={slideKey} key={slideKey} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <Works key={keyMotion} choice={choice} />
+            <Works slideKey={slideKey} key={slideKey} />
           </SwiperSlide>
         </Swiper>
       </article>

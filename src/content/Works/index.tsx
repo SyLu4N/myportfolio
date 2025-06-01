@@ -8,8 +8,7 @@ import { side } from '../../utils/side';
 import { Sentinela } from './styles';
 
 interface StudysProps {
-  key: number;
-  choice: 'work' | 'study';
+  slideKey: number;
 }
 
 const containerVariants: Variants = {
@@ -21,15 +20,16 @@ const containerVariants: Variants = {
   },
 };
 
-export function Works({ key, choice }: StudysProps) {
+export function Works({ slideKey }: StudysProps) {
   const sentinela = useRef<HTMLDivElement>(null);
 
   const controls = useAnimation();
   const isInView = useInView(sentinela, { once: true, amount: 0 });
 
   useEffect(() => {
-    if (isInView && choice === 'work') controls.start('visible');
-  }, [isInView, controls, key]);
+    if (side(slideKey) === 'right') return;
+    if (isInView) controls.start('visible');
+  }, [isInView]);
 
   return (
     <div>
@@ -43,7 +43,7 @@ export function Works({ key, choice }: StudysProps) {
         {WORKS.map((work, index) => (
           <Passage
             index={index}
-            key={key}
+            key={index}
             {...work}
             ballEnd={index === WORKS.length - 1}
             position={side(index)}

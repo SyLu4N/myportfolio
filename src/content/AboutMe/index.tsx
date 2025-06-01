@@ -35,23 +35,37 @@ export function AboutMe(): JSX.Element {
         </div>
 
         <h1>Luan Simões</h1>
-        <p>Desenvolvedor Front-End</p>
+        <p>Desenvolvedor Full Stack</p>
 
         <em>
-          Olá! Eu sou o Luan Simões, tenho {myAge()} anos e sou de Suzano - SP. Sou um fanático por tecnologia e um entusiasta do desenvolvimento Front-end.
+          Olá! Me chamo Luan Simões tenho {myAge()} anos, desenvolvedor Full
+          Stack de Suzano - SP.
           <br />
           <br />
-          Minha jornada começou com HTML e CSS puro, evoluindo para JavaScript para interações, dominei ReactJS para interfaces de usuário reutilizáveis e escaláveis, e adotei TypeScript para melhorar a qualidade do código. Com Next.js, desenvolvo aplicações otimizadas para SEO e desempenho. Sou versátil na estilização, utilizando frameworks como SASS, Styled-Components, TailwindCSS entre outros frameworks de estilização. 
+          Minha trajetória na tecnologia começou com HTML e CSS, e desde então
+          venho me especializando em ferramentas modernas como React.js,
+          Next.js, TypeScript, Node.js e React Native.
           <br />
           <br />
-          Embora meu foco principal seja o front end, também tenho experiência no back end com Node.js, trabalhando com Fastify e NestJS, além de um conhecimento básico em Python.
+          Com uma base sólida em desenvolvimento front-end e back-end, também
+          atuo com Electron.js e Puppeteer, explorando automações e aplicações
+          desktop. Além do desenvolvimento, trago experiências anteriores com
+          design gráfico e marketing digital, o que me proporciona uma visão
+          mais ampla sobre usabilidade, experiência do usuário e comunicação
+          visual.
           <br />
           <br />
-          Além das habilidades técnicas, desenvolvi competências pessoais importantes, como gerenciamento de tempo, produtividade e comunicação clara. 
+          Atualmente, trabalho como Técnico de Service Desk na Movida, onde além
+          de prestar suporte técnico, também desenvolvo automações internas. Sou
+          formado em Análise e Desenvolvimento de Sistemas pela Wyden e sigo
+          ampliando meus conhecimentos por meio de cursos intensivos e projetos
+          práticos.
           <br />
           <br />
-          Atualmente, estou na faculdade WYDEN, onde curso Análise e
-          Desenvolvimento de Sistemas.
+          Seja criando landing pages otimizadas para SEO, sistemas
+          administrativos simples ou aplicações completas com SSR, meu objetivo
+          é sempre entregar soluções escaláveis, performáticas e com excelente
+          experiência para o usuário.
         </em>
 
         <div>
