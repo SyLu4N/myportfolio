@@ -52,4 +52,13 @@ export const PROJECTS = [
     summary:
       'Precisa de exames precisos? Nós oferecemos os melhores serviços de diagnósticos e análises clínicas!',
   },
+
+  {
+    title: 'Hunterstack.io',
+    type: 'others',
+    src: '/assets/hunterstack.png',
+    link: 'https://hunterstack.vercel.app/',
+    summary:
+      'Precisa analisar políticas de segurança? O Hunterstack coleta, organiza e entrega tudo pra você!',
+  },
 ];
